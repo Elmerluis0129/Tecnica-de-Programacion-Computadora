@@ -1,4 +1,4 @@
-#Elmer Luis Saint-Hilare Rojo / 21-1354
+#Elmer Luis Saint-Hilare Rojo / 21-1354.
 #Escribir un programa que pida 2 números y muestre paso a paso el cálculo de la raíz cuadrada de la suma del cuadrado de ambos. 
 import math #Aquí importo math para poder hacer uso de la raiz cuadrada.
 
