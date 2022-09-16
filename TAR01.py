@@ -119,4 +119,4 @@ else:
 print("\n*-------------------------------------------*")#Decorando el agradecimiento.
 print("| ¡Muchas gracias por utilizar mi programa! |")
 print("*-------------------------------------------*")#Decorando el agradecimiento.
-#FINN
+#FIN
