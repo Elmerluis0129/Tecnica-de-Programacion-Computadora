@@ -20,4 +20,9 @@ print("\n La suma de los números es: ", numero1**2, "+", numero2**2, "=", opera
 print("|----------------------------------------------|")
 print("\n La raiz de esa suma es: ", math.sqrt(operación))#Aquí le muestra ya el resultado de el problema resuelto y utilizamos math.sqrt para sacar la raiz.
 print("|----------------------------------------------|")
+
+#Agradecimiento por usar el programa.
+print("\n*-------------------------------------------*")#Decorando el agradecimiento.
+print("| ¡Muchas gracias por utilizar mi programa! |")
+print("*-------------------------------------------*")#Decorando el agradecimiento.
 #FIN
