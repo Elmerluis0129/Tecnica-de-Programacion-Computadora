@@ -116,7 +116,7 @@ else:
             print("\nEl resultado en todas las operaciones es: \nSuma: ", num1,"+",num2,"=", Sumar, "\nResta: ", num1,"-",num2,"=", Restar, "\nMultiplicación: ", num1,"*",num2,"=", Multiplicar, "\nDivisión: ", num1,"/",num2,"=", Dividir)
 
 #Agradecimiento por usar el programa.
-print("\n*-------------------------------------------*")#Decorando el agradecimiento.
-print("| ¡Muchas gracias por utilizar mi programa! |")
-print("*-------------------------------------------*")#Decorando el agradecimiento.
+print("\n*----------------------------------------------------------------------------*")#Decorando el agradecimiento.
+print("| ¡Muchas gracias por utilizar mi programa! / By: Elmer Saint-Hilare 21-1354 |")
+print("*----------------------------------------------------------------------------*\n")#Decorando el agradecimiento.
 #FIN
