@@ -10,7 +10,7 @@ print("""\nOperaciones:\n
 3.- Multiplicar\n
 4.- Dividir\n""")
 
-#Para saber si el usuario quiere que le muestre las 4 operaciones con los mismos 2 números, o si quiere que le muestre el resultado con la operación que desea.
+#Para saber si el usuario quiere que le muestre las 4 operaciones con los mismos 2 números, o si quiere que le muestre el resultado con la operación que desea
 modo = int(input("""¿Cómo quieres las respuesta/s?
 \n1.- Que el programa te haga las 4 operaciones con los mismos números."""   #Aqui muestra los resultados de las 4 operaciones básicas.
 """\n2.- Que el programa te haga solo la operacion que selecciones.\n> """)) #Solo muestra el resultado de una operación ya seleccionada por el usuario.
