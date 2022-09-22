@@ -11,7 +11,7 @@ print("""\nOperaciones:\n
 4.- Dividir\n""")
 
 #Para saber si el usuario quiere que le muestre las 4 operaciones con los mismos 2 números, o si quiere que le muestre el resultado con la operación que desea
-modo = int(input("""¿Cómo quieres las respuesta/s?
+modo = int(input("""¿Cómo quieres las respuesta/s? Responder con el número por favor.
 \n1.- Que el programa te haga las 4 operaciones con los mismos números."""   #Aqui muestra los resultados de las 4 operaciones básicas.
 """\n2.- Que el programa te haga solo la operacion que selecciones.\n> """)) #Solo muestra el resultado de una operación ya seleccionada por el usuario.
 
@@ -38,7 +38,6 @@ if modo == 2:
 
         print("El resultado de:", num1,"+",num2,"=", Sumar)
     else:
-
         #Decorando los "Subtitulos"
         #Operacion Restar.
         if operacion == 2:
@@ -54,7 +53,6 @@ if modo == 2:
 
             print("El resultado de:", num1,"-",num2,"=", Restar)
         else:
-
             #Decorando los "Subtitulos"
             #Operacion Multiplicar.
             if operacion == 3:
@@ -70,7 +68,6 @@ if modo == 2:
 
                 print("El resultado de:", num1,"*",num2,"=", Multiplicar)
             else:
-
                 #Decorando los "Subtitulos"
                 #Operacion Dividir.
                 if operacion == 4:
@@ -84,16 +81,20 @@ if modo == 2:
 
                     #Verificar si el denominador (Segundo numero) pone un 0.
                     if num2 == 0:
-                        print("¡ERROR! Recuerda que no puedes poner cero(0) en el divisor(en el dividiendo)")#Error mas comprensible por un usuario.
+                        print("\n¡ERROR! Recuerda que no puedes poner cero(0) en el divisor(en el dividiendo)")#Error mas comprensible por un usuario.
                     else:
                         #Variable de la división.
                         Dividir = num1 / num2
                         print("El resultado de:", num1,"/",num2,"=", Dividir)
                 else:
-                    print("Lo siento, debes introducir un número, intenta de nuevo.") #Aqui el usuario pone una letra o caracter especial, cuando deberia ser un numero.
+                    if operacion >= 5:
+                        print("\nLo siento, debes introducir un número de las opciones que se te marcan al principio.") #Aqui el usuario pone una un numero mayor que las opciones que se les propone
+                    else:
+                        if operacion <= 0:
+                            print("\nLo siento, debes introducir un número de las opciones que se te marcan al principio.") #Aqui el usuario pone una un numero menor que las opciones que se les propone
 
 else:
-    if modo == 1: #Si elije la opcion 1, el programa hace las 4 operaciones al mismo tiemo.
+    if modo == 1: #Si elije la opcion 1, el programa hace las 4 operaciones al mismo tiempo.
         print("\n*-----------------------------*")#Decorando el Modo.
         print("| Modo: Todas las operaciones |")
         print("*-----------------------------*\n")#Decorando el Modo.
@@ -114,6 +115,13 @@ else:
         else:
             #Variable de la division.
             print("\nEl resultado en todas las operaciones es: \nSuma: ", num1,"+",num2,"=", Sumar, "\nResta: ", num1,"-",num2,"=", Restar, "\nMultiplicación: ", num1,"*",num2,"=", Multiplicar, "\nDivisión: ", num1,"/",num2,"=", Dividir)
+            
+    else:
+        if modo >= 3:
+            print("\nLo siento, este número no es uno de las opciones mostradas en pantalla.")
+        else:
+            if modo <= 0:
+                print("\nLo siento, este número no es uno de las opciones mostradas en pantalla.")
 
 #Agradecimiento por usar el programa.
 print("\n*----------------------------------------------------------------------------*")#Decorando el agradecimiento.
