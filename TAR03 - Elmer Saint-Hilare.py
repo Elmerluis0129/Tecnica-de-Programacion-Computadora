@@ -34,7 +34,7 @@ elif TipoInstalacion == "I":#Aqui para saber si su instalacion es tipo I.
     elif kwhConsumido > 5000:#Sentencia para saber si la cantidad de Kilo watts es mayor a 5000.
         print("\nEl precio a pagar es de: RD$4200.00")#Precio a pagar dependiendo de si su consumo es mayor a 5000.
 else:
-    print("\nLo siento, lo que haz introducido no es la letra que corresponde a uno de las opciones de tipo de instalacion. ") #En caso de que el usuario no marque correctamente la letra de su tipo de instalacion.
+    print("\nLo siento, lo que haz introducido no es la letra que corresponde a una de las opciones de tipo de instalacion. ") #En caso de que el usuario no marque correctamente la letra de su tipo de instalacion.
         
 #Agradecimiento por usar el programa.
 print("\n*----------------------------------------------------------------------------*")#Decorando el agradecimiento.
