@@ -22,7 +22,7 @@ if TipoDeTicket == 1:#Aquí sólo tiene un sólo número de ticket.
     for numero in range(1):#Aquí para que me iteré 1 vez.
         if x == 1: #Aquí para la primera iteración tendrá un valor de 1 la x, por lo que le pondrá el 1er mandato.
             ListaNumLot.append(int(input("Ingresar el primer número de lotería de su ticket. \n> ")))#Mandato 1.
-        break
+        break#Esto sirve para cuanddo vaya por la 1ra iteración y se cumpla la condición el bucle for se rompa, terminando por completo con las iteraciones.
     
 elif TipoDeTicket == 2:#Aquí sólo tiene dos números de ticket.
     for numero in range(2):#Aquí para que me iteré 2 veces.
@@ -30,7 +30,7 @@ elif TipoDeTicket == 2:#Aquí sólo tiene dos números de ticket.
             ListaNumLot.append(int(input("Ingresar el primer número de lotería de su ticket. \n> ")))#Mandato 1.
         elif x == 2: #Aquí para la segunda iteración tendrá un valor de 2 la x, por lo que le pondrá el 2do mandato.
             ListaNumLot.append(int(input("Ingresar el segundo número de lotería de su ticket. \n> ")))#Mandato 2.
-            break
+            break#Esto sirve para cuanddo vaya por la 2da iteración y se cumpla la condición el bucle for se rompa, terminando por completo con las iteraciones.
         x=x+1
 
 elif TipoDeTicket == 3:#Aquí sólo tiene tres números de ticket.
@@ -41,7 +41,7 @@ elif TipoDeTicket == 3:#Aquí sólo tiene tres números de ticket.
             ListaNumLot.append(int(input("Ingresar el segundo número de lotería de su ticket. \n> ")))#Mandato 2.
         elif x == 3: #Aquí para la tercera iteración tendrá un valor de 3 la x, por lo que le pondrá el 2do mandato.
             ListaNumLot.append(int(input("Ingresar el tercer número de lotería de su ticket. \n> ")))#Mandato 3.
-            break
+            break#Esto sirve para cuanddo vaya por la 3ra iteración y se cumpla la condición el bucle for se rompa, terminando por completo con las iteraciones.
         x=x+1
 
 elif TipoDeTicket == 4:#Aquí sólo tiene cuatro números de ticket.
@@ -54,7 +54,7 @@ elif TipoDeTicket == 4:#Aquí sólo tiene cuatro números de ticket.
             ListaNumLot.append(int(input("Ingresar el tercer número de lotería de su ticket. \n> ")))#Mandato 3.
         elif x == 4: #Aquí para la cuarta iteración tendrá un valor de 4 la x, por lo que le pondrá el 2do mandato.
             ListaNumLot.append(int(input("Ingresar el cuarto número de lotería de su ticket. \n> ")))#Mandato 4.
-            break
+            break#Esto sirve para cuanddo vaya por la 4ta iteración y se cumpla la condición el bucle for se rompa, terminando por completo con las iteraciones.
         x=x+1
         
 elif TipoDeTicket == 5:#Aquí sólo tiene cinco números de ticket.
