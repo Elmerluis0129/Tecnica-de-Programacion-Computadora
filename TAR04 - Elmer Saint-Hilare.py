@@ -31,11 +31,11 @@ VecesPalabraAparece = Lista.count(buscarPalabra) #Para saber si la palabra apare
 
 #Aquí uso estas condiciones para saber qué cantidad de veces aparece la palabra, y poder varíar la respuesta, tipo: una vez o tantas veces. o no aparece.
 if VecesPalabraAparece > 1:
-    print("\nLa palabra: ","'",buscarPalabra,"'", "aparece",VecesPalabraAparece, "veces.") #Aquí si aparece más de 1 vez, usará "Veces".
+    print("\nLa palabra: ","'"+str(buscarPalabra)+"'", "aparece",VecesPalabraAparece, "veces en la lista.") #Aquí si aparece más de 1 vez, usará "Veces".
 elif VecesPalabraAparece == 1:
-    print("\nLa palabra: ","'",buscarPalabra,"'", "aparece",VecesPalabraAparece, "vez.") #Aquí si aparece 1 sola vez, usará "Vez".
+    print("\nLa palabra: ","'"+str(buscarPalabra)+"'", "aparece",VecesPalabraAparece, "vez en la lista.") #Aquí si aparece 1 sola vez, usará "Vez".
 elif not buscarPalabra in Lista:
-    print("\nLa palabra: ","'",buscarPalabra,"'", "no aparece en la lista que haz creado anteriormente.")  #Aquí si no aparece la palabra se lo especifica.
+    print("\nLa palabra: ","'"+str(buscarPalabra)+"'", "no aparece en la lista que haz creado anteriormente.")  #Aquí si no aparece la palabra se lo especifica.
 
 #Agradecimiento por usar el programa.
 print("\n*----------------------------------------------------------------------------*")#Decorando el agradecimiento.
