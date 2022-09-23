@@ -1,17 +1,27 @@
 #Escriba un programa que calcule el precio a pagar por el suministro de energía eléctrica. Se debe preguntar la cantidad de kwh consumidos y el tipo de instalación: R para residencias, I para industrias y C para comercios. Calcule el precio a pagar de acuerdo con la siguiente tabla
 #Elmer Saint-Hilare 21-1354
 
-print("\n*------------------------------------------------------*")#Decorando el nombre.
-print("|Precio a pagar por el suministro de energía eléctrica.|")
-print("*------------------------------------------------------*\n")#Decorando el nombre.
+print("""\n
+*------------------------------------------------------*
+|Precio a pagar por el suministro de energía eléctrica.|
+*------------------------------------------------------*
+\n""")#Decorando el nombre.
 
-print("*--------------------------------------*")#Decorando la pregunta.
-print("|Tipos de instalacciones a seleccionar.|")
-print("*--------------------------------------*\n")#Decorando la pregunta.
+print("""
+*--------------------------------------*
+|Tipos de instalacciones a seleccionar.|
+*--------------------------------------*
+\n""")#Decorando la pregunta.
 
-print("*---------------*")#Decorando las opciones.
-print("|R = Residencial|\n|C = Comercial  |\n|I = Industrial |")#Opciones de tipo de instalacion.
-print("*---------------*\n")#Decorando las opciones.
+print("""
+*---------------*
+|R = Residencial|
+|---------------|
+|C = Comercial  |
+|---------------|
+|I = Industrial |
+*---------------*
+\n""")#Decorando las opciones.
 
 #Declaro las variables a utilizar, tipo de instalacion y kilo waths consumidos.
 TipoInstalacion = str(input("Ingrese el tipo de instalación: ")) #Tipo de instalacion.
