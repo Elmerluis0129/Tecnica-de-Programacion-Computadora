@@ -5,9 +5,11 @@
 Lista = []#Aquí se almacenan todos los elementos que el usuario más adelante va a proporcionar.
 x = 1 #Aquí es para poder cambiar el mandato en el bucle for.
 
-print("*--------------------------------------------*")#Decorando la intrucción.
-print("|Ingresar las 5 palabras para crear la lista.|")
-print("*--------------------------------------------*\n")#Decorando la intrucción.
+print("""
+*--------------------------------------------*
+|Ingresar las 5 palabras para crear la lista.|
+*--------------------------------------------*
+\n""")#Decorando la intrucción.
 
 #Bucle for para hacer las iteraciones necesarias para crear la lista, en este caso 5 veces.
 for n in range(5):
