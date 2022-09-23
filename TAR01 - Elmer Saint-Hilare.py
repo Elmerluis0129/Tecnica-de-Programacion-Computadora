@@ -104,10 +104,10 @@ else:
         num2 = float(input("Por favor, ingrese el segundo número: "))#Numero 2.
 
         #Operaciones.
-        Sumar = num1 + num2
-        Restar = num1 - num2
-        Multiplicar = num1 * num2
-        Dividir = num1 / num2
+        Sumar = num1+num2
+        Restar = num1-num2
+        Multiplicar = num1*num2
+        Dividir = num1/num2
 
         #Condicion para saber si marca el cero como segundo número y asi le muestre un error que pueda entender.
         if num2 == 0:
