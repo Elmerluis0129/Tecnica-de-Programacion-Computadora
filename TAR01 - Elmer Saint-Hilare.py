@@ -1,7 +1,4 @@
-#Nombre del programa.
-print("\n*--------------------*")#Decorando el nombre.
-print("| Calculadora Básica |")
-print("*--------------------*\n")#Decorando el nombre.
+
 
 #Operaciones para mostrarle en pantalla las que tiene para poder elegir.
 print("""\nOperaciones:\n
