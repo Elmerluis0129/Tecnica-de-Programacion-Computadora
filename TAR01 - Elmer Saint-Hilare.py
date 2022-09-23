@@ -123,7 +123,9 @@ else:
                 print("\nLo siento, este número no es uno de las opciones mostradas en pantalla.")
 
 #Agradecimiento por usar el programa.
-print("\n*----------------------------------------------------------------------------*")#Decorando el agradecimiento.
-print("| ¡Muchas gracias por utilizar mi programa! / By: Elmer Saint-Hilare 21-1354 |")
-print("*----------------------------------------------------------------------------*\n")#Decorando el agradecimiento.
+print("""\n
+*----------------------------------------------------------------------------*
+| ¡Muchas gracias por utilizar mi programa! / By: Elmer Saint-Hilare 21-1354 |
+*----------------------------------------------------------------------------*
+\n""")#Decorando el agradecimiento.
 #FIN
