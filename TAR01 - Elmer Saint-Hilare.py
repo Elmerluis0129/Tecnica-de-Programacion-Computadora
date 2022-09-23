@@ -100,7 +100,7 @@ else:
         print("*-----------------------------*\n")#Decorando el Modo.
 
         #Entrada de los numeros / Variables
-        num1 = float(input("Por favor, ingrese el primer número: "))#Numero 1
+        num1 = float(input("Por favor, ingrese el primer número: "))#Numero 1.
         num2 = float(input("Por favor, ingrese el segundo número: "))#Numero 2.
 
         #Operaciones.
