@@ -38,7 +38,7 @@ if modo == 2:
 
         print("El resultado de:", num1,"+",num2,"=", Sumar)
     else:
-        #Decorando los "Subtitulos"
+        #Decorando los "Subtitulos".
         #Operacion Restar.
         if operacion == 2:
             print("\n*----------------------------------*")#Decorando los la operación.
