@@ -21,9 +21,11 @@ modo = int(input("""¿Cómo quieres las respuesta/s? Responder con el número po
 
 #Si el usuario selecciona la opcion 2, hace la operacion que elija.
 if modo == 2:
-    print("\n*-------------------------------*")#Decorando los "Subtitulos".
-    print("| Modo: Selección de operación. |")
-    print("*-------------------------------*\n")#Decorando los "Subtitulos".
+    print("""\n
+*-------------------------------*
+| Modo: Selección de operación. |
+*-------------------------------*
+    \n""")#Decorando los "Subtitulos".
     #Eleccion de la operacion a realizar
     operacion = int(input("¿Qué operación desea realizar? / Responde con el número, por favor.\n> "))
 
