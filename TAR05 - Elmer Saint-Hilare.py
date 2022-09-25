@@ -71,4 +71,12 @@ elif TipoDeTicket == 5:
     
 else:
     for numero in range(TipoDeTicket):
-        ListaNumLot.append(int(input("Ingresar el número de su ticket. \n> "))) #TODO Poner a que muestre la lista ordenada de menor a mayor.
+        ListaNumLot.append(int(input("Ingresar el número de su ticket. \n> "))) 
+
+#Agradecimiento por usar el programa.
+print("""\n
+*----------------------------------------------------------------------------*
+| ¡Muchas gracias por utilizar mi programa! / By: Elmer Saint-Hilare 21-1354 |
+*----------------------------------------------------------------------------*
+\n""")#Decorando el agradecimiento.
+#FIN

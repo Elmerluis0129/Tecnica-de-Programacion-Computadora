@@ -2,7 +2,7 @@
 print("""\n
 *--------------------*
 | Calculadora Básica |
-"*--------------------*
+*--------------------*
 \n""")#Decorando el nombre.
 #Operaciones para mostrarle en pantalla las que tiene para poder elegir.
 print("""
