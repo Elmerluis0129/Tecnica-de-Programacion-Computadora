@@ -40,9 +40,9 @@ elif not buscarPalabra in Lista:
     print("\nLa palabra: ","'"+str(buscarPalabra)+"'", "no aparece en la lista que haz creado anteriormente.")  #Aquí si no aparece la palabra se lo especifica.
 
 #Agradecimiento por usar el programa.
-print("""\n
+print("""
 *----------------------------------------------------------------------------*
 | ¡Muchas gracias por utilizar mi programa! / By: Elmer Saint-Hilare 21-1354 |
 *----------------------------------------------------------------------------*
-\n""")#Decorando el agradecimiento.
+""")#Decorando el agradecimiento.
 #FIN

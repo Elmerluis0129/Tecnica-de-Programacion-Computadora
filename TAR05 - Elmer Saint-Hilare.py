@@ -6,7 +6,7 @@ print("""
 *-----------------------------------------------*
 |Ordenar de menor a mayor los números de lotería|
 *-----------------------------------------------*
-\n""")#Decorando el nombre de la aplicación.
+""")#Decorando el nombre de la aplicación.
 
 ListaNumLot = []
 x = 1
@@ -73,10 +73,14 @@ else:
     for numero in range(TipoDeTicket):
         ListaNumLot.append(int(input("Ingresar el número de su ticket. \n> "))) 
 
+print("La lista creada con los números de tu ticket de loteria es: ", ListaNumLot)#Lista normal sin ordenar.
+ListaNumLot.sort()#Función para ordenar la lista.
+print("El orden de menor a mayor en la lista creada con tus números de tickets es: ", ListaNumLot, ) #Lista ordenada.
+
 #Agradecimiento por usar el programa.
-print("""\n
+print("""
 *----------------------------------------------------------------------------*
 | ¡Muchas gracias por utilizar mi programa! / By: Elmer Saint-Hilare 21-1354 |
 *----------------------------------------------------------------------------*
-\n""")#Decorando el agradecimiento.
+""")#Decorando el agradecimiento.
 #FIN

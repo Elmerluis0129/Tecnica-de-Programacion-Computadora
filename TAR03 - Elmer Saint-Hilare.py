@@ -47,9 +47,9 @@ else:
     print("\nLo siento, lo que haz introducido no es la letra que corresponde a una de las opciones de tipo de instalacion. ") #En caso de que el usuario no marque correctamente la letra de su tipo de instalacion.
         
 #Agradecimiento por usar el programa.
-print("""\n
+print("""
 *----------------------------------------------------------------------------*
 | ¡Muchas gracias por utilizar mi programa! / By: Elmer Saint-Hilare 21-1354 |
 *----------------------------------------------------------------------------*
-\n""")#Decorando el agradecimiento.
+""")#Decorando el agradecimiento.
 #FIN
