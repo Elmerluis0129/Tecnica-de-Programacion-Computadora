@@ -143,7 +143,7 @@ else:
 
 #Agradecimiento por usar el programa.
 print("""
-*------------------------------------------------------------////-*
+*-------------------------------------------------------------*
 | ¡Muchas gracias por utilizar mi programa! / By: Elmer Saint-Hilare 21-1354 |
 *----------------------------------------------------------------------------*
 """)#Decorando el agradecimiento.
