@@ -22,9 +22,9 @@ print("\n La raiz de esa suma es: ", math.sqrt(operación))#Aquí le muestra ya 
 print("|----------------------------------------------|")
 
 #Agradecimiento por usar el programa.
-print("""\n
+print("""
 *----------------------------------------------------------------------------*
 | ¡Muchas gracias por utilizar mi programa! / By: Elmer Saint-Hilare 21-1354 |
 *----------------------------------------------------------------------------*
-\n""")#Decorando el agradecimiento.
+""")#Decorando el agradecimiento.
 #FIN

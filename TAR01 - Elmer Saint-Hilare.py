@@ -1,35 +1,42 @@
 #Nombre del programa.
-print("""\n
+print("""
 *--------------------*
 | Calculadora Básica |
 *--------------------*
-\n""")#Decorando el nombre.
+""")#Decorando el nombre.
 #Operaciones para mostrarle en pantalla las que tiene para poder elegir.
-print("""\nOperaciones:\n
-1.- Sumar\n
-2.- Restar\n
-3.- Multiplicar\n
-4.- Dividir\n""")
+print("""
+Operaciones:
+
+1.- Sumar
+2.- Restar
+3.- Multiplicar
+4.- Dividir
+""")
 
 #Para saber si el usuario quiere que le muestre las 4 operaciones con los mismos 2 números, o si quiere que le muestre el resultado con la operación que desea
 modo = int(input("""¿Cómo quieres las respuesta/s? Responder con el número por favor.
-\n1.- Que el programa te haga las 4 operaciones con los mismos números."""   #Aqui muestra los resultados de las 4 operaciones básicas.
+1.- Que el programa te haga las 4 operaciones con los mismos números."""   #Aqui muestra los resultados de las 4 operaciones básicas.
 """\n2.- Que el programa te haga solo la operacion que selecciones.\n> """)) #Solo muestra el resultado de una operación ya seleccionada por el usuario.
 
 #Si el usuario selecciona la opcion 2, hace la operacion que elija.
 if modo == 2:
-    print("\n*-------------------------------*")#Decorando los "Subtitulos".
-    print("| Modo: Selección de operación. |")
-    print("*-------------------------------*\n")#Decorando los "Subtitulos".
+    print("""
+*-------------------------------*
+| Modo: Selección de operación. |
+*-------------------------------*
+    """)#Decorando los "Subtitulos".
     #Eleccion de la operacion a realizar
     operacion = int(input("¿Qué operación desea realizar? / Responde con el número, por favor.\n> "))
 
     #Aquí lo utilizo para saber qué número me da el usuario y así identificar qué quiere el usuario hacer, si sumar, restar, multiplicar o dividir.
     #Operacion Sumar.
     if operacion == 1:
-        print("\n*---------------------------------*")#Decorando la operación.
-        print("| Haz elegido la operación: Sumar |")
-        print("*---------------------------------*\n")#Decorando la operación.
+        print("""
+*---------------------------------*
+| Haz elegido la operación: Sumar |
+*---------------------------------*
+        """)#Decorando la operación.
 
         #Entrada de los numeros / Variables.
         num1 = float(input("Por favor, ingrese el primer número: "))#Numero 1.
@@ -42,9 +49,11 @@ if modo == 2:
         #Decorando los "Subtitulos".
         #Operacion Restar.
         if operacion == 2:
-            print("\n*----------------------------------*")#Decorando los la operación.
-            print("| Haz elegido la operación: Restar |")
-            print("*----------------------------------*\n")#Decorando la operación.
+            print("""
+*----------------------------------*
+| Haz elegido la operación: Restar |
+*----------------------------------*
+            """)#Decorando la operación.
 
             #Entrada de los numeros / Variables.
             num1 = float(input("Por favor, ingrese el primer número: "))#Numero 1.
@@ -57,9 +66,11 @@ if modo == 2:
             #Decorando los "Subtitulos"
             #Operacion Multiplicar.
             if operacion == 3:
-                print("\n*---------------------------------------*")#Decorando la operación.
-                print("| Haz elegido la operación: Multiplicar |")
-                print("*---------------------------------------*\n")#Decorando la operación.
+                print("""
+*---------------------------------------*
+| Haz elegido la operación: Multiplicar |
+*---------------------------------------*
+                """)#Decorando la operación.
 
                 #Entrada de los numeros / Variables.
                 num1 = float(input("Por favor, ingrese el primer número: "))#Numero 1.
@@ -72,9 +83,13 @@ if modo == 2:
                 #Decorando los "Subtitulos"
                 #Operacion Dividir.
                 if operacion == 4:
-                    print("\n*-----------------------------------*")#Decorando la operación.
-                    print("| Haz elegido la operación: Dividir |\n*-----------------------------------*")#Decorando la operación.
-                    print("Recuerda que el segundo número no puede ser igual a cero(0)\n")
+                    print("""
+*-------------------------------------------------------------*
+| Haz elegido la operación: Dividir                           |
+|-------------------------------------------------------------|
+| Recuerda que el segundo número no puede ser igual a cero(0) |
+*-------------------------------------------------------------*
+                    """)
 
                     #Entrada de los números / Variables.
                     num1 = float(input("Por favor, ingrese el primer número: "))#Numero 1.
@@ -96,9 +111,11 @@ if modo == 2:
 
 else:
     if modo == 1: #Si elije la opcion 1, el programa hace las 4 operaciones al mismo tiempo.
-        print("\n*-----------------------------*")#Decorando el Modo.
-        print("| Modo: Todas las operaciones |")
-        print("*-----------------------------*\n")#Decorando el Modo.
+        print("""
+*-----------------------------*
+| Modo: Todas las operaciones |
+*-----------------------------*
+        """)#Decorando el Modo.
 
         #Entrada de los numeros / Variables
         num1 = float(input("Por favor, ingrese el primer número: "))#Numero 1.
@@ -125,9 +142,9 @@ else:
                 print("\nLo siento, este número no es uno de las opciones mostradas en pantalla.")
 
 #Agradecimiento por usar el programa.
-print("""\n
+print("""
 *----------------------------------------------------------------------------*
 | ¡Muchas gracias por utilizar mi programa! / By: Elmer Saint-Hilare 21-1354 |
 *----------------------------------------------------------------------------*
-\n""")#Decorando el agradecimiento.
+""")#Decorando el agradecimiento.
 #FIN.
