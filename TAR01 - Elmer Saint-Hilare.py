@@ -130,4 +130,4 @@ print("""\n
 | ¡Muchas gracias por utilizar mi programa! / By: Elmer Saint-Hilare 21-1354 |
 *----------------------------------------------------------------------------*
 \n""")#Decorando el agradecimiento.
-#FIN
+#FIN.
