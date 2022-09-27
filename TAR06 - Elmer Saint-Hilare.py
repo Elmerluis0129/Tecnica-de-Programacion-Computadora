@@ -4,7 +4,11 @@
 # Mediante el uso de while, determinar los meses (total) en los que se completará el pago del préstamo.
 # Elmer Saint-Hilare 21-1354
 
-print("Tiempo en meses para pagar su préstamo.\n")
+print("""
+*---------------------------------------*
+|Tiempo en meses para pagar su préstamo.|
+*---------------------------------------*
+""")
 
 MontoPrestamo = int(input("""
 ¿Cuál es el monto de su préstamo? 
@@ -19,21 +23,47 @@ while MontoPrestamo == CantidadMensual:
     CantidadMensual = int(input("""
 ¿Cuál es la cantidad mensual de su préstamo a pagar? 
 > """))
-else:
-    print("\nDatos registrados y guardados.\n")
 
 mesesApagar = MontoPrestamo / CantidadMensual
-operacion = CantidadMensual * mesesApagar
+AñosApagar = mesesApagar / 12
+operacion = mesesApagar * CantidadMensual
 
-while operacion != MontoPrestamo:
-    if mesesApagar == 1:
-        print("Con los proporcionados, estará completando su préstamo en " +str(mesesApagar) + " mes.\n")
+while operacion == MontoPrestamo:
+    if MontoPrestamo >= 1000000 and CantidadMensual < 83333.33:
+        while CantidadMensual < 83333.33:
+            CantidadMensual = int(input(""""
+¡Lo siento! la cantidad a pagar mensual es muy baja, por lo que excede el límite de años(meses) establecidos por la empresa. 
+Por favor ingrese una cantidad por encima de los 83,500 pesos.
         
-    elif mesesApagar > 1:
-        print("Con los datos proporcionados, estará completando su préstamo en " +str(mesesApagar) + " meses.\n")
+¿Cuál es la cantidad mensual de su préstamo a pagar? 
+> """))
+    if MontoPrestamo >= 500000 and CantidadMensual < 2100:
+        while CantidadMensual < 2100:
+            CantidadMensual = int(input(""""
+¡Lo siento! la cantidad a pagar mensual es muy baja, por lo que excede el límite de años(meses) establecidos por la empresa. 
+Por favor ingrese una cantidad por encima de los 2,250 pesos.
         
-#TODO RECORDAR BUSCAR LA FORMA DE HACER QUE EL BUCLE DE MAS DE UNA VUELTA SI NO CUMPLE LA CONDICION, PARA QUE SE MANIFIESTE REALMENTE EL USO DE WHILE
+¿Cuál es la cantidad mensual de su préstamo a pagar? 
+> """))
+
+    if MontoPrestamo >= 100000 and CantidadMensual < 425:
+        while CantidadMensual < 425:
+            CantidadMensual = int(input(""""
+¡Lo siento! la cantidad a pagar mensual es muy baja, por lo que excede el límite de años(meses) establecidos por la empresa. 
+Por favor ingrese una cantidad por encima de los 450 pesos.
         
-
-
-
+¿Cuál es la cantidad mensual de su préstamo a pagar? 
+> """))
+    else:
+        print("\nCon los datos proporcionados, estará completando su préstamo en " ,round(mesesApagar, 2), " meses o \n", round(AñosApagar, 2), " años\n")
+        break
+    
+#TODO RECUERDA AGREGAR LA DOCUMENTACION.
+    
+#Agradecimiento por usar el programa.
+print("""
+*----------------------------------------------------------------------------*
+| ¡Muchas gracias por utilizar mi programa! / By: Elmer Saint-Hilare 21-1354 |
+*----------------------------------------------------------------------------*
+""")#Decorando el agradecimiento.
+#FIN
