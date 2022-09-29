@@ -11,6 +11,15 @@ print("""
 *---------------------------------------*
 """)
 
+modo = int(input("""
+*--------------------------------------------------------------------------------*
+|                        ¿Qué modo desea seleccionar?                            |
+|--------------------------------------------------------------------------------|
+|1- Nuevo / Este tiene un límite de 10 años para pagar el préstamo sin impuestos.|
+|2- Antiguo / Este no tiene límite de años pero paga impuestos.                  |
+*--------------------------------------------------------------------------------*
+> """)) #TODO CAMBIAR OPCION 1.
+
 MontoPrestamo = int(input("""
 ¿Cuál es el monto de su préstamo? 
 > """))
@@ -29,37 +38,42 @@ mesesApagar = MontoPrestamo / CantidadMensual
 AñosApagar = mesesApagar / 12
 operacion = mesesApagar * CantidadMensual
 
-while operacion == MontoPrestamo:
-    if MontoPrestamo >= 1000000 and CantidadMensual < 83333.33:
-        while CantidadMensual < 83333.33:
-            CantidadMensual = int(input(""""
-¡Lo siento! la cantidad a pagar mensual es muy baja, por lo que excede el límite de años(meses) establecidos por la empresa. 
-Por favor ingrese una cantidad por encima de los 83,500 pesos.
-        
-¿Cuál es la cantidad mensual de su préstamo a pagar? 
-> """))
-    if MontoPrestamo >= 500000 and CantidadMensual < 2100:
-        while CantidadMensual < 2100:
-            CantidadMensual = int(input(""""
-¡Lo siento! la cantidad a pagar mensual es muy baja, por lo que excede el límite de años(meses) establecidos por la empresa. 
-Por favor ingrese una cantidad por encima de los 2,250 pesos.
-        
-¿Cuál es la cantidad mensual de su préstamo a pagar? 
-> """))
+# MODO ANTIGUO VARIABLES
+impuestoUnMillonOMas = 1000 * AñosApagar
+impuestosQuinientosMil = 500 * AñosApagar
+impuestosCienMil = 100 * AñosApagar
+impuestosBajoCienMil = 10 * AñosApagar
 
-    if MontoPrestamo >= 100000 and CantidadMensual < 425:
-        while CantidadMensual < 425:
-            CantidadMensual = int(input(""""
-¡Lo siento! la cantidad a pagar mensual es muy baja, por lo que excede el límite de años(meses) establecidos por la empresa. 
-Por favor ingrese una cantidad por encima de los 450 pesos.
-        
-¿Cuál es la cantidad mensual de su préstamo a pagar? 
-> """))
-    else:
-        print("\nCon los datos proporcionados, estará completando su préstamo en " ,round(mesesApagar, 2), " meses o \n", round(AñosApagar, 2), " años\n")
+       
+#////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+if modo == 2:
+    while round(operacion) == MontoPrestamo:
+        if MontoPrestamo >= 1000000:
+            print("El impuesto a pagar por años es de: RD$1000.")
+                
+        elif MontoPrestamo >= 500000:
+            print("El impuesto a pagar por años es de: RD$500.")
+
+        elif MontoPrestamo >= 100000:
+            print("El impuesto a pagar por años es de: RD$100.")
+    
         break
     
-#TODO RECUERDA AGREGAR LA DOCUMENTACION.
+print("\nCon los datos proporcionados, estará completando su préstamo en " ,round(mesesApagar, 2), " meses o \n", round(AñosApagar, 2), " años\n")
+if MontoPrestamo >= 1000000:
+    print("Por lo que el impuesto serían: ", "RD$" + str(round(impuestoUnMillonOMas, 2)), "pesos.")
+    print("\nEl total serían: ", "RD$" + str(round(impuestoUnMillonOMas + MontoPrestamo, 2)), "pesos.","\n")
+elif MontoPrestamo >= 500000:
+    print("Por lo que el impuesto serían: ", "RD$" + str(round(impuestosQuinientosMil, 2)), "pesos.")
+    print("\nEl total serían: ", "RD$" + str(round(impuestosQuinientosMil + MontoPrestamo, 2)), "pesos.","\n")
+elif MontoPrestamo >= 100000:
+    print("Por lo que el impuesto serían: ", "RD$" + str(round(impuestosCienMil, 2)), "pesos.")
+    print("\nEl total serían: ", "RD$" + str(round(impuestosCienMil + MontoPrestamo, 2)), "pesos.","\n")
+elif MontoPrestamo < 100000:
+    print("Por lo que el impuesto serían: ", "RD$" + str(round(impuestosBajoCienMil, 2)), "pesos.")
+    print("\nEl total serían: ", "RD$" + str(round(impuestosBajoCienMil + MontoPrestamo, 2)), "pesos.","\n")
+    
+#TODO RECUERDA AGREGAR LA DOCUMENTACION Y USAR WHILE EN EL MODO 1 QUE FALTA TAMBIEN.
     
 #Agradecimiento por usar el programa.
 print("""
