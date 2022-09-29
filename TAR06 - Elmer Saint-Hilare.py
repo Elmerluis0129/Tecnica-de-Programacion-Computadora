@@ -12,13 +12,13 @@ print("""
 """)
 
 modo = int(input("""
-*--------------------------------------------------------------------------------*
-|                        ¿Qué modo desea seleccionar?                            |
-|--------------------------------------------------------------------------------|
-|1- Nuevo / Este tiene un límite de 10 años para pagar el préstamo sin impuestos.|
-|2- Antiguo / Este no tiene límite de años pero paga impuestos.                  |
-*--------------------------------------------------------------------------------*
-> """)) #TODO CAMBIAR OPCION 1.
+*----------------------------------------------------------------------------------*
+|                         ¿Qué sistema desea seleccionar?                          |
+|----------------------------------------------------------------------------------|
+|1- Nuevo / Este no pagas impuestos pero tiene límite de tiempo para pagar         |
+|2- Antiguo / Este pagas impuestos luego de exceder los 10 años a pagar el préstamo|
+*----------------------------------------------------------------------------------*
+> """))
 
 MontoPrestamo = int(input("""
 ¿Cuál es el monto de su préstamo? 
@@ -59,19 +59,19 @@ if modo == 2:
     
         break
     
-print("\nCon los datos proporcionados, estará completando su préstamo en " ,round(mesesApagar, 2), " meses o \n", round(AñosApagar, 2), " años\n")
-if MontoPrestamo >= 1000000:
-    print("Por lo que el impuesto serían: ", "RD$" + str(round(impuestoUnMillonOMas, 2)), "pesos.")
-    print("\nEl total serían: ", "RD$" + str(round(impuestoUnMillonOMas + MontoPrestamo, 2)), "pesos.","\n")
-elif MontoPrestamo >= 500000:
-    print("Por lo que el impuesto serían: ", "RD$" + str(round(impuestosQuinientosMil, 2)), "pesos.")
-    print("\nEl total serían: ", "RD$" + str(round(impuestosQuinientosMil + MontoPrestamo, 2)), "pesos.","\n")
-elif MontoPrestamo >= 100000:
-    print("Por lo que el impuesto serían: ", "RD$" + str(round(impuestosCienMil, 2)), "pesos.")
-    print("\nEl total serían: ", "RD$" + str(round(impuestosCienMil + MontoPrestamo, 2)), "pesos.","\n")
-elif MontoPrestamo < 100000:
-    print("Por lo que el impuesto serían: ", "RD$" + str(round(impuestosBajoCienMil, 2)), "pesos.")
-    print("\nEl total serían: ", "RD$" + str(round(impuestosBajoCienMil + MontoPrestamo, 2)), "pesos.","\n")
+    print("\nCon los datos proporcionados, estará completando su préstamo en " ,round(mesesApagar, 2), " meses o \n", round(AñosApagar, 2), " años\n")
+    if MontoPrestamo >= 1000000:
+        print("Por lo que el impuesto serían: ", "RD$" + str(round(impuestoUnMillonOMas, 2)), "pesos.")
+        print("\nEl total serían: ", "RD$" + str(round(impuestoUnMillonOMas + MontoPrestamo, 2)), "pesos.","\n")
+    elif MontoPrestamo >= 500000:
+        print("Por lo que el impuesto serían: ", "RD$" + str(round(impuestosQuinientosMil, 2)), "pesos.")
+        print("\nEl total serían: ", "RD$" + str(round(impuestosQuinientosMil + MontoPrestamo, 2)), "pesos.","\n")
+    elif MontoPrestamo >= 100000:
+        print("Por lo que el impuesto serían: ", "RD$" + str(round(impuestosCienMil, 2)), "pesos.")
+        print("\nEl total serían: ", "RD$" + str(round(impuestosCienMil + MontoPrestamo, 2)), "pesos.","\n")
+    elif MontoPrestamo < 100000:
+        print("Por lo que el impuesto serían: ", "RD$" + str(round(impuestosBajoCienMil, 2)), "pesos.")
+        print("\nEl total serían: ", "RD$" + str(round(impuestosBajoCienMil + MontoPrestamo, 2)), "pesos.","\n")
     
 #TODO RECUERDA AGREGAR LA DOCUMENTACION Y USAR WHILE EN EL MODO 1 QUE FALTA TAMBIEN.
     
