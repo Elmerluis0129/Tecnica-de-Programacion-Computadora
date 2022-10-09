@@ -66,7 +66,7 @@ elif TipoDeTicket == 5:
             ListaNumLot.append(int(input("Ingresar el cuarto número de lotería de su ticket. \n> ")))
         elif x == 5: #Aquí para la quinta iteración tendrá un valor de 5 la x, por lo que le pondrá el 2do mandato.
             ListaNumLot.append(int(input("Ingresar el quinto número de lotería de su ticket. \n> ")))
-        break #Esto sirve para cuanddo vaya por la 5ta iteración y se cumpla la condición el bucle for se rompa, terminando por completo con las iteraciones.
+            break #Esto sirve para cuanddo vaya por la 5ta iteración y se cumpla la condición el bucle for se rompa, terminando por completo con las iteraciones.
         x = x+1 #Este es la magia del bucle, aquí la variable x irá aumentando su valor de 1 en 1, por lo que es lo que ayuda a que cada condición se vaya cumpliendo según aumente el valor de x.
     
 else:

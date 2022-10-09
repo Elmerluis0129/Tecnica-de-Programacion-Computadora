@@ -19,7 +19,10 @@ print("""
 
 nombreUsuario = 0
 ListaCompra = []
-ListaITBS = ["Manzana", "Pera", "Hueos"]
+ListaValor = []
+ListaCantidadProducto = []
+ListaITBS = ["Manzana", "Pera", "Huevos"]
+ListaCalcularITBS = []
 cantidadProductosComprados = int(input("Ingrese la cantidad de productos comprados: "))
 x = 0
 
@@ -33,62 +36,53 @@ while cantidadProductosComprados != x:
     nombreProducto = input("Nombre Producto: ") #Aqui pido el nombre del producto
     
     if cantidadProductosComprados != x: 
-        cantidadProducto = str(input("Cantidad Producto: ")) #Aqui pide la cantidad del producto
-        precioProducto = int(input("Precio Producto: ")) #Aqui pide el precio del producto
-    x = x + 1 #Aqui mi contador
-    ListaCompra.append(nombreProducto) #Aqui para agregar el producto a la lista
-    #Aqui para saber cuales llevan itbis
-    if nombreProducto == ListaITBS[0] or nombreProducto == ListaITBS[1] or nombreProducto == ListaITBS[2]:
-        precioTotal = float(cantidadProducto) * float(precioProducto)
-        CalcularITBI = ((float(precioTotal) / 1.18) * 0.18) 
-        for e in ListaCompra:
-            print("""
-*------------------------------*
-|FACTURA DE CONSUMO ELECTRONICA| 
-*------------------------------*""")
-
-            #Encabezado de la factura
-            print("""
-*------------------------------------------------------------------------*
-|      Descripcion       | Cantidad Producto |   ITBIS   |       VALOR   | 
-*------------------------------------------------------------------------*
-"""
-"Usuario:", nombreUsuario)
-            if len(e) > 4:
-                print(e, "\t\t\t", float(cantidadProducto), "\t\t",round(CalcularITBI, 2), "\t\t",round(precioProducto, 2))
-            else:
-                print(e, "\t\t\t\t", float(cantidadProducto), "\t\t",round(CalcularITBI, 2), "\t\t",round(precioProducto, 2))
+        cantidadProducto = str(input("Cantidad Producto: ")) # Aqui pide la cantidad del producto
+        ListaCantidadProducto.append(cantidadProducto) # Aqui agrega el cantidad del producto
+        precioProducto = int(input("Precio Producto: ")) # Aqui pide el precio del producto
+        ListaValor.append(precioProducto) # Aqui agrega el precio del producto.
+    if nombreProducto in ListaITBS:
+        calcularITBS = (precioProducto / 1.18) * 0.18
+        ListaCalcularITBS.append(calcularITBS)
     else:
-        CalcularITBI = 0.00
-        print("""
+        calcularITBS = 0.00
+        
+        
+    x = x + 1 # Aqui mi contador.
+    ListaCompra.append(nombreProducto)# Aqui para agregar el producto a la lista
+    # Aqui para saber cuales llevan itbis
+    
+precioCompraProducto = int(cantidadProducto) * int(precioProducto)
+# CalcularPrecioTodo = precioCompraProducto + CalcularITBI
+
+
+
+    
+    
+print("""
 *------------------------------*
 |FACTURA DE CONSUMO ELECTRONICA| 
-*------------------------------*""")
+*------------------------------*\n\n"""
+"Usuario:", nombreUsuario)
 
         #Encabezado de la factura
-        print("""
+print("""
 *------------------------------------------------------------------------*
 |      Descripcion       | Cantidad Producto |   ITBIS   |       VALOR   | 
 *------------------------------------------------------------------------*
-"""
-"Usuario:", nombreUsuario)
-        #Aqui lo uso para que me imprima la factura.
-        for e in ListaCompra:
-            if len(e) > 4:
-                print(e, "\t\t\t", float(cantidadProducto), "\t\t",round(CalcularITBI, 2), "\t\t",round(precioProducto, 2))
-            else:
-                print(e, "\t\t\t\t", float(cantidadProducto), "\t\t",round(CalcularITBI, 2), "\t\t",round(precioProducto, 2))
+""")
+a = 0
+for e in ListaCompra:
+    n = ListaCantidadProducto[a]
+    i = ListaCalcularITBS[a]
+    v = ListaValor[a]
+    if len(ListaCompra[a]) >= 5 and len(ListaCantidadProducto[a]) <= 7:
+        print("\t",e, "\t\t", n, "\t\t", round(i, 2), "\t\t", v)
+    elif len(ListaCompra[a]) >= 2 and len(ListaCantidadProducto[a]) <= 4:
+        print("\t",e, "\t\t\t", n, "\t\t", round(i, 2), "\t\t", float(v))
+    a = a + 1
     
+#TODO TRATAR DE RESOLVER LO DEL ITBIS PARA QUE AGREGUE AL QUE NO TIENE COMO 0.00
     
-
-precioTotal = int(cantidadProducto) * int(precioProducto)
-
-#Nombre de la factura
-
-
-        
-CalcularPrecioTodo = precioTotal + CalcularITBI
-print("Precio Total: ", round(CalcularPrecioTodo, 2))
 
 #Agradecimiento por usar el programa.
 print("""
