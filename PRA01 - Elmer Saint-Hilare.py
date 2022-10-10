@@ -5,7 +5,7 @@ print("""
 *--------------------*  
 |Tabla de multiplicar|
 *--------------------*
-      \n""")#Decoración.
+\n""")#Decoración.
 
 
 numeroUsuario = int(input("Escribe un número: ")) #Número que le pide al usuario para que imprima la tabla del mismo.
