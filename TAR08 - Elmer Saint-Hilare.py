@@ -60,4 +60,4 @@ if j != (Final - 1):
 else:
     print("no cumple")
 
-    
+#TODO RECORDAR PONER QUE IMPRIMA LAS TABLAS DEL MEDIO DEL INICIO Y EL FINAL
