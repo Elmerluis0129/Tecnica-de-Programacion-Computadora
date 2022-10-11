@@ -1,5 +1,8 @@
-#Escribir un programa que imprima la tabla de multiplicar de un numero ingresado por teclado.
-#Elmer Saint-Hilare 21-1354
+"""
+Escribir un programa que imprima la tabla de multiplicar de un numero ingresado por teclado.
+Elmer Saint-Hilare 21-1354
+"""
+
 
 print("""
 *--------------------*  

@@ -1,13 +1,15 @@
-# Realice un programa que replique la impresión de una factura.
-# Indicaciones:
-# Omitir las categorías de productos.
-# Capturar nombre del cliente y mostrarlo al inicio de la factura.
-# A diferencia de como se muestra en la imagen, INCLUIR una columna para la CANTIDAD del producto.
-# Hay productos que no llevan ITBIS, por lo que el programa debe de controlar esto, de modo que en la columna de ITBIS se tenga 0.00 si el producto no lleva, o el valor correspondiente si lleva.
-# Fórmula para el cálculo del ITBIS: (precio / 1.18) * 0.18.
-# Los valores deben presentarse con 2 posiciones decimales (tal como en la imagen).
-# Se debe evitar capturar data basura.
-# Elmer Saint-Hilare 21-1354.
+"""
+Realice un programa que replique la impresión de una factura.
+Indicaciones:
+Omitir las categorías de productos.
+Capturar nombre del cliente y mostrarlo al inicio de la factura.
+A diferencia de como se muestra en la imagen, INCLUIR una columna para la CANTIDAD del producto.
+Hay productos que no llevan ITBIS, por lo que el programa debe de controlar esto, de modo que en la columna de ITBIS se tenga 0.00 si el producto no lleva, o el valor correspondiente si lleva.
+Fórmula para el cálculo del ITBIS: (precio / 1.18) * 0.18.
+Los valores deben presentarse con 2 posiciones decimales (tal como en la imagen).
+Se debe evitar capturar data basura.
+Elmer Saint-Hilare 21-1354.
+"""
 
 print("""
 *---------------------*

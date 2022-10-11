@@ -1,7 +1,9 @@
-""" Escriba un programa que calcule el precio a pagar por el suministro de energía eléctrica. Se debe preguntar la cantidad de kwh 
+""" 
+Escriba un programa que calcule el precio a pagar por el suministro de energía eléctrica. Se debe preguntar la cantidad de kwh 
 consumidos y el tipo de instalación: R para residencias, I para industrias y C para comercios. Calcule el precio a pagar de acuerdo 
-con la siguiente tabla. (Tabla en la plataforma UNPHU)"""
-# Elmer Saint-Hilare 21-1354
+con la siguiente tabla. (Tabla en la plataforma UNPHU)
+Elmer Saint-Hilare 21-1354
+"""
 
 print("""\n
 *------------------------------------------------------*

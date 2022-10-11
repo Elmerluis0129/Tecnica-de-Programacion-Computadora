@@ -1,5 +1,7 @@
-#Escriba un programa que pregunte al usuario los números de su ticket de lotería, los almacene en una lista y los muestre por pantalla ordenados de menor a mayor. 
-#Elmer Saint-Hilare 21-1354
+"""
+Escriba un programa que pregunte al usuario los números de su ticket de lotería, los almacene en una lista y los muestre por pantalla ordenados de menor a mayor. 
+Elmer Saint-Hilare 21-1354
+"""
 
 #Nombre del programa.
 print("""

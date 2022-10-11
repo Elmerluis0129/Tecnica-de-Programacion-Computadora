@@ -1,5 +1,8 @@
-#Escriba un programa que permita crear una lista de palabras y que, a continuación, pida una palabra y diga cuántas veces aparece esa palabra en la lista.
-#Elmer Saint-Hilare 21/1354
+"""
+Escriba un programa que permita crear una lista de palabras y que, a continuación, pida una palabra y diga cuántas veces aparece esa palabra en la lista.
+Elmer Saint-Hilare 21/1354
+"""
+
 
 #Declaro mis variables a utilizar.
 Lista = []#Aquí se almacenan todos los elementos que el usuario más adelante va a proporcionar.

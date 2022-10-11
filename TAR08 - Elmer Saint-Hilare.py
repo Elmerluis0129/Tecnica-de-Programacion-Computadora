@@ -1,8 +1,10 @@
-# Escriba un programa que, mediante una función, retorne las tablas de multiplicar del n al m.
-# Ejemplo:
-# Ingrese el número por el que comenzarán a mostrarse las tablas: 1.
-# Ingrese el número por el que terminarán a mostrarse las tablas: 3.
-# Elmer Saint-Hilare 21-1354.
+"""
+Escriba un programa que, mediante una función, retorne las tablas de multiplicar del n al m.
+Ejemplo:
+Ingrese el número por el que comenzarán a mostrarse las tablas: 1.
+Ingrese el número por el que terminarán a mostrarse las tablas: 3.
+Elmer Saint-Hilare 21-1354.
+"""
 
 #========================== Nombre programa =========================# 
 """

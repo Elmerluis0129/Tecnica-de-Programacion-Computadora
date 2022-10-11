@@ -1,3 +1,8 @@
+"""
+Escribir un programa que mediante el uso de variables y operadores aritméticos, almacene la suma, resta, multiplicación y división de 2 números. Luego, mostrar los resultados.
+Elmer Saint-Hilare 21-1354
+"""
+
 #Nombre del programa.
 print("""
 *--------------------*

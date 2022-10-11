@@ -1,9 +1,11 @@
-# Realizar un programa el cual determine el tiempo en meses para pagar un préstamo.\
-# Indicaciones: 
-# El monto del préstamo debe ser solicitado.
-# Se debe solicitar la cantidad mensual que se desea pagar.
-# Mediante el uso de while, determinar los meses (total) en los que se completará el pago del préstamo.
-# Elmer Saint-Hilare 21-1354
+"""
+Realizar un programa el cual determine el tiempo en meses para pagar un préstamo.\
+Indicaciones: 
+El monto del préstamo debe ser solicitado.
+Se debe solicitar la cantidad mensual que se desea pagar.
+Mediante el uso de while, determinar los meses (total) en los que se completará el pago del préstamo.
+Elmer Saint-Hilare 21-1354
+"""
 
 print("""
 *---------------------------------------*
