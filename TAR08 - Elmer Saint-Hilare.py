@@ -36,6 +36,7 @@ Aquí consta de 3 funciones:
 -La segunda (Desarrollo) se encarga de realizar las tablas que quedan de por medio de la tabla inicio y fin.
 -La tercera (Final) se encarga de realizar la tabla del número que le indique el usuario como fin.
 
+Aquí también le agrego lo que son los marcadores de inicio de la tabla y final de la tabla.
 """
 
 #----- Función Inicio -----#
@@ -48,7 +49,12 @@ def multiplicar (x):
     for i in range(0, 11):
         operación = x * i
         print(Inicio, "*", i ,"=", operación)
-    print("\n")
+    
+    print("""
+*------------------*
+|Fin tabla del:""", Inicio, """ | 
+*------------------*
+""")
 #----- Fin Función Inicio -----#
 
 #----- Función Desarrollo -----#         
@@ -61,7 +67,12 @@ def multiplicar3 (j):
     for a in range(0, 11):
         operación2 = a * j
         print((Inicio+n), "*", a ,"=", operación2)
-    print("\n")
+        
+    print("""
+*------------------*
+|Fin tabla del:""", Inicio+n, """ | 
+*------------------*
+""")
 #----- Fin Función Desarrollo -----# 
 
 #----- Función Final -----# 
@@ -74,6 +85,12 @@ def multiplicar2 (y):
     for a in range(0,11):
         operación1 = y * a
         print(Final, "*", a ,"=", operación1)
+        
+    print("""
+*------------------*
+|Fin tabla del:""", Final, """ | 
+*------------------*
+""")
 #----- Fin Función Final -----# 
 
 #========================== Fin Funciones =========================#
