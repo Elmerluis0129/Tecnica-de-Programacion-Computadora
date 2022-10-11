@@ -21,10 +21,15 @@ print("|----------------------------------------------|")
 print("\n La raiz de esa suma es: ", math.sqrt(operación))#Aquí le muestra ya el resultado de el problema resuelto y utilizamos math.sqrt para sacar la raiz.
 print("|----------------------------------------------|")
 
-#Agradecimiento por usar el programa.
+#========================== Agradecimiento por usar el programa =========================#  
+
+"""
+Aquí imprimo por pantalla el agradecimiento y por quién fue creado, en este caso por mi.
+"""
+
 print("""
 *----------------------------------------------------------------------------*
 | ¡Muchas gracias por utilizar mi programa! / By: Elmer Saint-Hilare 21-1354 |
 *----------------------------------------------------------------------------*
-""")#Decorando el agradecimiento.
-#FIN
+""")
+#========================== Fin Agradecimiento por usar el programa =========================#

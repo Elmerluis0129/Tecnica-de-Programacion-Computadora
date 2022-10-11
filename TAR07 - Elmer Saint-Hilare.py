@@ -51,10 +51,15 @@ if len(listaCaracteres) == maxCaracterLista:
     else: # Aquí la condición para poner un sólo mandato cuando sea plural. Oséa que tenga más de un caracter.
         print("Con el total de: ", totalCaracteres, "caracteres.\n") 
 
-#Agradecimiento por usar el programa.
+#========================== Agradecimiento por usar el programa =========================#  
+
+"""
+Aquí imprimo por pantalla el agradecimiento y por quién fue creado, en este caso por mi.
+"""
+
 print("""
 *----------------------------------------------------------------------------*
 | ¡Muchas gracias por utilizar mi programa! / By: Elmer Saint-Hilare 21-1354 |
 *----------------------------------------------------------------------------*
-""")#Decorando el agradecimiento.
-#FIN.
+""")
+#========================== Fin Agradecimiento por usar el programa =========================#

@@ -48,10 +48,15 @@ elif TipoInstalacion == "I":# Aqui para saber si su instalacion es tipo I.
 else:
     print("\nLo siento, lo que haz introducido no es la letra que corresponde a una de las opciones de tipo de instalacion. ") #En caso de que el usuario no marque correctamente la letra de su tipo de instalacion.
         
-# Agradecimiento por usar el programa.
+#========================== Agradecimiento por usar el programa =========================#  
+
+"""
+Aquí imprimo por pantalla el agradecimiento y por quién fue creado, en este caso por mi.
+"""
+
 print("""
 *----------------------------------------------------------------------------*
 | ¡Muchas gracias por utilizar mi programa! / By: Elmer Saint-Hilare 21-1354 |
 *----------------------------------------------------------------------------*
-""")# Decorando el agradecimiento.
-# FIN
+""")
+#========================== Fin Agradecimiento por usar el programa =========================#

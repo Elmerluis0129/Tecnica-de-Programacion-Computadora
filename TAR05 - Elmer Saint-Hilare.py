@@ -77,10 +77,15 @@ print("La lista creada con los números de tu ticket de loteria es: ", ListaNumL
 ListaNumLot.sort()#Función para ordenar la lista.
 print("El orden de menor a mayor en la lista creada con tus números de tickets es: ", ListaNumLot, ) #Lista ordenada.
 
-#Agradecimiento por usar el programa.
+#========================== Agradecimiento por usar el programa =========================#  
+
+"""
+Aquí imprimo por pantalla el agradecimiento y por quién fue creado, en este caso por mi.
+"""
+
 print("""
 *----------------------------------------------------------------------------*
 | ¡Muchas gracias por utilizar mi programa! / By: Elmer Saint-Hilare 21-1354 |
 *----------------------------------------------------------------------------*
-""")#Decorando el agradecimiento.
-#FIN
+""")
+#========================== Fin Agradecimiento por usar el programa =========================#

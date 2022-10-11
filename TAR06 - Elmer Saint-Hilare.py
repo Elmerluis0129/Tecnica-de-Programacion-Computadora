@@ -159,10 +159,15 @@ while sistema == 2: # While sistema 2.
         print("\nEl total serían: ", "RD$" + str(round(impuestosBajoCienMil + MontoPrestamo, 2)), "pesos.","\n") # Total a pagar.
     break # Acabar while.
     
-#Agradecimiento por usar el programa.
+#========================== Agradecimiento por usar el programa =========================#  
+
+"""
+Aquí imprimo por pantalla el agradecimiento y por quién fue creado, en este caso por mi.
+"""
+
 print("""
 *----------------------------------------------------------------------------*
 | ¡Muchas gracias por utilizar mi programa! / By: Elmer Saint-Hilare 21-1354 |
 *----------------------------------------------------------------------------*
-""")#Decorando el agradecimiento.
-#FIN
+""")
+#========================== Fin Agradecimiento por usar el programa =========================#

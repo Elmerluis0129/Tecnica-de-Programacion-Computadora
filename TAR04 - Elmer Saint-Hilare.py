@@ -39,10 +39,15 @@ elif VecesPalabraAparece == 1:
 elif not buscarPalabra in Lista:
     print("\nLa palabra: ","'"+str(buscarPalabra)+"'", "no aparece en la lista que haz creado anteriormente.")  #Aquí si no aparece la palabra se lo especifica.
 
-#Agradecimiento por usar el programa.
+#========================== Agradecimiento por usar el programa =========================#  
+
+"""
+Aquí imprimo por pantalla el agradecimiento y por quién fue creado, en este caso por mi.
+"""
+
 print("""
 *----------------------------------------------------------------------------*
 | ¡Muchas gracias por utilizar mi programa! / By: Elmer Saint-Hilare 21-1354 |
 *----------------------------------------------------------------------------*
-""")#Decorando el agradecimiento.
-#FIN
+""")
+#========================== Fin Agradecimiento por usar el programa =========================#
