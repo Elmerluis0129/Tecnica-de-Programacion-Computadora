@@ -10,7 +10,6 @@ Elmer Saint-Hilare 21-1354
 """
 Aquí es para imprimir el nombre del programa.
 """
-from itertools import count
 
 
 print("""
@@ -42,23 +41,13 @@ def primer_Caracter_no_se_repite(pcnsr):
     else:
         while True: 
             cadenaCaracteresLongitud = len(pcnsr) 
-            print(lista)
             primerCaracterRepetido = pcnsr[0]
             pcnsr = pcnsr.replace(pcnsr[0], "")
-            
-            #print(s)
             cadenaCaracteresLongitud2 = len(pcnsr)
-            #print(cadenaCaracteresLongitud2) 
-            
+
             if cadenaCaracteresLongitud2 == cadenaCaracteresLongitud-1: 
                 print ("\nEl primer carácter que no se repite es: ", primerCaracterRepetido, "\n")
                 break
-            elif cadenaCaracteresLongitud != cadenaCaracteresLongitud-1:
-                serepite = lista.count(pcnsr)
-                print("\nSe repite: ",primerCaracterRepetido, serepite, "veces.")
-            
-                
-            
 #========================== Fin Función ==========================#
 
 #========================== Llamada Función ==========================# 
@@ -81,5 +70,3 @@ print("""
 *----------------------------------------------------------------------------*
 """)
 #========================== Fin Agradecimiento por usar el programa =========================#
-
-#TODO RECORDAR HACER LO DE CUANTAS VECES APARECE LA LETRA
