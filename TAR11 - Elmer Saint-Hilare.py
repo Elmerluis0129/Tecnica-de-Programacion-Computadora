@@ -25,50 +25,67 @@ Aquí también agrego los productos a las listas correspondientes.
 El while es para que me lo ejecute las veces n necesarias.
 El for es para ir imprimiendo los productos de la listas.
 En la ultima funcion es donde identifico si hay o no productos comunes entre listas.
+
+En los acumuladores es para ir controlando el numero de producto, producto 1, 2, 3 etc y asi controlar todo con los numeros correspondientes.
+Los contadores son los que me van aumentando de 1 en 1 los acumuladores.
 """
 
 # ------------ Función 1 ------------ #
 def ListaUno(x):
+    # Acumuladores
+    a = 1
+    n = 1
     j = 0
     m = 0
     print("\n================== Lista Uno ==================\n")
     while x != j:
-        producto = input("""
-*--------------------*
-|Ingrese el producto:| 
-*--------------------*
-> """)
+        print("""
+*-----------------------*
+|Ingrese el producto """+str(n)+""":|
+*-----------------------*""")
+        producto = input("> ")
         Lista1.append(producto)
+        # Contadores
         j = j + 1
+        n = n + 1
         
     print("\nCantidad de producto lista 1: ", len(Lista1))
     
     for e in Lista1:
-        print("\nProducto: ", Lista1[m])
+        print("\nProducto",str(a)+":", Lista1[m])
+        # Contadores
         m = m + 1
+        a = a + 1
     
     print("\nLista 1: ", Lista1)
 # ------------ Fin Función 1 ------------ #
           
 # ------------ Función 2 ------------ #
 def ListaDos(n):
+    # Acumuladores
+    a = 1 
+    p = 1
     j = 0
     m = 0
     print("\n================== Lista Dos ==================\n")
     while n != j:
-        producto = input("""
-*--------------------*
-|Ingrese el producto:| 
-*--------------------*
-> """)
+        print("""
+*-----------------------*
+|Ingrese el producto """+str(p)+""":|
+*-----------------------*""")
+        producto = input("> ")
         Lista2.append(producto)
+        # Contadores
         j = j + 1
+        p = p + 1
         
     print("\nCantidad de producto lista 2: ", len(Lista2))
     
     for e in Lista2:
-        print("\nProducto: ", Lista2[m])
+        print("\nProducto",str(a)+":", Lista2[m])
+        # Contadores
         m = m + 1
+        a = a + 1
 
     print("\nLista 2: ", Lista2)
 
@@ -115,4 +132,3 @@ print("""
 *----------------------------------------------------------------------------*
 """)
 #========================== Fin Agradecimiento por usar el programa =========================#
-#TODO Recuerda resolver que te diga los productos iguales y retornar que no hay si no los hay.
