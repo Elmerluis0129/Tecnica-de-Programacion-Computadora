@@ -24,22 +24,26 @@ Aquí también agrego los productos a las listas correspondientes.
 
 El while es para que me lo ejecute las veces n necesarias.
 El for es para ir imprimiendo los productos de la listas.
+En la ultima funcion es donde identifico si hay o no productos comunes entre listas.
 """
 
 # ------------ Función 1 ------------ #
 def ListaUno(x):
     j = 0
     m = 0
-    print("\n================== Lista Dos ==================\n")
+    print("\n================== Lista Uno ==================\n")
     while x != j:
-        producto = input("Ingrese el producto: \n> ")
+        producto = input("""
+*--------------------*
+|Ingrese el producto:| 
+*--------------------*
+> """)
         Lista1.append(producto)
         j = j + 1
         
     print("\nCantidad de producto lista 1: ", len(Lista1))
     
     for e in Lista1:
-        set(Lista1)
         print("\nProducto: ", Lista1[m])
         m = m + 1
     
@@ -52,14 +56,17 @@ def ListaDos(n):
     m = 0
     print("\n================== Lista Dos ==================\n")
     while n != j:
-        producto = input("Ingrese el producto: \n> ")
+        producto = input("""
+*--------------------*
+|Ingrese el producto:| 
+*--------------------*
+> """)
         Lista2.append(producto)
         j = j + 1
         
     print("\nCantidad de producto lista 2: ", len(Lista2))
     
     for e in Lista2:
-
         print("\nProducto: ", Lista2[m])
         m = m + 1
 
@@ -69,19 +76,15 @@ def ListaDos(n):
 
 # ------------ Función 3 ------------ #    
 def ProductoComunes(l):
-    print("\n========= Producto comunes en ambas listas =========")
-    print("\nProducto comunes: ", l)
+    
+    if len(l) >= 1:
+        print("\n========= Producto comunes en ambas listas =========")
+        print("\nProducto comunes: ", l)
+    else:
+        print("\nNo hay productos comunes en las listas.")
 # ------------ Fin Función 3 ------------ #
     
 # ==================== Fin Funciones ==================== #
-
-# =========== Conversión de lista a sets =========== #
-"""
-Aquí Convierto mis listas a set para luego encontrar los prodcutos comunes entre ellas con el comando de los conjuntos .intersections
-"""
-convirtiendo1 = set(Lista1)
-convirtiendo2 = set(Lista2)
-# =========== Fin Conversión de lista a sets =========== #
 
 # ==================== Llamada Funciones ==================== #
 """
@@ -90,7 +93,14 @@ Aquí llamo las funciones para que lleven acabo dichos códigos que tienen dentr
 
 ListaUno(int(input("\nIngrese la cantidad de producto lista 1: \n> ")))
 ListaDos(int(input("\nIngrese la cantidad de producto lista 2: \n> ")))
-ProductoComunes((convirtiendo1.intersection(convirtiendo2)))
+# =========== Conversión de lista a sets =========== #
+"""
+Aquí Convierto mis listas a set para luego encontrar los prodcutos comunes entre ellas con el comando de los conjuntos .intersections
+"""
+convirtiendo1 = set(Lista1)
+convirtiendo2 = set(Lista2)
+# =========== Fin Conversión de lista a sets =========== #
+ProductoComunes(convirtiendo1.intersection(convirtiendo2))
 # ==================== Fin Llamada Funciones ==================== #
 
 #========================== Agradecimiento por usar el programa =========================#  
