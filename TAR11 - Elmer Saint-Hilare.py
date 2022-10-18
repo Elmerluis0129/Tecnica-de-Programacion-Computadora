@@ -107,7 +107,6 @@ def ProductoComunes(l):
 """
 Aquí llamo las funciones para que lleven acabo dichos códigos que tienen dentro.
 """
-
 ListaUno(int(input("\nIngrese la cantidad de producto lista 1: \n> ")))
 ListaDos(int(input("\nIngrese la cantidad de producto lista 2: \n> ")))
 # =========== Conversión de lista a sets =========== #
