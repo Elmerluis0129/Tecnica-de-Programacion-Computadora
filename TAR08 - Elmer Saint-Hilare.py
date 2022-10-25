@@ -110,8 +110,10 @@ multiplicar(Inicio)
 while True:
     multiplicar3(Inicio+n)
     
-    if (Final - 1) == Inicio +n:
+    if (Final - 1) == Inicio + n:
         multiplicar2(Final)
+        break
+    elif (Final) == Inicio + n:
         break
     n = n + 1
     continue

@@ -8,6 +8,24 @@ Elmer Saint-Hilare 21-1354
 
 """
 
+print("""
+*-----------------------*
+|   Menú de opciones    |
+*-----------------------*
+0.- Primera posición / Este busca la primera letra que no se repite. Ignorando las demás.
+1.- Segunda posición / Este busca la segunda letra que no se repite. Ignorando la primera.
+2.- Tercera posición / Este busca la tercera letra que no se repite. Ignorando la segunda.
+
+Puedes elegir el número que quieras de posición a evaluar, pero recuerda que la cadena de caracteres tiene que tener la misma cantidad de caracteres que de posición.
+""")
+
+
+
+
+
+
+
+
 #========================== Agradecimiento por usar el programa =========================#  
 
 """

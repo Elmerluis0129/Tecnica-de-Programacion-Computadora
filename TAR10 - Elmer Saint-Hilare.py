@@ -32,10 +32,8 @@ def FizzBuzz(j):
             else:
                 print(f)
         elif n %5 == 0:
-            if n %3 == 0:
-                print(fb)
-            else:
                 print(b)
+        
                 
 """
 En la funcion Suma_Digitos le tengo que me haga la suma de los digitos del numero entero.
@@ -46,6 +44,7 @@ tengo que cuando termine todo me llame a la funcion fizzbuzz
     
 
 def Suma_Digitos(x):
+    global operacion, digito1, digito2
     digito1 = x[0]
     digito2 = x[1]
     operacion = int(digito1) + int(digito2)
@@ -57,16 +56,12 @@ def Suma_Digitos(x):
 Aqui declaro mis variables globales, que uso en las funciones
 Aqui tambien hago el llamado de la funcion suma_digitos. 
 """
-while True:
-    x = str(input("Número entero: \n> "))
-    digito1 = x[0]
-    digito2 = x[1]
-    operacion = int(digito1) + int(digito2)
-    f = "Fizz"
-    b = "Buzz"
-    fb = "FizzBuzz"
-    Suma_Digitos(x)
-    break
+x = str(input("Número entero: \n> "))
+f = "Fizz"
+b = "Buzz"
+fb = "FizzBuzz"
+Suma_Digitos(x)
+
 
 #========================== Agradecimiento por usar el programa =========================#  
 
