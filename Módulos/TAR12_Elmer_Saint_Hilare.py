@@ -127,7 +127,7 @@ Aquí imprimo por pantalla el agradecimiento y por quién fue creado, en este ca
 
 print("""
 *----------------------------------------------------------------------------*
-| ¡Muchas gracias por utilizar mi programa! / By: Elmer Saint-Hilare 21-1354 |
+| ¡Programa 12 Finalizado exitosamente! / By: Elmer Saint-Hilare 21-1354 |
 *----------------------------------------------------------------------------*
 """)
 #========================== Fin Agradecimiento por usar el programa =========================#

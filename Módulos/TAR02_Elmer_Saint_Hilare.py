@@ -7,7 +7,7 @@ import math #Aquí importo math para poder hacer uso de la raiz cuadrada.
 
 print("""
 *--------------------------------------------------------*
-|Cálculo de la raíz cuadrada de la suma de los cuadrados1|
+|Cálculo de la raíz cuadrada de la suma de los cuadrados |
 *--------------------------------------------------------*   
 """)
 
@@ -38,7 +38,7 @@ Aquí imprimo por pantalla el agradecimiento y por quién fue creado, en este ca
 
 print("""
 *----------------------------------------------------------------------------*
-| ¡Muchas gracias por utilizar mi programa! / By: Elmer Saint-Hilare 21-1354 |
+| ¡Programa 2 Finalizado exitosamente! / By: Elmer Saint-Hilare 21-1354 |
 *----------------------------------------------------------------------------*
 """)
 #========================== Fin Agradecimiento por usar el programa =========================#
