@@ -18,6 +18,14 @@ Si se coloca un destino que no se encuentra en los almacenados, el programa debe
 
 Elmer Saint-Hilare 21-1354.
 """
+
+#Nombre del programa.
+print("""
+*-----------------------------------------------*
+|        Buscar viajero según su destino        |
+*-----------------------------------------------*
+""")#Decorando el nombre de la aplicación.
+
 # ============== Lista con los viajeros =============== #
 """
 Aquí almaceno la lista de tuplas con la informacion de los usuarios.

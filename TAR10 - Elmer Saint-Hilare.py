@@ -17,6 +17,13 @@ En la funcion fizzbuzz le tengo que me haga el juego de fizz buzz, donde tengo u
 
 Tengo condicionales para que imprima fizz cuando es divisor de 3, buzz cuando es de 5, y fizzbuzz cuando es de ambos.
 """
+#Nombre del programa.
+print("""
+*-----------------------------------------------*
+|           Suma dígitos y FIZZBUZZ             |
+*-----------------------------------------------*
+""")#Decorando el nombre de la aplicación.
+
 def FizzBuzz(j):
     
     print("""

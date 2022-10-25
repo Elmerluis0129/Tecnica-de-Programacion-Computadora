@@ -5,6 +5,12 @@ Elmer Luis Saint-Hilare Rojo / 21-1354.
 
 import math #Aquí importo math para poder hacer uso de la raiz cuadrada.
 
+print("""
+*--------------------------------------------------------*
+|Cálculo de la raíz cuadrada de la suma de los cuadrados1|
+*--------------------------------------------------------*   
+""")
+
 print("|------------------------------------|")
 numero1 = int(input(" Ingrese el primer número: "))#Aquí le pido al usuario el primer número.
 print("|------------------------------------|")
@@ -21,7 +27,7 @@ print("\n El resultado de: ", str(numero2) + "^2 =", numero2cuadrado)#Aquí le m
 print("|----------------------------------------------|")
 print("\n La suma de los números es: ", numero1**2, "+", numero2**2, "=", operación) #Aquí le muestra la suma de los números cuadrados.
 print("|----------------------------------------------|")
-print("\n La raiz de esa suma es: ", math.sqrt(operación))#Aquí le muestra ya el resultado de el problema resuelto y utilizamos math.sqrt para sacar la raiz.
+print("\n La raiz de esa suma es: ", round(math.sqrt(operación), 2))#Aquí le muestra ya el resultado de el problema resuelto y utilizamos math.sqrt para sacar la raiz.
 print("|----------------------------------------------|")
 
 #========================== Agradecimiento por usar el programa =========================#  
