@@ -9,14 +9,51 @@ Formato de fechas. Solicitar una fecha por teclado (día, mes y año), y retorna
 Elmer Saint-Hilare 21-1354
 """
 
-import DiccionarioCaracteres, FormatoFecha
+
 
 
 print("""
+*----------------------*
+|   Menú de opciones   | 
+*----------------------*
+
+|1.-| Diccionario de caracteres.
+|2.-| Formato de fecha.
+""")
+
+seleccion = input("> ")
+while True:
+    if seleccion == "2":
+        import FormatoFecha
+        break
+    elif seleccion == "1":
+        import DiccionarioCaracteres
+        break
+    else:
+        while True:
+            print("¡Lo siento! Lo que haz introducido no está en nuestro menú de opciones.\n")
+            print("""
 Seleccione una opción:
 
 |1.-| Diccionario de caracteres.
 |2.-| Formato de fecha.
 """)
-seleccion = int(input("> "))
+            seleccion = input("> ")
+        
+            if seleccion == "2" or seleccion == "1":
+                break
+        continue
+    
 
+# ========================== Agradecimiento por usar el programa ========================= #  
+
+"""
+Aquí imprimo por pantalla el agradecimiento y por quién fue creado, en este caso por mi.
+"""
+
+print("""
+*----------------------------------------------------------------------------*
+| ¡Muchas gracias por utilizar mi programa! / By: Elmer Saint-Hilare 21-1354 |
+*----------------------------------------------------------------------------*
+""")
+# ========================== Fin Agradecimiento por usar el programa ========================= #
