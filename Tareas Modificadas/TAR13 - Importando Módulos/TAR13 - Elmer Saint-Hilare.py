@@ -9,9 +9,6 @@ Formato de fechas. Solicitar una fecha por teclado (día, mes y año), y retorna
 Elmer Saint-Hilare 21-1354
 """
 
-
-
-
 print("""
 *----------------------*
 |   Menú de opciones   | 
