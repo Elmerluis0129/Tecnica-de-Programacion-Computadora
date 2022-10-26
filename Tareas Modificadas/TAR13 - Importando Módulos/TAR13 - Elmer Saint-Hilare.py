@@ -8,7 +8,12 @@ Formato de fechas. Solicitar una fecha por teclado (día, mes y año), y retorna
 
 Elmer Saint-Hilare 21-1354
 """
+# ================ Menú de opciones ================ #
+"""
+Aquí es donde presento al usuario las opciones que tiene de los diferentes programas.
 
+Y aqui espero la respuesta del mismo.
+"""
 print("""
 *----------------------*
 |   Menú de opciones   | 
@@ -19,6 +24,16 @@ print("""
 """)
 
 seleccion = input("> ")
+# ============== Fin Menú de opciones ============== #
+
+# ============== While - Control ============== #
+"""
+Aquí controlo lo que son las opciones, y que no me acepte nada mas que no sea las opciones establecidas en el menu que son las de mis programas.
+
+en las condicionales dentro del while, son las que me controlan cuando si y cuando no importar el programa que desea el usuario.
+
+Si introduce algo no esperado, se lo notifica hasta que introduzca lo esperado.
+"""
 while True:
     if seleccion == "2":
         import FormatoFecha
@@ -40,6 +55,9 @@ Seleccione una opción:
             if seleccion == "2" or seleccion == "1":
                 break
         continue
+
+# ============ Fin While - Control ============ #
+
     
 
 # ========================== Agradecimiento por usar el programa ========================= #  
