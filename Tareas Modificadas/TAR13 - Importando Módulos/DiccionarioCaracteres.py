@@ -35,11 +35,9 @@ for x in ListaCaracteres1:
         
         Diccionario1.update(
             {
-                x:"{}".format(VecesRepite)
+                x:VecesRepite
             }
         
         )
-
-
 
 print(Diccionario1)
