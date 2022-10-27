@@ -8,8 +8,29 @@ Elmer Saint-Hilare 21-1354
 
 """
 
+# ================= Importaciones ================= #
+"""
+Aquí importo mis 12 programas, para tener acceso a los mismo con su respectivos nombres, del ms1 al ms12.
+"""
+from Módulos import TAR01_Elmer_Saint_Hilare as ms1
+from Módulos import TAR02_Elmer_Saint_Hilare as ms2
+from Módulos import TAR03_Elmer_Saint_Hilare as ms3
+from Módulos import TAR04_Elmer_Saint_Hilare as ms4
+from Módulos import TAR05_Elmer_Saint_Hilare as ms5
+from Módulos import TAR06_Elmer_Saint_Hilare as ms6
+from Módulos import TAR07_Elmer_Saint_Hilare as ms7
+from Módulos import TAR08_Elmer_Saint_Hilare as ms8
+from Módulos import TAR09_Elmer_Saint_Hilare as ms9
+from Módulos import TAR10_Elmer_Saint_Hilare as ms10
+from Módulos import TAR11_Elmer_Saint_Hilare as ms11
+from Módulos import TAR12_Elmer_Saint_Hilare as ms12
+# =============== Fin Importaciones =============== #
 
-x = "1"
+
+# ================= Menú de opciones ================= #
+"""
+Muestro por pantalla mi menú de opciones.
+"""
 print("""
 *--------------------------------------*
 |          Menú de opciones            |
@@ -39,7 +60,8 @@ print("""
 |12.-| Los viajeros.                   |
 *--------------------------------------*
 """)
-
+# =============== Fin Menú de opciones =============== #
+x = "1"
 print("Si quieres salir solo tienes que escribir: Fin")
 while True:
     if x == 3:
@@ -47,52 +69,51 @@ while True:
     elif x == "1":
         eleccion = input("¿Qué programa desea ejecutar? \n> ")
     if eleccion == "1":
-        import Módulos.TAR01_Elmer_Saint_Hilare
-        
+        ms1.programa1()
         x = "1"
         print("Recuerda que si quieres salir solo tienes que escribir: Fin")
     elif eleccion == "2":
-        import Módulos.TAR02_Elmer_Saint_Hilare
+        ms2.programa2()
         print("Recuerda que si quieres salir solo tienes que escribir: Fin")
         x = "1"
     elif eleccion == "3":
-        import Módulos.TAR03_Elmer_Saint_Hilare
+        ms3.programa3()
         x = "1"
         print("Recuerda que si quieres salir solo tienes que escribir: Fin")
     elif eleccion == "4":
-        import Módulos.TAR04_Elmer_Saint_Hilare
+        ms4.programa4()
         x = "1"
         print("Recuerda que si quieres salir solo tienes que escribir: Fin")
     elif eleccion == "5":
-        import Módulos.TAR05_Elmer_Saint_Hilare
+        ms5.programa5()
         x = "1"
         print("Recuerda que si quieres salir solo tienes que escribir: Fin")
     elif eleccion == "6":
-        import Módulos.TAR06_Elmer_Saint_Hilare
+        ms6.programa6()
         x = "1"
         print("Recuerda que si quieres salir solo tienes que escribir: Fin")
     elif eleccion == "7":
-        import Módulos.TAR07_Elmer_Saint_Hilare
+        ms7.programa7()
         x = "1"
         print("Recuerda que si quieres salir solo tienes que escribir: Fin")
     elif eleccion == "8":
-        import Módulos.TAR08_Elmer_Saint_Hilare
+        ms8.programa8()
         x = "1"
         print("Recuerda que si quieres salir solo tienes que escribir: Fin")
     elif eleccion == "9":
-        import Módulos.TAR09_Elmer_Saint_Hilare
+        ms9.programa9()
         x = "1"
         print("Recuerda que si quieres salir solo tienes que escribir: Fin")
     elif eleccion == "10":
-        import Módulos.TAR10_Elmer_Saint_Hilare
+        ms10.programa10()
         x = "1"
         print("Recuerda que si quieres salir solo tienes que escribir: Fin")
     elif eleccion == "11":
-        import Módulos.TAR11_Elmer_Saint_Hilare
+        ms11.programa11()
         x = "1"
         print("Recuerda que si quieres salir solo tienes que escribir: Fin")
     elif eleccion == "12":
-        import Módulos.TAR12_Elmer_Saint_Hilare
+        ms12.programa12()
         x = "1"
         print("Recuerda que si quieres salir solo tienes que escribir: Fin")
         
@@ -114,9 +135,6 @@ while True:
                 break     
         continue
             
-#Módulos.TAR01_Elmer_Saint_Hilare
-
-
 # ========================== Agradecimiento por usar el programa ========================= #  
 
 """
