@@ -25,7 +25,7 @@ maxCaracterLista = int(input("Ingrese la cantidad de caracter que va a introduci
 # Función while para que me iteré las veces necesarias.
 while len(listaCaracteres) != maxCaracterLista:
     caracter = input("Ingresa el caracter: ") # Mandato para guardar los caracteres en una variable.
-    if caracter == "0" or caracter == "1" or caracter == "2" or caracter == "3" or caracter == "4" or caracter == "5" or caracter == "6" or caracter == "7" or caracter == "8" or caracter == "9": # Me sirve esta condición para saber si el usuario ingresa un dígito.
+    if caracter.isdigit():
         print("\nLo sentimos, no se permiten dígitos.") # Se le dice que no se permiten los dígitos.
         if listaCaracteres == listaVacia: # Aquí uso la otra lista de arriba para especificar que si la lista principal se parece a la secundaria, entonces es porque la principal está vacía.
             print("\nAl parecer lo primero que introdujiste fue un dígito, por lo que la lista se encuentra vacía.", listaCaracteres, "\n") # Y Aquí le pongo un mandato únicamente para cuando la lista principal sea igual a la secundaria (Está VACÍA).     
