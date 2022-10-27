@@ -71,58 +71,68 @@ while True:
     if eleccion == "1":
         ms1.programa1()
         x = "1"
-        print("Recuerda que si quieres salir solo tienes que escribir: Fin")
+        print("Recuerda que si quieres salir solo tienes que escribir: \"Fin\"")
+        
     elif eleccion == "2":
         ms2.programa2()
-        print("Recuerda que si quieres salir solo tienes que escribir: Fin")
         x = "1"
+        print("Recuerda que si quieres salir solo tienes que escribir: \"Fin\"")
+        
     elif eleccion == "3":
         ms3.programa3()
         x = "1"
-        print("Recuerda que si quieres salir solo tienes que escribir: Fin")
+        print("Recuerda que si quieres salir solo tienes que escribir: \"Fin\"")
+        
     elif eleccion == "4":
         ms4.programa4()
         x = "1"
-        print("Recuerda que si quieres salir solo tienes que escribir: Fin")
+        print("Recuerda que si quieres salir solo tienes que escribir: \"Fin\"")
+        
     elif eleccion == "5":
         ms5.programa5()
         x = "1"
-        print("Recuerda que si quieres salir solo tienes que escribir: Fin")
+        print("Recuerda que si quieres salir solo tienes que escribir: \"Fin\"")
+        
     elif eleccion == "6":
         ms6.programa6()
         x = "1"
-        print("Recuerda que si quieres salir solo tienes que escribir: Fin")
+        print("Recuerda que si quieres salir solo tienes que escribir: \"Fin\"")
+        
     elif eleccion == "7":
         ms7.programa7()
         x = "1"
-        print("Recuerda que si quieres salir solo tienes que escribir: Fin")
+        print("Recuerda que si quieres salir solo tienes que escribir: \"Fin\"")
+        
     elif eleccion == "8":
         ms8.programa8()
         x = "1"
-        print("Recuerda que si quieres salir solo tienes que escribir: Fin")
+        print("Recuerda que si quieres salir solo tienes que escribir: \"Fin\"")
+        
     elif eleccion == "9":
         ms9.programa9()
         x = "1"
-        print("Recuerda que si quieres salir solo tienes que escribir: Fin")
+        print("Recuerda que si quieres salir solo tienes que escribir: \"Fin\"")
+        
     elif eleccion == "10":
         ms10.programa10()
         x = "1"
-        print("Recuerda que si quieres salir solo tienes que escribir: Fin")
+        print("Recuerda que si quieres salir solo tienes que escribir: \"Fin\"")
+        
     elif eleccion == "11":
         ms11.programa11()
         x = "1"
-        print("Recuerda que si quieres salir solo tienes que escribir: Fin")
+        print("Recuerda que si quieres salir solo tienes que escribir: \"Fin\"")
+        
     elif eleccion == "12":
         ms12.programa12()
         x = "1"
-        print("Recuerda que si quieres salir solo tienes que escribir: Fin")
+        print("Recuerda que si quieres salir solo tienes que escribir: \"Fin\"")
         
     elif eleccion == "Fin":
         print("\nCerrando el programa general...")
         break
     elif eleccion != "12":
         while True:
-            
             print("Lo siento, lo que haz introducido no va acorde con los números del menú de opciones.")
             print("Intenta de nuevo.\n")
             eleccion = input("¿Qué programa desea ejecutar? \n> ")
