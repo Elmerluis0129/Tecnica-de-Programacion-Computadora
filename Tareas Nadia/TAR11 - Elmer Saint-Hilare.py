@@ -131,3 +131,4 @@ print("""
 *----------------------------------------------------------------------------*
 """)
 #========================== Fin Agradecimiento por usar el programa =========================#
+# TODO RECORDAR ARREGLARLO SEGUN EL COMENTARIO DE LA PROFESORA EN LA PLATAFORMA.
