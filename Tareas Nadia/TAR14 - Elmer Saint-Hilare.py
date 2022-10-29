@@ -38,21 +38,27 @@ print("\n")
     
 # ============== Fin Barra de porcentaje ============== #
 
+# ============== Nombre Programa ============== #
 print("""
 *---------------------------------------*  
 |      Texto - Consonantes, Vocales     |
 *---------------------------------------*
 """)
+# ============ Fin Nombre Programa ============ #
 
-print("Por favor no introducir vocales con acento. (á,é,í,ó,ú)")
+# ============ Variables generales ============ #
 texto = input("Ingrese texto:\n> ").lower()
-
-
 diccionario = {}
-listavocales = ['a','e','i','o','u','á','é','í','ó','ú']
-    
+# ========== Fin Variables generales ========== #
 
-def funcion1(m):
+# ============ Funciones ============ #
+# ------------ Función 1 -------------#
+"""
+Aquí lo que hago es especificar algunos contadores, los cuales los uso para facilitar la busqueda entre elementos e ir teniendo una cuenta de las consonantes y vocales.
+con el for recorro cada palabra del texto.
+con los condicionales es para saber si empieza con vocal, o consonantes e irlas agregando según con lo que empiecen al diccionario.
+"""
+def VocalConsonante(m):
     a = 0
     global e
     global o
@@ -83,7 +89,12 @@ def funcion1(m):
             )        
             o += 1
         a += 1
+# ---------- Fin Función 1 -----------#
 
+# ------------ Función 2 -------------#
+"""
+Aquí grego la cantidad de vocales y consonantes que encontró.
+"""
 def ConteoVocalesConsonantes (TotalVocal, TotalConsonante): 
     diccionario.update(
                 {
@@ -95,10 +106,35 @@ def ConteoVocalesConsonantes (TotalVocal, TotalConsonante):
                     "Consonantes":TotalConsonante
                 }
                 )
+# ---------- Fin Función 2 -----------#
+# ========== Fin Funciones ========== #
 
-
-funcion1(texto.split(' '))
+# ============ Llamando funciones ============ #
+"""
+Aquí llamo mis funciones.
+"""
+VocalConsonante(texto.split(' '))
 ConteoVocalesConsonantes(e,o)
+# ========== Fin Llamando funciones ========== #
+
+# ========== Impresión por pantalla ========== #
+"""
+Aquí imprimo en pantalla todos los resultados ya calculados.
+"""
 print("\n",diccionario)
 texto = texto.title()
 print("\nEl texto capitalizado es: ", texto)
+# ======== Fin Impresión por pantalla ======== #
+
+#========================== Agradecimiento por usar el programa =========================#  
+
+"""
+Aquí imprimo por pantalla el agradecimiento y por quién fue creado, en este caso por mi.
+"""
+
+print("""
+*----------------------------------------------------------------------------*
+| ¡Muchas gracias por utilizar mi programa! / By: Elmer Saint-Hilare 21-1354 |
+*----------------------------------------------------------------------------*
+""")
+#========================== Fin Agradecimiento por usar el programa =========================#
