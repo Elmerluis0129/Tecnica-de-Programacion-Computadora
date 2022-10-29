@@ -3,6 +3,37 @@ Escriba un programa que pregunte al usuario los números de su ticket de loterí
 Elmer Saint-Hilare 21-1354
 """
 
+# ==== Importando time ==== #
+"""
+Aquí lo importo para usar la función sleep y poder controlar la velocidad de iteración del bucle for.
+"""
+import time
+# ==== Fin Importando time ==== #
+
+# ================ Barra de porcentaje ================ #
+"""
+Aquí declaro mi limite una función, que es la que se encarga de hacer los cálculos de la barra.
+Con el for es para darle formato a la barra de carga, de tal manera que vaya haciendolo con un tiempo de 0,7 por iteración.
+"""
+limite = 50
+
+def barraProgreso(segmento, total, longitud):
+    porcentaje = segmento / total
+    completado = int(porcentaje * longitud)
+    restante = longitud - completado
+    barra = f"[{'+' * completado}{'-' * restante}{porcentaje:.2%}]"
+    return barra
+
+input("\nPresione Enter para iniciar el programa... \n")
+print("\nCargando... Por favor espere.")
+for i in range(limite+1):
+    time.sleep(0.07)
+    print(barraProgreso(i, limite, 50), end = "\r")
+    
+print("\n")
+    
+# ============== Fin Barra de porcentaje ============== #
+
 #Nombre del programa.
 print("""
 *-----------------------------------------------*
