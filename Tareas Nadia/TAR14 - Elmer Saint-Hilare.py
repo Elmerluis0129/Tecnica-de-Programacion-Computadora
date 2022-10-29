@@ -45,11 +45,11 @@ print("""
 """)
 
 print("Por favor no introducir vocales con acento. (á,é,í,ó,ú)")
-texto = input("Ingrese texto:\n> ")
-texto1 = texto.lower()
+texto = input("Ingrese texto:\n> ").lower()
+
 
 diccionario = {}
-
+listavocales = ['a','e','i','o','u','á','é','í','ó','ú']
     
 
 def funcion1(m):
@@ -67,6 +67,14 @@ def funcion1(m):
                 )
             
             e += 1
+        elif m[a].startswith('á')|m[a].startswith('é')|m[a].startswith('í')|m[a].startswith('ó')|m[a].startswith('ú'):
+            diccionario.update(
+                {
+                    m[a]:"Vocal"
+                }
+                )
+            
+            e += 1
         else:
             diccionario.update(
                 {
@@ -75,10 +83,8 @@ def funcion1(m):
             )        
             o += 1
         a += 1
-        
 
-
-def ConteoVocalesConsonantes (TotalVocal, TotalConsonante):
+def ConteoVocalesConsonantes (TotalVocal, TotalConsonante): 
     diccionario.update(
                 {
                     "Vocales":TotalVocal
@@ -91,9 +97,8 @@ def ConteoVocalesConsonantes (TotalVocal, TotalConsonante):
                 )
 
 
-
-
-funcion1(texto1.split(' '))
+funcion1(texto.split(' '))
 ConteoVocalesConsonantes(e,o)
 print("\n",diccionario)
-#TODO PONER A QUE CAPITALIZE TODAS LAS LETRAS DEL TEXTO.
+texto = texto.title()
+print("\nEl texto capitalizado es: ", texto)
