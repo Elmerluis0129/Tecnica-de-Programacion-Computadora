@@ -37,6 +37,11 @@ import time
 """
 Aquí declaro mi limite una función, que es la que se encarga de hacer los cálculos de la barra.
 Con el for es para darle formato a la barra de carga, de tal manera que vaya haciendolo con un tiempo de 0,7 por iteración.
+
+Con cada condicional en la barra formato, es para saber que barra va en cada proceso.
+Tengo que cuando reciba 1, es para la barra de inicio del programa.
+Tengo que cuando reciba 2, es para la barra de carga de los programas(Tareas).
+Y en caso de ninguno, pues la barra de fin del programa.
 """
 limite = 50
 
@@ -48,7 +53,7 @@ def barraProgreso(segmento, total, longitud):
     return barra
 
 def barraFormato(decision):
-    if decision:
+    if decision == 1:
         input("\nPresione Enter para iniciar el programa... \n")
         print("\nCargando... Por favor espere.")
         for i in range(limite+1):
@@ -56,6 +61,12 @@ def barraFormato(decision):
             print(barraProgreso(i, limite, 50), end = "\r")
 
         print("\n")
+    elif decision == 2:
+        print("\nCargando... Por favor espere.")
+        for i in range(limite+1):
+            time.sleep(0.01)
+            print(barraProgreso(i, limite, 50), end = "\r")
+        
     else:
         print("\nCerrando el programa general...")
         for i in range(limite+1):
@@ -111,61 +122,73 @@ while True:
     elif x == "1":
         eleccion = input("¿Qué programa desea ejecutar? \n> ")
     if eleccion == "1":
+        barraFormato(2)
         ms1.programa1()
         x = "1"
         print("Recuerda que si quieres salir solo tienes que escribir: \"Fin\"")
         
     elif eleccion == "2":
+        barraFormato(2)
         ms2.programa2()
         x = "1"
         print("Recuerda que si quieres salir solo tienes que escribir: \"Fin\"")
         
     elif eleccion == "3":
+        barraFormato(2)
         ms3.programa3()
         x = "1"
         print("Recuerda que si quieres salir solo tienes que escribir: \"Fin\"")
         
     elif eleccion == "4":
+        barraFormato(2)
         ms4.programa4()
         x = "1"
         print("Recuerda que si quieres salir solo tienes que escribir: \"Fin\"")
         
     elif eleccion == "5":
+        barraFormato(2)
         ms5.programa5()
         x = "1"
         print("Recuerda que si quieres salir solo tienes que escribir: \"Fin\"")
         
     elif eleccion == "6":
+        barraFormato(2)
         ms6.programa6()
         x = "1"
         print("Recuerda que si quieres salir solo tienes que escribir: \"Fin\"")
         
     elif eleccion == "7":
+        barraFormato(2)
         ms7.programa7()
         x = "1"
         print("Recuerda que si quieres salir solo tienes que escribir: \"Fin\"")
         
     elif eleccion == "8":
+        barraFormato(2)
         ms8.programa8()
         x = "1"
         print("Recuerda que si quieres salir solo tienes que escribir: \"Fin\"")
         
     elif eleccion == "9":
+        barraFormato(2)
         ms9.programa9()
         x = "1"
         print("Recuerda que si quieres salir solo tienes que escribir: \"Fin\"")
         
     elif eleccion == "10":
+        barraFormato(2)
         ms10.programa10()
         x = "1"
         print("Recuerda que si quieres salir solo tienes que escribir: \"Fin\"")
         
     elif eleccion == "11":
+        barraFormato(2)
         ms11.programa11()
         x = "1"
         print("Recuerda que si quieres salir solo tienes que escribir: \"Fin\"")
         
     elif eleccion == "12":
+        barraFormato(2)
         ms12.programa12()
         x = "1"
         print("Recuerda que si quieres salir solo tienes que escribir: \"Fin\"")
