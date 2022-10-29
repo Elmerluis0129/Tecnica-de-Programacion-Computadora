@@ -26,6 +26,48 @@ from Módulos import TAR11_Elmer_Saint_Hilare as ms11
 from Módulos import TAR12_Elmer_Saint_Hilare as ms12
 # =============== Fin Importaciones =============== #
 
+# ==== Importando time ==== #
+"""
+Aquí lo importo para usar la función sleep y poder controlar la velocidad de iteración del bucle for.
+"""
+import time
+# ==== Fin Importando time ==== #
+
+# ================ Barra de porcentaje ================ #
+"""
+Aquí declaro mi limite una función, que es la que se encarga de hacer los cálculos de la barra.
+Con el for es para darle formato a la barra de carga, de tal manera que vaya haciendolo con un tiempo de 0,7 por iteración.
+"""
+limite = 50
+
+def barraProgreso(segmento, total, longitud):
+    porcentaje = segmento / total
+    completado = int(porcentaje * longitud)
+    restante = longitud - completado
+    barra = f"[{'+' * completado}{'-' * restante}{porcentaje:.2%}]"
+    return barra
+
+def barraFormato(decision):
+    if decision:
+        input("\nPresione Enter para iniciar el programa... \n")
+        print("\nCargando... Por favor espere.")
+        for i in range(limite+1):
+            time.sleep(0.07)
+            print(barraProgreso(i, limite, 50), end = "\r")
+
+        print("\n")
+    else:
+        print("\nCerrando el programa general...")
+        for i in range(limite+1):
+            time.sleep(0.02)
+            print(barraProgreso(i, limite, 50), end = "\r")
+
+        print("\n")
+        
+
+barraFormato(1)
+    
+# ============== Fin Barra de porcentaje ============== #
 
 # ================= Menú de opciones ================= #
 """
@@ -129,7 +171,7 @@ while True:
         print("Recuerda que si quieres salir solo tienes que escribir: \"Fin\"")
         
     elif eleccion == "Fin":
-        print("\nCerrando el programa general...")
+        barraFormato(0)
         break
     elif eleccion != "12":
         while True:
@@ -140,7 +182,7 @@ while True:
                 x = "2"
                 break
             elif eleccion == "Fin":
-                print("\nCerrando el programa general...")
+                barraFormato(0)
                 x = 3
                 break     
         continue
