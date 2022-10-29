@@ -8,54 +8,61 @@ Retorne el texto capitalizado.
 Elmer Saint-Hilare 21-1354
 """
 
-from tkinter import E
-
-
 print("""
 *---------------------------------------*  
 |      Texto - Consonantes, Vocales     |
 *---------------------------------------*
 """)
 
+print("Por favor no introducir vocales con acento. (á,é,í,ó,ú)")
 texto = input("Ingrese texto:\n> ")
+texto1 = texto.lower()
 
-separado_por_espacios = texto.split(' ')
 diccionario = {}
 
-a = 0
-e = 0
-o = 0
-for x in separado_por_espacios:
-    if separado_por_espacios[a].startswith('a')|separado_por_espacios[a].startswith('e')|separado_por_espacios[a].startswith('i')|separado_por_espacios[a].startswith('o')|separado_por_espacios[a].startswith('u'):
-        diccionario.update(
-            {
-                separado_por_espacios[a]:"Vocal"
-            }
-            )
-        e += 1
-    else:
-        diccionario.update(
-            {
-                separado_por_espacios[a]:"Consonante"
-            }
-        )        
-        o += 1
-    a += 1
-texto.abs
 
-diccionario.update(
-            {
-                "Vocales":e
-            }
-            )
-diccionario.update(
-            {
-                "Consonantes":o
-            }
-            )
+def funcion1(m):
+    a = 0
+    global e
+    global o
+    e = 0
+    o = 0
+    for x in m:
+        if m[a].startswith('a')|m[a].startswith('e')|m[a].startswith('i')|m[a].startswith('o')|m[a].startswith('u'):
+            diccionario.update(
+                {
+                    m[a]:"Vocal"
+                }
+                )
+            
+            e += 1
+        else:
+            diccionario.update(
+                {
+                    m[a]:"Consonante"
+                }
+            )        
+            o += 1
+        a += 1
+        
 
+
+def ConteoVocalesConsonantes (TotalVocal, TotalConsonante):
+    diccionario.update(
+                {
+                    "Vocales":TotalVocal
+                }
+                )
+    diccionario.update(
+                {
+                    "Consonantes":TotalConsonante
+                }
+                )
+
+
+
+
+funcion1(texto1.split(' '))
+ConteoVocalesConsonantes(e,o)
 print(diccionario)
-
-
-#StrA = "".join(separado_por_espacios)
-# TODO PONER A QUE IMPRIMA EL TEXTO CAPITALIZADO
+#TODO PONER A QUE CAPITALIZE TODAS LAS LETRAS DEL TEXTO.
