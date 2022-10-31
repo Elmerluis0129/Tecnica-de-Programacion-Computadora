@@ -17,7 +17,6 @@ Aquí es donde almaceno en las variables lo que es el día, mes y año según lo
 d = int(input("\nDía: \n> "))
 m = int(input("Mes: \n> "))
 a = int(input("Año: \n> "))
-Fechactual = dt(a, m, d) # Aquí le doy el formato de fecha y lo guardo en la variable.
 # === Fin Variables generales === #
 
 # ========================================== Control de días y meses ========================================== #
@@ -82,7 +81,9 @@ while True:
         print("\nLo siento, diciembre solo tiene 31 días.\nVuelve a intentarlo.")
         d = int(input("\nDía: \n> "))
         continue    
-    else: break
+    else: 
+        Fechactual = dt(a, m, d) # Aquí le doy el formato de fecha y lo guardo en la variable.
+        break
 # -------------------------- Fin Meses con 31 días -------------------------- #
 # ======================================== Fin Control de días y meses ======================================== #
       
