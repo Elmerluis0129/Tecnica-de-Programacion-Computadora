@@ -12,8 +12,11 @@ Elmer Saint-Hilare 21-1354
 # ==== Importando time ==== #
 """
 Aquí lo importo para usar la función sleep y poder controlar la velocidad de iteración del bucle for.
+y los otros dos para poder ejecutar los programas.
 """
 import time
+import FormatoFecha as ff
+import DiccionarioCaracteres as dc
 # ==== Fin Importando time ==== #
 
 # ================ Barra de porcentaje ================ #
@@ -30,13 +33,31 @@ def barraProgreso(segmento, total, longitud):
     barra = f"[{'+' * completado}{'-' * restante}{porcentaje:.2%}]"
     return barra
 
-input("\nPresione Enter para iniciar el programa... \n")
-print("\nCargando... Por favor espere.")
-for i in range(limite+1):
-    time.sleep(0.07)
-    print(barraProgreso(i, limite, 50), end = "\r")
-    
-print("\n")
+def barraFormato(decision):
+    if decision == 1:
+        input("\nPresione Enter para iniciar el programa... \n")
+        print("\nCargando... Por favor espere.")
+        for i in range(limite+1):
+            time.sleep(0.07)
+            print(barraProgreso(i, limite, 50), end = "\r")
+        print("\n")
+
+        print("\n")
+    elif decision == 2:
+        print("\nCargando... Por favor espere.")
+        for i in range(limite+1):
+            time.sleep(0.01)
+            print(barraProgreso(i, limite, 50), end = "\r")
+        print("\n")
+        
+    else:
+        for i in range(limite+1):
+            time.sleep(0.02)
+            print(barraProgreso(i, limite, 50), end = "\r")
+        print("\n")
+        
+
+barraFormato(1)
     
 # ============== Fin Barra de porcentaje ============== #
 
@@ -53,9 +74,9 @@ print("""
 
 |1.-| Diccionario de caracteres.
 |2.-| Formato de fecha.
+|3.-| Cerrar programa.
 """)
-
-seleccion = input("> ")
+seleccion = input(">")
 # ============== Fin Menú de opciones ============== #
 
 # ============== While - Control ============== #
@@ -66,12 +87,26 @@ en las condicionales dentro del while, son las que me controlan cuando si y cuan
 
 Si introduce algo no esperado, se lo notifica hasta que introduzca lo esperado.
 """
+x = 0
 while True:
+    if x != 0:
+        seleccion = input("\n¿Qué programa desea ejecutar? \n> ")
+    
     if seleccion == "2":
-        import FormatoFecha
-        break
+        x += 1
+        barraFormato(2)
+        ff.fecha()
+        continue
+        
     elif seleccion == "1":
-        import DiccionarioCaracteres
+        x += 1
+        barraFormato(2)
+        dc.diccionario()
+        continue
+        
+    elif seleccion == "3":
+        print("\nCerrando programa general...")
+        barraFormato(3)
         break
     else:
         while True:
@@ -81,12 +116,16 @@ Seleccione una opción:
 
 |1.-| Diccionario de caracteres.
 |2.-| Formato de fecha.
+|3.-| Cerrar el programa.
 """)
             seleccion = input("> ")
         
-            if seleccion == "2" or seleccion == "1":
+            if seleccion == "2" or seleccion == "1" or seleccion == "3":
+                x = 0
                 break
         continue
+    x += 1
+        
 
 # ============ Fin While - Control ============ #
 
