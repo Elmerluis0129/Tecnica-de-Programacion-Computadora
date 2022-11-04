@@ -10,8 +10,6 @@ def programa9 ():
     """
     Aquí es para imprimir el nombre del programa.
     """
-
-
     print("""
 *------------------------*  
 |Primero que no se repite|
@@ -49,17 +47,17 @@ def programa9 ():
                     break
         else:
             print("Lo siento, vuelve a intentarlo.")
-    #========================== Fin Función 1 ==========================#
+    # ========================== Fin Función 1 ========================== #
 
-    #========================== Llamada Función ==========================# 
+    # ========================== Llamada Función ========================== # 
     """
     Aquí lo uso para llamar la función.
     También pongo que la entrada de la función sea una entrada de teclado, para que la lista de caracteres la introduzca el usuario.
     """       
     primer_Caracter_no_se_repite(input("Ingrese la cadena de caracteres: \n>"))
-    #========================== Fin Llamada Función ==========================#    
+    # ========================== Fin Llamada Función ========================== #    
 
-    #========================== Agradecimiento por usar el programa =========================#  
+    # ========================== Agradecimiento por usar el programa ========================= #  
 
     """
     Aquí imprimo por pantalla el agradecimiento y por quién fue creado, en este caso por mi.
@@ -70,4 +68,4 @@ def programa9 ():
 |  ¡Programa 9 Finalizado exitosamente! / By: Elmer Saint-Hilare 21-1354     |
 *----------------------------------------------------------------------------*
 """)
-#========================== Fin Agradecimiento por usar el programa =========================#
+    # ========================== Fin Agradecimiento por usar el programa ========================= #

@@ -1,11 +1,16 @@
 """
-Escriba un programa que mediante módulos tenga el siguiente menú de opciones, y realice lo que se indica para cada una de ellas:
+Realizar un programa que permita la ejecución de todos los ejercicios que se han hecho hasta el momento (TAR01 - TAR12).
 
-Diccionario de caracteres. Solicitar una cadena de caracteres y devolver un diccionario con la cantidad de apariciones de cada caracter (sin repetir) en la cadena. Si la cadena tiene espacios, el diccionario debe tener la clave 'espacio'.
-Formato de fechas. Solicitar una fecha por teclado (día, mes y año), y retornarla en el siguiente formato de ejemplo: Sábado 29 de octubre del 2022.
+Indicaciones:
+
+El programa debe tener un menú que permita seleccionar el ejercicio que se desea ejecutar.
+Luego de seleccionar un ejercicio, además de su ejecución (entradas, y demás funcionalidades), se debe mostrar el enunciado del mismo. (Esto debe aparecer arriba).
+Se debe hacer uso de módulos: los ejercicios deben ser importados desde el programa principal.
+Una vez terminada la ejecución de un ejercicio, el programa debe permitir volver al menú principal o terminar la ejecución de todo el programa.
+El programa debe controlar la captura de data basura.
+Recomendación: para aquellos ejercicios que no completaron correctamente y que tienen observaciones de mejora, favor de corregirlos para que se ejecuten 100% correctos.
 
 Elmer Saint-Hilare 21-1354
-
 """
 
 # ================= Importaciones ================= #
@@ -111,11 +116,14 @@ print("""
 |11.-| Sets a partir de listas.        |
 |--------------------------------------|
 |12.-| Los viajeros.                   |
+|--------------------------------------|
+|13.-| Mostrar Menú de opciones.       |
+|--------------------------------------|
+|14.-| Cerrar programa general.        |
 *--------------------------------------*
 """)
 # =============== Fin Menú de opciones =============== #
 x = "1"
-print("Si quieres salir solo tienes que escribir: Fin")
 while True:
     if x == 3:
         break
@@ -125,86 +133,123 @@ while True:
         barraFormato(2)
         ms1.programa1()
         x = "1"
-        print("Recuerda que si quieres salir solo tienes que escribir: \"Fin\"")
+        print("Recuerda que si quieres ver el menú de opciones solo tienes que escribir: \"13\"")
         
     elif eleccion == "2":
         barraFormato(2)
         ms2.programa2()
         x = "1"
-        print("Recuerda que si quieres salir solo tienes que escribir: \"Fin\"")
+        print("Recuerda que si quieres ver el menú de opciones solo tienes que escribir: \"13\"")
         
     elif eleccion == "3":
         barraFormato(2)
         ms3.programa3()
         x = "1"
-        print("Recuerda que si quieres salir solo tienes que escribir: \"Fin\"")
+        print("Recuerda que si quieres ver el menú de opciones solo tienes que escribir: \"13\"")
         
     elif eleccion == "4":
         barraFormato(2)
         ms4.programa4()
         x = "1"
-        print("Recuerda que si quieres salir solo tienes que escribir: \"Fin\"")
+        print("Recuerda que si quieres ver el menú de opciones solo tienes que escribir: \"13\"")
         
     elif eleccion == "5":
         barraFormato(2)
         ms5.programa5()
         x = "1"
-        print("Recuerda que si quieres salir solo tienes que escribir: \"Fin\"")
+        print("Recuerda que si quieres ver el menú de opciones solo tienes que escribir: \"13\"")
         
     elif eleccion == "6":
         barraFormato(2)
         ms6.programa6()
         x = "1"
-        print("Recuerda que si quieres salir solo tienes que escribir: \"Fin\"")
+        print("Recuerda que si quieres ver el menú de opciones solo tienes que escribir: \"13\"")
         
     elif eleccion == "7":
         barraFormato(2)
         ms7.programa7()
         x = "1"
-        print("Recuerda que si quieres salir solo tienes que escribir: \"Fin\"")
+        print("Recuerda que si quieres ver el menú de opciones solo tienes que escribir: \"13\"")
         
     elif eleccion == "8":
         barraFormato(2)
         ms8.programa8()
         x = "1"
-        print("Recuerda que si quieres salir solo tienes que escribir: \"Fin\"")
+        print("Recuerda que si quieres ver el menú de opciones solo tienes que escribir: \"13\"")
         
     elif eleccion == "9":
         barraFormato(2)
         ms9.programa9()
         x = "1"
-        print("Recuerda que si quieres salir solo tienes que escribir: \"Fin\"")
+        print("Recuerda que si quieres ver el menú de opciones solo tienes que escribir: \"13\"")
         
     elif eleccion == "10":
         barraFormato(2)
         ms10.programa10()
         x = "1"
-        print("Recuerda que si quieres salir solo tienes que escribir: \"Fin\"")
+        print("Recuerda que si quieres ver el menú de opciones solo tienes que escribir: \"13\"")
         
     elif eleccion == "11":
         barraFormato(2)
         ms11.programa11()
         x = "1"
-        print("Recuerda que si quieres salir solo tienes que escribir: \"Fin\"")
+        print("Recuerda que si quieres ver el menú de opciones solo tienes que escribir: \"13\"")
         
     elif eleccion == "12":
         barraFormato(2)
         ms12.programa12()
         x = "1"
-        print("Recuerda que si quieres salir solo tienes que escribir: \"Fin\"")
+        print("Recuerda que si quieres ver el menú de opciones solo tienes que escribir: \"13\"")
         
-    elif eleccion == "Fin":
+    elif eleccion == "13":
+        barraFormato(2)
+        print("""
+*--------------------------------------*
+|          Menú de opciones            |
+*--------------------------------------*
+|1.-| Operaciones Básicas.             |
+|--------------------------------------|
+|2.-| Entrada teclado.                 |
+|--------------------------------------|
+|3.-| Precio de energía eléctrica.     |
+|--------------------------------------|
+|4.-| Veces que se repite una palabra. |
+|--------------------------------------|
+|5.-| Números de lotería.              |
+|--------------------------------------|
+|6.-| Préstamos usando while.          |
+|--------------------------------------|
+|7.-| Lista de caracteres usando while.|
+|--------------------------------------|
+|8.-| Tablas de multiplicar.           |
+|--------------------------------------|
+|9.-| Primer caracter que no se repite.|
+|--------------------------------------|
+|10.-| Más funciones.                  |
+|--------------------------------------|
+|11.-| Sets a partir de listas.        |
+|--------------------------------------|
+|12.-| Los viajeros.                   |
+|--------------------------------------|
+|13.-| Mostrar Menú de opciones.       |
+|--------------------------------------|
+|14.-| Cerrar programa general.        |
+*--------------------------------------*
+""")
+        x = "1"
+    elif eleccion == "14":
         barraFormato(0)
         break
-    elif eleccion != "12":
+        
+    elif eleccion != "14":
         while True:
             print("Lo siento, lo que haz introducido no va acorde con los números del menú de opciones.")
             print("Intenta de nuevo.\n")
             eleccion = input("¿Qué programa desea ejecutar? \n> ")
-            if eleccion == "1"  or eleccion == "2" or eleccion == "3" or eleccion == "4" or eleccion == "5" or eleccion == "6" or eleccion == "7" or eleccion == "8" or eleccion == "9" or eleccion == "10" or eleccion == "11" or eleccion == "12":
+            if eleccion == "1"  or "2" or "3" or "4" or "5" or "6" or "7" or "8" or "9" or "10" or "11" or "12" or "13":
                 x = "2"
                 break
-            elif eleccion == "Fin":
+            elif eleccion == "14":
                 barraFormato(0)
                 x = 3
                 break     
