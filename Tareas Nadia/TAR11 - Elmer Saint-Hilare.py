@@ -65,66 +65,66 @@ Los contadores son los que me van aumentando de 1 en 1 los acumuladores.
 """
 
 # ------------ Función 1 ------------ #
-def ListaUno(x):
-    # Acumuladores
-    a = 1
+def ListaDeCompras(x):
     n = 1
-    j = 0
-    m = 0
-    print("\n================== Lista Uno ==================\n")
-    while x != j:
-        print("""
-*-----------------------*
-|Ingrese el producto """+str(n)+""":|
-*-----------------------*""")
-        producto = input("> ")
-        Lista1.append(producto)
-        # Contadores
-        j = j + 1
-        n = n + 1
-        
-    print("\nCantidad de producto lista 1: ", len(Lista1))
-    
-    for e in Lista1:
-        print("\nProducto",str(a)+":", Lista1[m])
-        # Contadores
-        m = m + 1
-        a = a + 1
-    
-    print("\nLista 1: ", Lista1)
-# ------------ Fin Función 1 ------------ #
-          
-# ------------ Función 2 ------------ #
-def ListaDos(n):
-    # Acumuladores
-    a = 1 
-    p = 1
-    j = 0
-    m = 0
-    print("\n================== Lista Dos ==================\n")
-    while n != j:
-        print("""
+    while True:
+        # Acumuladores
+        a = 1
+        p = 1
+        j = 0
+        m = 0
+        if n == 1:
+            print("\n================== Lista Uno ==================\n")
+            while x != j:
+                print("""
 *-----------------------*
 |Ingrese el producto """+str(p)+""":|
 *-----------------------*""")
-        producto = input("> ")
-        Lista2.append(producto)
-        # Contadores
-        j = j + 1
-        p = p + 1
+                producto = input("> ")
+                Lista1.append(producto)
+                # Contadores
+                j += 1
+                p += 1
+
+            print("\nCantidad de producto lista 1: ", len(Lista1))
+            for e in Lista1:
+                print("\nProducto",str(a)+":", Lista1[m])
+                # Contadores
+                m += 1
+                a += 1
+
+            print("\nLista 1: ", Lista1)
+            n = 2
+            continue
+        elif n == 2: #Lista 2
+            cantidad = int(input("\nIngrese la cantidad de producto lista 2: \n> "))
+            print("\n================== Lista Dos ==================\n")
+            while cantidad != j:
+                print("""
+*-----------------------*
+|Ingrese el producto """+str(p)+""":|
+*-----------------------*""")
+                producto = input("> ")
+                Lista2.append(producto)
+                # Contadores
+                j += 1
+                p += 1
+
+            print("\nCantidad de producto lista 2: ", len(Lista2))
+            for e in Lista2:
+                print("\nProducto",str(a)+":", Lista2[m])
+                # Contadores
+                m += 1
+                a += 1
+
+            print("\nLista 2: ", Lista2)
+            
+            n = "Fin"
+            continue
+        elif n == "Fin": break
         
-    print("\nCantidad de producto lista 2: ", len(Lista2))
-    
-    for e in Lista2:
-        print("\nProducto",str(a)+":", Lista2[m])
-        # Contadores
-        m = m + 1
-        a = a + 1
-
-    print("\nLista 2: ", Lista2)
-
-# ------------ Fin Función 2 ------------ #
-
+# ------------ Fin Función 1 ------------ #
+          
 # ------------ Función 3 ------------ #    
 def ProductoComunes(l):
     
@@ -141,8 +141,7 @@ def ProductoComunes(l):
 """
 Aquí llamo las funciones para que lleven acabo dichos códigos que tienen dentro.
 """
-ListaUno(int(input("\nIngrese la cantidad de producto lista 1: \n> ")))
-ListaDos(int(input("\nIngrese la cantidad de producto lista 2: \n> ")))
+ListaDeCompras(int(input("\nIngrese la cantidad de producto lista 1: \n> ")))
 # =========== Conversión de lista a sets =========== #
 """
 Aquí Convierto mis listas a set para luego encontrar los prodcutos comunes entre ellas con el comando de los conjuntos .intersections
@@ -165,4 +164,3 @@ print("""
 *----------------------------------------------------------------------------*
 """)
 #========================== Fin Agradecimiento por usar el programa =========================#
-# TODO RECORDAR ARREGLARLO SEGUN EL COMENTARIO DE LA PROFESORA EN LA PLATAFORMA.
