@@ -152,7 +152,7 @@ convirtiendo2 = set(Lista2)
 ProductoComunes(convirtiendo1.intersection(convirtiendo2))
 # ==================== Fin Llamada Funciones ==================== #
 
-#========================== Agradecimiento por usar el programa =========================#  
+# ========================== Agradecimiento por usar el programa ========================= #  
 
 """
 Aquí imprimo por pantalla el agradecimiento y por quién fue creado, en este caso por mi.
@@ -163,4 +163,4 @@ print("""
 | ¡Muchas gracias por utilizar mi programa! / By: Elmer Saint-Hilare 21-1354 |
 *----------------------------------------------------------------------------*
 """)
-#========================== Fin Agradecimiento por usar el programa =========================#
+# ========================== Fin Agradecimiento por usar el programa ========================= #
