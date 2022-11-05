@@ -28,7 +28,7 @@ def fecha():
     
     # ---------------------------- Meses con 28 días ---------------------------- #
         if m == 2 and d > 28:
-            print("\nLo siento, febrero solo tiene 28 días a menos que sea un año viciesto.\nVuelve a intentarlo.")
+            print("\nLo siento, febrero solo tiene 28 días a menos que sea un año Bisiesto.\nVuelve a intentarlo.")
             d = int(input("\nDía: \n> "))
             continue
     # -------------------------- Fin Meses con 28 días -------------------------- #
