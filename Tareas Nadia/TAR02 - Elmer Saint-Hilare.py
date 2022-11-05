@@ -40,9 +40,10 @@ print("|------------------------------------|")
 numero1 = int(input(" Ingrese el primer número: "))#Aquí le pido al usuario el primer número.
 print("|------------------------------------|")
 numero2 = int(input(" Ingrese el segundo número: "))#Aquí le pido al usuario el segundo número.
-numero1cuadrado = numero1**2#Aquí elevo el primer número que me da el usuario al cuadrado.
-numero2cuadrado = numero2**2#Aquí elevo el segundo número que me da el usuario al cuadrado.
+numero1cuadrado = pow(numero1,2)#Aquí elevo el primer número que me da el usuario al cuadrado.
+numero2cuadrado = pow(numero2,2)#Aquí elevo el segundo número que me da el usuario al cuadrado.
 operación = (numero1cuadrado + numero2cuadrado)#Aquí es para que me sume los dos números ya elevados al cuadrado.
+resultado = math.sqrt(operación) #Aquí saco raiz de la operacion realizada (La suma de los cuadrados).
 
 #Salidas/proceso que el usuario verá.
 print("|----------------------------------------------|")
@@ -52,7 +53,7 @@ print("\n El resultado de: ", str(numero2) + "^2 =", numero2cuadrado)#Aquí le m
 print("|----------------------------------------------|")
 print("\n La suma de los números es: ", numero1**2, "+", numero2**2, "=", operación) #Aquí le muestra la suma de los números cuadrados.
 print("|----------------------------------------------|")
-print("\n La raiz de esa suma es: ", math.sqrt(operación))#Aquí le muestra ya el resultado de el problema resuelto y utilizamos math.sqrt para sacar la raiz.
+print("\n La raiz de esa suma es: ", round(resultado, 2))#Aquí le muestra ya el resultado de el problema resuelto y utilizamos math.sqrt para sacar la raiz.
 print("|----------------------------------------------|")
 
 #========================== Agradecimiento por usar el programa =========================#  
