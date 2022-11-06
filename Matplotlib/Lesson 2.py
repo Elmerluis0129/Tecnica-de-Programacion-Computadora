@@ -45,23 +45,39 @@ dotted can be written as :.
 dashed can be written as --.
 
 """
-# 1 row, 2 columns, first plot (subplot properties)
-plt.subplot(1,2,1) 
+# 2 row, 2 columns, first plot (subplot properties)
+plt.subplot(2,2,1) 
 plt.plot(x,y,"*--c", ms = 15, mec = "k", mfc = "m", linestyle = '--', linewidth = 5) # Create grafic with the cordinates given in x & y, also recive parameters to format the grafic.
 plt.title("Elmer", fontdict=font3)
 plt.xlabel("X-axis", fontdict=font1)
 plt.ylabel("Y-axis", fontdict=font2)
 
-# 1 row, 2 columns, second plot (subplot properties)
-plt.subplot(1,2,2)
+# 2 row, 2 columns, second plot (subplot properties)
+plt.subplot(2,2,2)
 plt.plot(x2,y2,"--y", linestyle = '--', linewidth = 3) # Create grafic with the cordinates given in x2 & y2, also recive parameters to format the grafic.
-plt.subplot(1,2,2)
+plt.subplot(2,2,2)
 plt.plot(x3,y3,"--r", linestyle = '--', linewidth = 3) # Create grafic with the cordinates given in x3 & y3, also recive parameters to format the grafic.
-plt.subplot(1,2,2)
+plt.subplot(2,2,2)
 plt.plot(x4,y4,"--b", linestyle = '--', linewidth = 3) # Create grafic with the cordinates given in x4 & y4, also recive parameters to format the grafic.
 plt.title("Luis",fontdict=font3)
 plt.xlabel("X-axis", fontdict=font1)
 plt.ylabel("Y-axis", fontdict=font2)
+
+# PIE CHART
+# 2 row, 2 columns, third plot (subplot properties)
+plt.subplot(2,2,3)
+y = np.array([35, 25, 25, 15]) # Porcent of each one of them.
+mylabels = ["Apples", "Bananas", "Cherries", "Dates"]
+
+plt.pie(y, labels = mylabels) # Here will create the pie chart.
+plt.legend(title = "Four Fruits:")  # List of explanation for each wedge with title.
+
+
+# Histogram plot
+# 2 row, 2 columns, fourth plot (subplot properties)
+plt.subplot(2,2,4)
+x = np.random.normal(170, 10, 250) # This will generate a random result
+plt.hist(x) # The hist() function will read the array and produce a histogram
 
 plt.suptitle("Learning with w3school / Matplotlib.Pyplot", fontdict = font4)
 plt.show() # It works for show on screen teh grafic as 'print' the python's function. But this one works with grafic.
