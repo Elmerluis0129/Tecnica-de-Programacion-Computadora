@@ -1,0 +1,45 @@
+body {/*Body Sirve para darle los ajustes a todo el cuerpo del HTML*/
+    background-color:powderblue; /*Aqui le cambiamos el color de fondo*/
+    color:rgb(2, 1, 0);/*Aqui le cambiamos el color a las letras*/
+}
+
+/*Section main*/
+section.main p { /*Aqui seleccionamos que queremos cambiarle el color, basicamente estamos diciendo que a la section main, le cambie el color al parrafo "p"*/
+    font-size: large;/*Tamaño letra*/
+    width:500px;/*Tamaño cuadro de texto*/
+    background-color: antiquewhite;
+    margin: 20px;/*Margen del cuadro de texto*/
+    padding: 15px;/*Le agrega un margen dentro del cuadro de texto*/
+    border: 2.5px solid black; /*Asi podemos agregarle el borde del color y tamaño que queramos*/
+}
+section.main .Titulo1{ 
+    color:black;
+    font-size: 30px;
+    margin: 20px 100px;
+}
+section.main .Titulo2{
+    color:black;
+    font-size: 25px;
+    margin: 20px 130px;
+}
+
+/*Informacion secundaria (Menos importante para el buscador)*/
+aside h3{
+    margin: 20px 230px;
+}
+aside  p {
+    background-color: bisque; /*Color del fondo del parrafo en aside*/
+    color:black;/*Letras color*/
+    font-size: large;/*Tamaño letra*/
+    width: 20%;/*Tamaño cuadro de texto*/
+    margin: 20px 60px;/*Margen del cuadro de texto*/
+    padding: 15px;
+    border: 2.5px solid black;/*Asi podemos agregarle el borde del color y tamaño que queramos*/
+}
+
+/*Pie de pagina*/
+footer {
+    color:chocolate;
+    font-size: medium;
+    margin-left: 100px; /*Le agrega un margen de 130px en este caso pero solo a la izquierda*/
+}
