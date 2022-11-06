@@ -69,9 +69,9 @@ Color Syntax | Description
 
 #Example:
 
-plt.plot(x,y,"o--r", ms = 10, mec = "k", mfc = "r") # Crea la grafica segun las cordenadas dadas en x & y, tambien recive parametros para darle formato al grafico.
-plt.show() # Sirve para mostrar en pantalla lo que se especifica arriba, es como el print en python.
+plt.plot(x,y,"o--r", ms = 10, mec = "k", mfc = "r") # Create grafic with the cordinates given in x2 & y2, also recive parameters to format the grafic.
+plt.show() # It works for show on screen teh grafic as 'print' the python's function. But this one works with grafic.
 
-# ms = marker size, sirve para darle tamño a los markadores.
-# mec = marker edge color, sirve para colorear los bordes de los marcadores.
-# mfc = marker face color, sirve para colorear los fondos de los marcadores.
+# ms = marker size, works for marker sizes.
+# mec = marker edge color, works for coloring the markers borders.
+# mfc = marker face color, works for filling the markers with a color.
