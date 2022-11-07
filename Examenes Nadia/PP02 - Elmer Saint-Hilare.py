@@ -49,6 +49,8 @@ Tengo que cuando reciba 2, es para la barra de carga de los programas(Tareas).
 Y en caso de ninguno, pues la barra de fin del programa.
 """
 limite = 50
+mensaje = "Recuerda que si quieres ver el menú de opciones solo tienes que escribir: \"13\""
+x = 1
 
 def barraProgreso(segmento, total, longitud):
     porcentaje = segmento / total
@@ -64,22 +66,21 @@ def barraFormato(decision):
         for i in range(limite+1):
             time.sleep(0.07)
             print(barraProgreso(i, limite, 50), end = "\r")
-
         print("\n")
+        
     elif decision == 2:
         print("\nCargando... Por favor espere.")
         for i in range(limite+1):
             time.sleep(0.01)
             print(barraProgreso(i, limite, 50), end = "\r")
-        
+        x = 1
+    
     else:
         print("\nCerrando el programa general...")
         for i in range(limite+1):
             time.sleep(0.02)
             print(barraProgreso(i, limite, 50), end = "\r")
-
         print("\n")
-        
 
 barraFormato(1)
     
@@ -89,7 +90,8 @@ barraFormato(1)
 """
 Muestro por pantalla mi menú de opciones.
 """
-print("""
+def menuOpciones():
+    print("""
 *--------------------------------------*
 |          Menú de opciones            |
 *--------------------------------------*
@@ -122,125 +124,34 @@ print("""
 |14.-| Cerrar programa general.        |
 *--------------------------------------*
 """)
+menuOpciones()
 # =============== Fin Menú de opciones =============== #
-x = "1"
+
 while True:
-    if x == 3:
-        break
-    elif x == "1":
-        eleccion = input("¿Qué programa desea ejecutar? \n> ")
-    if eleccion == "1":
-        barraFormato(2)
-        ms1.programa1()
-        x = "1"
-        print("Recuerda que si quieres ver el menú de opciones solo tienes que escribir: \"13\"")
-        
-    elif eleccion == "2":
-        barraFormato(2)
-        ms2.programa2()
-        x = "1"
-        print("Recuerda que si quieres ver el menú de opciones solo tienes que escribir: \"13\"")
-        
-    elif eleccion == "3":
-        barraFormato(2)
-        ms3.programa3()
-        x = "1"
-        print("Recuerda que si quieres ver el menú de opciones solo tienes que escribir: \"13\"")
-        
-    elif eleccion == "4":
-        barraFormato(2)
-        ms4.programa4()
-        x = "1"
-        print("Recuerda que si quieres ver el menú de opciones solo tienes que escribir: \"13\"")
-        
-    elif eleccion == "5":
-        barraFormato(2)
-        ms5.programa5()
-        x = "1"
-        print("Recuerda que si quieres ver el menú de opciones solo tienes que escribir: \"13\"")
-        
-    elif eleccion == "6":
-        barraFormato(2)
-        ms6.programa6()
-        x = "1"
-        print("Recuerda que si quieres ver el menú de opciones solo tienes que escribir: \"13\"")
-        
-    elif eleccion == "7":
-        barraFormato(2)
-        ms7.programa7()
-        x = "1"
-        print("Recuerda que si quieres ver el menú de opciones solo tienes que escribir: \"13\"")
-        
-    elif eleccion == "8":
-        barraFormato(2)
-        ms8.programa8()
-        x = "1"
-        print("Recuerda que si quieres ver el menú de opciones solo tienes que escribir: \"13\"")
-        
-    elif eleccion == "9":
-        barraFormato(2)
-        ms9.programa9()
-        x = "1"
-        print("Recuerda que si quieres ver el menú de opciones solo tienes que escribir: \"13\"")
-        
-    elif eleccion == "10":
-        barraFormato(2)
-        ms10.programa10()
-        x = "1"
-        print("Recuerda que si quieres ver el menú de opciones solo tienes que escribir: \"13\"")
-        
-    elif eleccion == "11":
-        barraFormato(2)
-        ms11.programa11()
-        x = "1"
-        print("Recuerda que si quieres ver el menú de opciones solo tienes que escribir: \"13\"")
-        
-    elif eleccion == "12":
-        barraFormato(2)
-        ms12.programa12()
-        x = "1"
-        print("Recuerda que si quieres ver el menú de opciones solo tienes que escribir: \"13\"")
-        
-    elif eleccion == "13":
-        barraFormato(2)
-        print("""
-*--------------------------------------*
-|          Menú de opciones            |
-*--------------------------------------*
-|1.-| Operaciones Básicas.             |
-|--------------------------------------|
-|2.-| Entrada teclado.                 |
-|--------------------------------------|
-|3.-| Precio de energía eléctrica.     |
-|--------------------------------------|
-|4.-| Veces que se repite una palabra. |
-|--------------------------------------|
-|5.-| Números de lotería.              |
-|--------------------------------------|
-|6.-| Préstamos usando while.          |
-|--------------------------------------|
-|7.-| Lista de caracteres usando while.|
-|--------------------------------------|
-|8.-| Tablas de multiplicar.           |
-|--------------------------------------|
-|9.-| Primer caracter que no se repite.|
-|--------------------------------------|
-|10.-| Más funciones.                  |
-|--------------------------------------|
-|11.-| Sets a partir de listas.        |
-|--------------------------------------|
-|12.-| Los viajeros.                   |
-|--------------------------------------|
-|13.-| Mostrar Menú de opciones.       |
-|--------------------------------------|
-|14.-| Cerrar programa general.        |
-*--------------------------------------*
-""")
-        x = "1"
+    if x == 3: break
+    elif x == 1: eleccion = input("¿Qué programa desea ejecutar? \n> ")
+    
+    # ==== Condicionales - Control de programas ==== #
+    """
+    Aquí controlo cual programa se va ejecutar, según el que seleccione el usuario.
+    Aquí también controlo la data basura, para evitar que ponga algo no esperado, en caso de, se lo notifica y espera la corrección del mismo.
+    """
+    if eleccion == "1": barraFormato(2), print("\n\nHaz elegido el programa 1: Operaciones Básicas.\n"),ms1.programa1(), print(mensaje)
+    elif eleccion == "2": barraFormato(2), print("\n\nHaz elegido el programa 2: Entrada teclado.\n"),ms2.programa2(), print(mensaje)   
+    elif eleccion == "3": barraFormato(2), print("\n\nHaz elegido el programa 3: Precio energía eléctrica.\n"),ms3.programa3(), print(mensaje)  
+    elif eleccion == "4": barraFormato(2), print("\n\nHaz elegido el programa 4: Veces que se repite una palabra.\n"),ms4.programa4(), print(mensaje)
+    elif eleccion == "5": barraFormato(2), print("\n\nHaz elegido el programa 5: Números de lotería.\n"),ms5.programa5(), print(mensaje)
+    elif eleccion == "6": barraFormato(2), print("\n\nHaz elegido el programa 6: Préstamos usando while.\n"),ms6.programa6(), print(mensaje)
+    elif eleccion == "7": barraFormato(2), print("\n\nHaz elegido el programa 7: Lista de caracteres usando while.\n"),ms7.programa7(), print(mensaje)
+    elif eleccion == "8": barraFormato(2), print("\n\nHaz elegido el programa 8: Tablas de multiplicar.\n"),ms8.programa8(), print(mensaje)
+    elif eleccion == "9": barraFormato(2), print("\n\nHaz elegido el programa 9: Primer caracter que no se repite.\n"),ms9.programa9(), print(mensaje)
+    elif eleccion == "10": barraFormato(2), print("\n\nHaz elegido el programa 10: Más funciones.\n"),ms10.programa10(), print(mensaje)
+    elif eleccion == "11": barraFormato(2), print("\n\nHaz elegido el programa 11: Sets a partir de listas.\n"),ms11.programa11(), print(mensaje)
+    elif eleccion == "12": barraFormato(2), print("\n\nHaz elegido el programa 12: Los viajeros.\n"),ms12.programa12(), print(mensaje)
+    elif eleccion == "13": barraFormato(2), menuOpciones()
     elif eleccion == "14":
         barraFormato(0)
         break
-        
     elif eleccion != "14":
         while True:
             print("Lo siento, lo que haz introducido no va acorde con los números del menú de opciones.")
@@ -254,6 +165,8 @@ while True:
                 x = 3
                 break     
         continue
+    # == Fin Condicionales - Control de programas == #
+    
             
 # ========================== Agradecimiento por usar el programa ========================= #  
 
@@ -267,4 +180,3 @@ print("""
 *----------------------------------------------------------------------------*
 """)
 # ========================== Fin Agradecimiento por usar el programa ========================= #
-#TODO RECORDAR AGREGAR LA OPCION 13, CERRAR PROGRAMA.
