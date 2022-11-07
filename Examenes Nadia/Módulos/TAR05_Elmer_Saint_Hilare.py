@@ -2,6 +2,8 @@
 Escriba un programa que pregunte al usuario los números de su ticket de lotería, los almacene en una lista y los muestre por pantalla ordenados de menor a mayor. 
 Elmer Saint-Hilare 21-1354
 """
+from emoji import emojize as em # Esto no es parte del ejercicio, es decoración.
+
 def programa5 ():
     #Nombre del programa.
     print("""
@@ -31,9 +33,9 @@ def programa5 ():
     Aquí imprimo por pantalla el agradecimiento y por quién fue creado, en este caso por mi.
     """
     
-    print("""
-*----------------------------------------------------------------------------*
-|  ¡Programa 5 Finalizado exitosamente! / By: Elmer Saint-Hilare 21-1354     |
-*----------------------------------------------------------------------------*
-""")
+    print(em("""
+*-----------------------------------------*
+|  ¡Programa 5 Finalizado exitosamente! :smiling_face_with_smiling_eyes:|
+*-----------------------------------------*
+"""))
 #========================== Fin Agradecimiento por usar el programa =========================#

@@ -2,8 +2,9 @@
 Escriba un programa que permita crear una lista de palabras y que, a continuación, pida una palabra y diga cuántas veces aparece esa palabra en la lista.
 Elmer Saint-Hilare 21/1354
 """
+from emoji import emojize as em # Esto no es parte del ejercicio, es decoración.
 
-def programa4 ():
+def programa4 (): # Esta linea no es parte del ejercicio, es del examen.
 #Declaro mis variables a utilizar.
     Lista = []#Aquí se almacenan todos los elementos que el usuario más adelante va a proporcionar.
     x = 1 #Aquí es para poder cambiar el mandato en el bucle for.
@@ -48,9 +49,9 @@ def programa4 ():
     Aquí imprimo por pantalla el agradecimiento y por quién fue creado, en este caso por mi.
     """
     
-    print("""
-*----------------------------------------------------------------------------*
-|  ¡Programa 4 Finalizado exitosamente! / By: Elmer Saint-Hilare 21-1354     |
-*----------------------------------------------------------------------------*
-""")
+    print(em("""
+*-----------------------------------------*
+|  ¡Programa 4 Finalizado exitosamente! :smiling_face_with_smiling_eyes:|
+*-----------------------------------------*
+"""))
 #========================== Fin Agradecimiento por usar el programa =========================#

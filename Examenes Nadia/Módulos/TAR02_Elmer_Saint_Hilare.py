@@ -2,7 +2,9 @@
 Escribir un programa que pida 2 números y muestre paso a paso el cálculo de la raíz cuadrada de la suma del cuadrado de ambos.
 Elmer Luis Saint-Hilare Rojo / 21-1354. 
 """
-def programa2 ():
+from emoji import emojize as em # Esto no es parte del ejercicio, es decoración.
+
+def programa2 (): # Esta linea no es parte del ejercicio, es del examen.
     import math #Aquí importo math para poder hacer uso de la raiz cuadrada.
 
     print("""
@@ -36,9 +38,9 @@ def programa2 ():
 Aquí imprimo por pantalla el agradecimiento y por quién fue creado, en este caso por mi.
 """
 
-    print("""
-*----------------------------------------------------------------------------*
-|  ¡Programa 2 Finalizado exitosamente! / By: Elmer Saint-Hilare 21-1354     |
-*----------------------------------------------------------------------------*
-""")
+    print(em("""
+*-----------------------------------------*
+|  ¡Programa 2 Finalizado exitosamente! :smiling_face_with_smiling_eyes:|
+*-----------------------------------------*
+"""))
 #========================== Fin Agradecimiento por usar el programa =========================#

@@ -11,6 +11,8 @@ Si el número no es divisor de ninguno (3 y 5), únicamente mostrar el número.
 
 Elmer Saint-Hilare 21-1354
 """
+from emoji import emojize as em # Esto no es parte del ejercicio, es decoración.
+
 def programa10():
     """
     En la funcion fizzbuzz le tengo que me haga el juego de fizz buzz, donde tengo un for que me realiza los numeros del 1 hasta la 1+suma
@@ -76,9 +78,9 @@ def programa10():
     Aquí imprimo por pantalla el agradecimiento y por quién fue creado, en este caso por mi.
     """
     
-    print("""
-*----------------------------------------------------------------------------*
-|  ¡Programa 10 Finalizado exitosamente! / By: Elmer Saint-Hilare 21-1354    |
-*----------------------------------------------------------------------------*
-""")
+    print(em("""
+*-----------------------------------------*
+|  ¡Programa 10 Finalizado exitosamente! :smiling_face_with_smiling_eyes:|
+*-----------------------------------------*
+"""))
 #========================== Fin Agradecimiento por usar el programa =========================#

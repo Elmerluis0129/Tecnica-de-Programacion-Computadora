@@ -31,12 +31,22 @@ from Módulos import TAR11_Elmer_Saint_Hilare as ms11
 from Módulos import TAR12_Elmer_Saint_Hilare as ms12
 # =============== Fin Importaciones =============== #
 
-# ==== Importando time ==== #
+# ================ Importando para decorar ================ #
+"""
+Aquí importo para poder decorar el codigo, como en este caso para usar emojis.
+"""
+from emoji import emojize as em
+
 """
 Aquí lo importo para usar la función sleep y poder controlar la velocidad de iteración del bucle for.
 """
 import time
-# ==== Fin Importando time ==== #
+# ============== Fin Importando para decorar ============== #
+
+# ===== Variables generaeles ===== #
+mensaje = "Recuerda que si quieres ver el menú de opciones solo tienes que escribir: \"13\""
+x = 1
+# === Fin Variables generaeles === #
 
 # ================ Barra de porcentaje ================ #
 """
@@ -49,8 +59,6 @@ Tengo que cuando reciba 2, es para la barra de carga de los programas(Tareas).
 Y en caso de ninguno, pues la barra de fin del programa.
 """
 limite = 50
-mensaje = "Recuerda que si quieres ver el menú de opciones solo tienes que escribir: \"13\""
-x = 1
 
 def barraProgreso(segmento, total, longitud):
     porcentaje = segmento / total
@@ -136,19 +144,19 @@ while True:
     Aquí controlo cual programa se va ejecutar, según el que seleccione el usuario.
     Aquí también controlo la data basura, para evitar que ponga algo no esperado, en caso de, se lo notifica y espera la corrección del mismo.
     """
-    if eleccion == "1": barraFormato(2), print("\n\nHaz elegido el programa 1: Operaciones Básicas.\n"),ms1.programa1(), print(mensaje)
-    elif eleccion == "2": barraFormato(2), print("\n\nHaz elegido el programa 2: Entrada teclado.\n"),ms2.programa2(), print(mensaje)   
-    elif eleccion == "3": barraFormato(2), print("\n\nHaz elegido el programa 3: Precio energía eléctrica.\n"),ms3.programa3(), print(mensaje)  
-    elif eleccion == "4": barraFormato(2), print("\n\nHaz elegido el programa 4: Veces que se repite una palabra.\n"),ms4.programa4(), print(mensaje)
-    elif eleccion == "5": barraFormato(2), print("\n\nHaz elegido el programa 5: Números de lotería.\n"),ms5.programa5(), print(mensaje)
-    elif eleccion == "6": barraFormato(2), print("\n\nHaz elegido el programa 6: Préstamos usando while.\n"),ms6.programa6(), print(mensaje)
-    elif eleccion == "7": barraFormato(2), print("\n\nHaz elegido el programa 7: Lista de caracteres usando while.\n"),ms7.programa7(), print(mensaje)
-    elif eleccion == "8": barraFormato(2), print("\n\nHaz elegido el programa 8: Tablas de multiplicar.\n"),ms8.programa8(), print(mensaje)
-    elif eleccion == "9": barraFormato(2), print("\n\nHaz elegido el programa 9: Primer caracter que no se repite.\n"),ms9.programa9(), print(mensaje)
-    elif eleccion == "10": barraFormato(2), print("\n\nHaz elegido el programa 10: Más funciones.\n"),ms10.programa10(), print(mensaje)
-    elif eleccion == "11": barraFormato(2), print("\n\nHaz elegido el programa 11: Sets a partir de listas.\n"),ms11.programa11(), print(mensaje)
-    elif eleccion == "12": barraFormato(2), print("\n\nHaz elegido el programa 12: Los viajeros.\n"),ms12.programa12(), print(mensaje)
-    elif eleccion == "13": barraFormato(2), menuOpciones()
+    if eleccion == "1":    barraFormato(2),  print("\n\nHaz elegido el programa 1: Operaciones Básicas.\n"),              ms1.programa1(),   print(mensaje)
+    elif eleccion == "2":  barraFormato(2),  print("\n\nHaz elegido el programa 2: Entrada teclado.\n"),                  ms2.programa2(),   print(mensaje)   
+    elif eleccion == "3":  barraFormato(2),  print("\n\nHaz elegido el programa 3: Precio energía eléctrica.\n"),         ms3.programa3(),   print(mensaje)  
+    elif eleccion == "4":  barraFormato(2),  print("\n\nHaz elegido el programa 4: Veces que se repite una palabra.\n"),  ms4.programa4(),   print(mensaje)
+    elif eleccion == "5":  barraFormato(2),  print("\n\nHaz elegido el programa 5: Números de lotería.\n"),               ms5.programa5(),   print(mensaje)
+    elif eleccion == "6":  barraFormato(2),  print("\n\nHaz elegido el programa 6: Préstamos usando while.\n"),           ms6.programa6(),   print(mensaje)
+    elif eleccion == "7":  barraFormato(2),  print("\n\nHaz elegido el programa 7: Lista de caracteres usando while.\n"), ms7.programa7(),   print(mensaje)
+    elif eleccion == "8":  barraFormato(2),  print("\n\nHaz elegido el programa 8: Tablas de multiplicar.\n"),            ms8.programa8(),   print(mensaje)
+    elif eleccion == "9":  barraFormato(2),  print("\n\nHaz elegido el programa 9: Primer caracter que no se repite.\n"), ms9.programa9(),   print(mensaje)
+    elif eleccion == "10": barraFormato(2),  print("\n\nHaz elegido el programa 10: Más funciones.\n"),                   ms10.programa10(), print(mensaje)
+    elif eleccion == "11": barraFormato(2),  print("\n\nHaz elegido el programa 11: Sets a partir de listas.\n"),         ms11.programa11(), print(mensaje)
+    elif eleccion == "12": barraFormato(2),  print("\n\nHaz elegido el programa 12: Los viajeros.\n"),                    ms12.programa12(), print(mensaje)
+    elif eleccion == "13": barraFormato(2),  menuOpciones()
     elif eleccion == "14":
         barraFormato(0)
         break
@@ -174,9 +182,9 @@ while True:
 Aquí imprimo por pantalla el agradecimiento y por quién fue creado, en este caso por mi.
 """
 
-print("""
-*----------------------------------------------------------------------------*
-| ¡Muchas gracias por utilizar mi programa! / By: Elmer Saint-Hilare 21-1354 |
-*----------------------------------------------------------------------------*
-""")
+print(em("""
+*----------------------------------------------------------------------------------*
+| ¡Muchas gracias por utilizar mi programa! :thumbs_up: / By: Elmer Saint-Hilare 21-1354 :OK_hand: |
+*----------------------------------------------------------------------------------*
+"""))
 # ========================== Fin Agradecimiento por usar el programa ========================= #

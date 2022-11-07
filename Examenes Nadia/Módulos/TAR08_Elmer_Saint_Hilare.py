@@ -5,6 +5,8 @@ Ingrese el número por el que comenzarán a mostrarse las tablas: 1.
 Ingrese el número por el que terminarán a mostrarse las tablas: 3.
 Elmer Saint-Hilare 21-1354.
 """
+from emoji import emojize as em # Esto no es parte del ejercicio, es decoración.
+
 def programa8 ():
     #========================== Nombre programa =========================# 
     """
@@ -126,9 +128,9 @@ def programa8 ():
     Aquí imprimo por pantalla el agradecimiento y por quién fue creado, en este caso por mi.
     """
 
-    print("""
-*----------------------------------------------------------------------------*
-|  ¡Programa 8 Finalizado exitosamente! / By: Elmer Saint-Hilare 21-1354     |
-*----------------------------------------------------------------------------*
-""")
+    print(em("""
+*-----------------------------------------*
+|  ¡Programa 8 Finalizado exitosamente! :smiling_face_with_smiling_eyes:|
+*-----------------------------------------*
+"""))
 #========================== Fin Agradecimiento por usar el programa =========================#

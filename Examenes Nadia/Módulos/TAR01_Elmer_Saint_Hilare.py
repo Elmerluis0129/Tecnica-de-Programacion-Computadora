@@ -2,7 +2,10 @@
 Escribir un programa que mediante el uso de variables y operadores aritméticos, almacene la suma, resta, multiplicación y división de 2 números. Luego, mostrar los resultados.
 Elmer Saint-Hilare 21-1354
 """
-def programa1 ():
+
+from emoji import emojize as em # Esto no es parte del ejercicio, es decoración.
+
+def programa1 (): # Esta linea no es parte del ejercicio, es del examen.
 #Nombre del programa.
     print("""
 *--------------------*
@@ -46,9 +49,9 @@ Operaciones:
 #Aquí imprimo por pantalla el agradecimiento y por quién fue creado, en este caso por mi.
 
 
-    print("""
-*----------------------------------------------------------------------------*
-|  ¡Programa 1 Finalizado exitosamente! / By: Elmer Saint-Hilare 21-1354     |
-*----------------------------------------------------------------------------*
-""")
+    print(em("""
+*-----------------------------------------*
+|  ¡Programa 1 Finalizado exitosamente! :smiling_face_with_smiling_eyes:|
+*-----------------------------------------*
+"""))
 #========================== Fin Agradecimiento por usar el programa =========================#

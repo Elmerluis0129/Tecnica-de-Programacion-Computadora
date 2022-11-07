@@ -4,7 +4,10 @@ consumidos y el tipo de instalación: R para residencias, I para industrias y C 
 con la siguiente tabla. (Tabla en la plataforma UNPHU)
 Elmer Saint-Hilare 21-1354
 """
-def programa3 ():
+from emoji import emojize as em # Esto no es parte del ejercicio, es decoración.
+
+
+def programa3 (): # Esta linea no es parte del ejercicio, es del examen.
     print("""\n
 *------------------------------------------------------*
 |Precio a pagar por el suministro de energía eléctrica.|
@@ -56,9 +59,9 @@ def programa3 ():
     Aquí imprimo por pantalla el agradecimiento y por quién fue creado, en este caso por mi.
     """
 
-    print("""
-*----------------------------------------------------------------------------*
-|  ¡Programa 3 Finalizado exitosamente! / By: Elmer Saint-Hilare 21-1354     |
-*----------------------------------------------------------------------------*
-""")
+    print(em("""
+*-----------------------------------------*
+|  ¡Programa 3 Finalizado exitosamente! :smiling_face_with_smiling_eyes:|
+*-----------------------------------------*
+"""))
 #========================== Fin Agradecimiento por usar el programa =========================#

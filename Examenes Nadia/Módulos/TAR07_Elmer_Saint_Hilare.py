@@ -7,6 +7,8 @@ Si el usuario ingresa una palabra, se debe de omitir y continuar con el bucle.
 Mostra la lista con los caracteres capturados y el total.
 Elmer Saint-Hilare 21-1354
 """
+from emoji import emojize as em # Esto no es parte del ejercicio, es decoración.
+
 def programa7 ():
 # Listas y variable a utilizar
     listaCaracteres = [] # Lista donde se guardan los caracteres. / PRINCIPAL.
@@ -59,9 +61,9 @@ def programa7 ():
     Aquí imprimo por pantalla el agradecimiento y por quién fue creado, en este caso por mi.
     """
     
-    print("""
-*----------------------------------------------------------------------------*
-|  ¡Programa 7 Finalizado exitosamente! / By: Elmer Saint-Hilare 21-1354     |
-*----------------------------------------------------------------------------*
-""")
+    print(em("""
+*-----------------------------------------*
+|  ¡Programa 7 Finalizado exitosamente! :smiling_face_with_smiling_eyes:|
+*-----------------------------------------*
+"""))
 #========================== Fin Agradecimiento por usar el programa =========================#

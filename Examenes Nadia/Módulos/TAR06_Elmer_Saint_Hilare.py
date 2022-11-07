@@ -6,6 +6,8 @@ Se debe solicitar la cantidad mensual que se desea pagar.
 Mediante el uso de while, determinar los meses (total) en los que se completará el pago del préstamo.
 Elmer Saint-Hilare 21-1354
 """
+from emoji import emojize as em # Esto no es parte del ejercicio, es decoración.
+
 def programa6 ():
     print("""
 *---------------------------------------*
@@ -167,9 +169,9 @@ Límite de tiempo por cantidad de préstamo:
     Aquí imprimo por pantalla el agradecimiento y por quién fue creado, en este caso por mi.
     """
     
-    print("""
-*----------------------------------------------------------------------------*
-|  ¡Programa 6 Finalizado exitosamente! / By: Elmer Saint-Hilare 21-1354     |
-*----------------------------------------------------------------------------*
-""")
+    print(em("""
+*-----------------------------------------*
+|  ¡Programa 6 Finalizado exitosamente! :smiling_face_with_smiling_eyes:|
+*-----------------------------------------*
+"""))
 #========================== Fin Agradecimiento por usar el programa =========================#
