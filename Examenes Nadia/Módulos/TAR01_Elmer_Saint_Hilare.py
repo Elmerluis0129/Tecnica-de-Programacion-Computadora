@@ -31,7 +31,7 @@ Operaciones:
 
     #Entrada de los numeros / Variables
     num1 = 96 # Numero 1.
-    num2 = 300 # Numero 2.
+    num2 = 347 # Numero 2.
 
     #Operaciones.
     Sumar = num1+num2
@@ -40,8 +40,15 @@ Operaciones:
     Dividir = num1/num2
 
 #Resultado operaciones.
-    print("\nEl resultado en todas las operaciones es: \n\nSuma: ", num1,"+",num2,"=", Sumar, "\nResta: ", num1,"-",num2,"=", Restar, "\nMultiplicación: ", num1,"*",num2,"=", Multiplicar, "\nDivisión: ", num1,"/",num2,"=", round(Dividir, 2))
+    print
+    ("""
+El resultado en todas las operaciones es:
 
+La suma de """, '{}'.format(num1),'+ {} = {}'.format(num2, Sumar),"""
+La resta de """, '{}'.format(num1),'- {} = {}'.format(num2, Restar),"""
+La multiplicación de """, '{}'.format(num1),'* {} = {}'.format(num2, Multiplicar),"""
+La división de """, '{}'.format(num1),'/ {} = {}'.format(num2, Dividir)
+)
 
 #========================== Agradecimiento por usar el programa =========================#  
 

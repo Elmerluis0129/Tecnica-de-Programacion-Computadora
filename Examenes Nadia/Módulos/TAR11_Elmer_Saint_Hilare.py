@@ -35,7 +35,6 @@ def programa11 ():
     Los contadores son los que me van aumentando de 1 en 1 los acumuladores.
     """
 
-    # ------------ Función 1 ------------ #
     def ListaDeCompras(x):
         n = 1
         while True:
@@ -44,6 +43,7 @@ def programa11 ():
             p = 1
             j = 0
             m = 0
+            # ================ Lista 1 ================ #
             if n == 1:
                 print("\n================== Lista Uno ==================\n")
                 while x != j:
@@ -67,6 +67,9 @@ def programa11 ():
                 print("\nLista 1: ", Lista1)
                 n = 2
                 continue
+            # ============== Fin Lista 1 ============== #
+            
+            # ================ Lista 2 ================ #
             elif n == 2: #Lista 2
                 cantidad = int(input("\nIngrese la cantidad de producto lista 2: \n> "))
                 print("\n================== Lista Dos ==================\n")
@@ -90,38 +93,34 @@ def programa11 ():
 
                 print("\nLista 2: ", Lista2)
 
+                n = 3
+                continue
+            # ============== Fin Lista 2 ============== #
+            
+            # ================ Set listas ================ #
+            elif n == 3:
+                convirtiendo1 = set(Lista1)
+                convirtiendo2 = set(Lista2)
+                l = convirtiendo1.intersection(convirtiendo2)
+                if len(l) >= 1:
+                    print("\n========= Producto comunes en ambas listas =========")
+                    print("\nProducto comunes: ", l)
+                
+                else:
+                    print("\nNo hay productos comunes en las listas.")
                 n = "Fin"
                 continue
+            # ============== Fin Set Listas ============== #
             elif n == "Fin": break
-
-    # ------------ Fin Función 1 ------------ #
-
-    # ------------ Función 2 ------------ #    
-    def ProductoComunes(l):
-
-        if len(l) >= 1:
-            print("\n========= Producto comunes en ambas listas =========")
-            print("\nProducto comunes: ", l)
-        else:
-            print("\nNo hay productos comunes en las listas.")
-    # ------------ Fin Función 2 ------------ #
 
     # ==================== Fin Funciones ==================== #
 
-    # ==================== Llamada Funciones ==================== #
+    # ==================== Llamada Función ==================== #
     """
-    Aquí llamo las funciones para que lleven acabo dichos códigos que tienen dentro.
+    Aquí llamo la función para que lleven acabo dichos códigos que tienen dentro.
     """
     ListaDeCompras(int(input("\nIngrese la cantidad de producto lista 1: \n> ")))
-    # =========== Conversión de lista a sets =========== #
-    """
-    Aquí Convierto mis listas a set para luego encontrar los prodcutos comunes entre ellas con el comando de los conjuntos .intersections
-    """
-    convirtiendo1 = set(Lista1)
-    convirtiendo2 = set(Lista2)
-    # =========== Fin Conversión de lista a sets =========== #
-    ProductoComunes(convirtiendo1.intersection(convirtiendo2))
-    # ==================== Fin Llamada Funciones ==================== #
+    # ================== Fin Llamada Función ================== #
 
     # ========================== Agradecimiento por usar el programa ========================= #  
 
@@ -130,8 +129,8 @@ def programa11 ():
     """
 
     print(em("""
-*-----------------------------------------*
+*------------------------------------------*
 |  ¡Programa 11 Finalizado exitosamente! :smiling_face_with_smiling_eyes:|
-*-----------------------------------------*
+*------------------------------------------*
 """))
     # ========================== Fin Agradecimiento por usar el programa ========================= #

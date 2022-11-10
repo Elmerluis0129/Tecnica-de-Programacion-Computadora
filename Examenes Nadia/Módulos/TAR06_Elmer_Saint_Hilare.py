@@ -24,7 +24,23 @@ def programa6 ():
 *----------------------------------------------------------------------------------*
 > """)) #Sistemas, pagar impuestos o no.
 
-# Condición para saber qué sistema elige.
+# Condición para saber si el sistema que elige está fuera del menú.
+    if sistema != 1 and sistema != 2:
+        while True:
+            print("\nLo siento, respuesta incorrecta, vuelve a intentarlo...\n")
+            sistema = int(input("""
+*----------------------------------------------------------------------------------*
+|                         ¿Qué sistema desea seleccionar?                          |
+|----------------------------------------------------------------------------------|
+|1- Nuevo / Este no pagas impuestos pero tiene límite de tiempo para pagar         |
+|2- Antiguo / Este pagas impuestos luego de exceder los 10 años a pagar el préstamo|
+*----------------------------------------------------------------------------------*
+> """))
+            
+            if sistema == 1 or sistema == 2:
+                break
+            else: continue
+            
     if sistema == 2: # Sistema 2.
         MontoPrestamo = int(input("""
 ¿Cuál es el monto de su préstamo? 
@@ -39,7 +55,7 @@ def programa6 ():
 ¿Cuál es la cantidad mensual de su préstamo a pagar? 
 > """))# Mandato para saber la cantidad de su mensualidad.
     elif sistema == 1:# Sistema 1.
-        print("""
+        print("""\n
 Límite de tiempo por cantidad de préstamo:
 *-------------------------------------------------------------------*
 |Préstamo mayor o igual a: RD$1,000,000 pesos. / 180 meses - 15 años|
@@ -52,19 +68,19 @@ Límite de tiempo por cantidad de préstamo:
 *-------------------------------------------------------------------*       
 """) # Tabla con los límites por préstamos.
         MontoPrestamo = int(input("""
-¿Cuá    l es el monto de su préstamo? 
+¿Cuál es el monto de su préstamo? 
 > """)) # Mandato para saber la cantidad de su préstamo.
 
         CantidadMensual = int(input("""
 ¿Cuál es la cantidad mensual de su préstamo a pagar? 
 > """)) # Mandato para saber la cantidad de su mensualidad.
+    
     while MontoPrestamo == CantidadMensual:
         print("\nLo siento, no permitimos pagar el préstamo con un sólo pago, tiene que dividirlo mensualmente.\n") # No está permitido hacer un sólo pago el préstamo.
         CantidadMensual = int(input("""
 ¿Cuál es la cantidad mensual de su préstamo a pagar? 
 > """))
-    else:
-        print("\nLo siento, respuesta incorrecta, vuelve a intentarlo y selecciona 1 o 2.\n")
+    
 
 #////////////////////////////////////////////////////////////////////////SISTEMA 1/////////////////////////////////////////////////////////////////////// 
 
@@ -78,7 +94,7 @@ Límite de tiempo por cantidad de préstamo:
             break # Acabar while.
         elif MontoPrestamo >= 1000000 and mesesApagar > 180: # Ejecutar esas sentencias de código hasta que se cumpla la primera condición de si excede límites o no.
             while mesesApagar > 180:  # Límites para el préstamo de 1M.
-                print("\nLo siento, pero, excede los límites de la empresa (15 años) para esta cantidad de préstamo.")
+                print("\nLo siento, pero, excede los límites de la empresa (15 años/180 meses) para esta cantidad de préstamo.\n Por favor, aumente su pago mensual.")
                 CantidadMensual = int(input("""
 ¿Cuál es la cantidad mensual de su préstamo a pagar? 
 > """))
@@ -92,7 +108,7 @@ Límite de tiempo por cantidad de préstamo:
             break # Acabar while
         elif MontoPrestamo >= 500000 and mesesApagar > 96: # Ejecutar esas sentencias de código hasta que se cumpla la primera condición de si excede límites o no.
             while mesesApagar > 96: # Límites para el préstamo de 500k.
-                print("\nLo siento, pero, excede los límites de la empresa (8 años) para esta cantidad de préstamo.")
+                print("\nLo siento, pero, excede los límites de la empresa (8 años/96 meses) para esta cantidad de préstamo.\n Por favor, aumente su pago mensual.")
                 CantidadMensual = int(input("""
 ¿Cuál es la cantidad mensual de su préstamo a pagar? 
 > """))
@@ -106,7 +122,7 @@ Límite de tiempo por cantidad de préstamo:
             break # Acabar while
         elif MontoPrestamo >= 100000 and mesesApagar > 48: # Ejecutar esas sentencias de código hasta que se cumpla la primera condición de si excede límites o no.
             while mesesApagar > 48: # Límites para el préstamo de 100k.
-                print("\nLo siento, pero, excede los límites de la empresa (4 años) para esta cantidad de préstamo.")
+                print("\nLo siento, pero, excede los límites de la empresa (4 años/48 meses) para esta cantidad de préstamo.\n Por favor, aumente su pago mensual.")
                 CantidadMensual = int(input("""
 ¿Cuál es la cantidad mensual de su préstamo a pagar? 
 > """))
@@ -120,7 +136,7 @@ Límite de tiempo por cantidad de préstamo:
             break # Acabar while.
         elif MontoPrestamo < 100000 and mesesApagar > 24: # Ejecutar esas sentencias de código hasta que se cumpla la primera condición de si excede límites o no.
             while mesesApagar > 24: # Límites para el préstamo de menor a 100k.
-                print("\nLo siento, pero, excede los límites de la empresa (2 años) para esta cantidad de préstamo.")
+                print("\nLo siento, pero, excede los límites de la empresa (2 años/24 meses) para esta cantidad de préstamo.\n Por favor, aumente su pago mensual.")
                 CantidadMensual = int(input("""
 ¿Cuál es la cantidad mensual de su préstamo a pagar? 
 > """)) 

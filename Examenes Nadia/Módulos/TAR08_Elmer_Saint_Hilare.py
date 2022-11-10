@@ -24,11 +24,32 @@ def programa8 ():
     """
     Aquí declaro mis variables inicio y fin, a las cuales le doy de valor una entrada que el usuario procederá a darme.
     Y un salto de línea para que no salga pegado.
+    
+    Aquí en el while tengo un control para saber si pone el iniciar las tablas igual al final o si el iniciar es mayor a final, para que solo haga las tablas cuando es posible
+    Es posible cuando inicio es menor que el final o no es igual al final.
     """
-
     Inicio = int(input("Escribe un número para comenzar la tabla: "))
     Final = int(input("Escribe un número para terminar la tabla: ")) 
     print("\n")
+    while True:
+        if Inicio > Final:
+            while True:
+                print("\nLo siento, el inicio no puede ser mayor a final.")
+                Final = int(input("\nEscribe un número para terminar la tabla: ")) 
+                if Inicio <= Final:
+                    break
+            continue
+                
+        elif Inicio == Final:
+            while True:
+                print("\nLo siento, el inicio no puede ser igual a Final.")
+                Inicio = int(input("\nEscribe un número para comenzar la tabla: "))
+                if Inicio != Final:
+                    break
+            continue
+        else:
+            break
+        
 #========================== Fin Inicio/Final =========================# 
 
 #========================== Funciones =========================#
