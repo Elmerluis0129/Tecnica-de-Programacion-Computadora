@@ -96,7 +96,7 @@ barraFormato(1)
 
 # ================= Menú de opciones ================= #
 """
-Muestro por pantalla mi menú de opciones.
+Muestro por pantalla mi menú de opciones cada vez que lo llamo.
 """
 def menuOpciones():
     print("""
@@ -166,13 +166,14 @@ while True:
             print("Intenta de nuevo.\n")
             eleccion = input("¿Qué programa desea ejecutar? \n> ")
             if eleccion == "1"  or "2" or "3" or "4" or "5" or "6" or "7" or "8" or "9" or "10" or "11" or "12" or "13":
-                x = "2"
+                x = "1"
                 break
             elif eleccion == "14":
                 barraFormato(0)
                 x = 3
                 break     
         continue
+    x = 1
     # == Fin Condicionales - Control de programas == #
     
             
