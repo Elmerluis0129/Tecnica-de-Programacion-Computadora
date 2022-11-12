@@ -35,70 +35,70 @@ def programa11 ():
     Los contadores son los que me van aumentando de 1 en 1 los acumuladores.
     """
 
-    def ListaDeCompras(x):
-        n = 1
+    def ListaDeCompras(cantidadProducto):
+        iteraccion = 1
         while True:
             # Acumuladores
-            a = 1
-            p = 1
-            j = 0
-            m = 0
+            NumeroProducto = 1
+            NumeroProducto2 = 1
+            controlIteracion = 0
+            PosicionLista = 0
             # ================ Lista 1 ================ #
-            if n == 1:
+            if iteraccion == 1:
                 print("\n================== Lista Uno ==================\n")
-                while x != j:
+                while cantidadProducto != controlIteracion:
                     print("""
 *-----------------------*
-|Ingrese el producto """+str(p)+""":|
+|Ingrese el producto """+str(NumeroProducto2)+""":|
 *-----------------------*""")
                     producto = input("> ")
                     Lista1.append(producto)
                     # Contadores
-                    j += 1
-                    p += 1
+                    controlIteracion += 1
+                    NumeroProducto2 += 1
 
                 print("\nCantidad de producto lista 1: ", len(Lista1))
                 for e in Lista1:
-                    print("\nProducto",str(a)+":", Lista1[m])
+                    print("\nProducto",str(NumeroProducto)+":", Lista1[PosicionLista])
                     # Contadores
-                    m += 1
-                    a += 1
+                    PosicionLista += 1
+                    NumeroProducto += 1
 
                 print("\nLista 1: ", Lista1)
-                n = 2
+                iteraccion = 2
                 continue
             # ============== Fin Lista 1 ============== #
             
             # ================ Lista 2 ================ #
-            elif n == 2: #Lista 2
-                cantidad = int(input("\nIngrese la cantidad de producto lista 2: \n> "))
+            elif iteraccion == 2: #Lista 2
+                cantidadProducto2 = int(input("\nIngrese la cantidad de producto lista 2: \n> "))
                 print("\n================== Lista Dos ==================\n")
-                while cantidad != j:
+                while cantidadProducto2 != controlIteracion:
                     print("""
 *-----------------------*
-|Ingrese el producto """+str(p)+""":|
+|Ingrese el producto """+str(NumeroProducto2)+""":|
 *-----------------------*""")
                     producto = input("> ")
                     Lista2.append(producto)
                     # Contadores
-                    j += 1
-                    p += 1
+                    controlIteracion += 1
+                    NumeroProducto2 += 1
 
                 print("\nCantidad de producto lista 2: ", len(Lista2))
                 for e in Lista2:
-                    print("\nProducto",str(a)+":", Lista2[m])
+                    print("\nProducto",str(NumeroProducto)+":", Lista2[PosicionLista])
                     # Contadores
-                    m += 1
-                    a += 1
+                    PosicionLista += 1
+                    NumeroProducto += 1
 
                 print("\nLista 2: ", Lista2)
 
-                n = 3
+                iteraccion = 3
                 continue
             # ============== Fin Lista 2 ============== #
             
             # ================ Set listas ================ #
-            elif n == 3:
+            elif iteraccion == 3:
                 convirtiendo1 = set(Lista1)
                 convirtiendo2 = set(Lista2)
                 l = convirtiendo1.intersection(convirtiendo2)
@@ -108,10 +108,10 @@ def programa11 ():
                 
                 else:
                     print("\nNo hay productos comunes en las listas.")
-                n = "Fin"
+                iteraccion = "Fin"
                 continue
             # ============== Fin Set Listas ============== #
-            elif n == "Fin": break
+            elif iteraccion == "Fin": break
 
     # ==================== Fin Funciones ==================== #
 

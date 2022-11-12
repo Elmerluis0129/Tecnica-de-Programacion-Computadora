@@ -45,7 +45,7 @@ import time
 
 # ===== Variables generaeles ===== #
 mensaje = "Recuerda que si quieres ver el menú de opciones solo tienes que escribir: \"13\""
-x = 1
+control = 1
 # === Fin Variables generaeles === #
 
 # ================ Barra de porcentaje ================ #
@@ -81,7 +81,7 @@ def barraFormato(decision):
         for i in range(limite+1):
             time.sleep(0.01)
             print(barraProgreso(i, limite, 50), end = "\r")
-        x = 1
+        control = 1
     
     else:
         print("\nCerrando el programa general...")
@@ -136,8 +136,8 @@ menuOpciones()
 # =============== Fin Menú de opciones =============== #
 
 while True:
-    if x == 3: break
-    elif x == 1: eleccion = input("¿Qué programa desea ejecutar? \n> ")
+    if control == 3: break
+    elif control == 1: eleccion = input("¿Qué programa desea ejecutar? \n> ")
     
     # ==== Condicionales - Control de programas ==== #
     """
@@ -166,14 +166,14 @@ while True:
             print("Intenta de nuevo.\n")
             eleccion = input("¿Qué programa desea ejecutar? \n> ")
             if eleccion == "1"  or "2" or "3" or "4" or "5" or "6" or "7" or "8" or "9" or "10" or "11" or "12" or "13":
-                x = "1"
+                control = "1"
                 break
             elif eleccion == "14":
                 barraFormato(0)
-                x = 3
+                control = 3
                 break     
         continue
-    x = 1
+    control = 1
     # == Fin Condicionales - Control de programas == #
     
             

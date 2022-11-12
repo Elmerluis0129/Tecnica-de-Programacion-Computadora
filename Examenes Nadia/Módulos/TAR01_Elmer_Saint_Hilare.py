@@ -40,13 +40,13 @@ Operaciones:
     Dividir = num1/num2
 
 #Resultado operaciones.
-    print("""
-El resultado en todas las operaciones es:
+    print(f"""
+El resultado en todas las operaciones con los números: {num1} y {num2}
 
-La suma de """, '{}'.format(num1),'+ {} = {}'.format(num2, Sumar),"""
-La resta de """, '{}'.format(num1),'- {} = {}'.format(num2, Restar),"""
-La multiplicación de """, '{}'.format(num1),'* {} = {}'.format(num2, Multiplicar),"""
-La división de """, '{}'.format(num1),'/ {} = {}'.format(num2, Dividir)
+La suma de """, f'{num1}',f'+ {num2} = {Sumar}',"""
+La resta de """, f'{num1}',f'- {num2} = {Restar}',"""
+La multiplicación de """, f'{num1}',f'* {num2} = {Multiplicar}',"""
+La división de """, f'{num1}',f'/ {num2} = {Dividir}'
 )
 
 #========================== Agradecimiento por usar el programa =========================#  

@@ -49,10 +49,9 @@ def programa12():
 
     # ===== Listas Generales ===== #
     """
-    En estas listas procedo mas adelante a convertirlas segun lo necesite.
+    En esta lista procedo mas adelante a convertirlas segun lo necesite.
     Aquí guardo tanto los destinos como la informacion de cada pasajero.
     """
-    Diccionario = []
     ListaDestinos = []
     # === Fin Listas Generales === #
 
@@ -78,30 +77,30 @@ def programa12():
     En la segunda función me encargo de la lista anterior de destinos que tenia, me ignora todas las repetidas ya que la paso de lista a set.
     Luego me imprime esos destinos.
     """
-    def BuscarPasajeroDestino(n):
-        m = 0
-        if n in ListaDestinos:
-            print("\nPasajeros que van para {}:\n".format(n))
+    def BuscarPasajeroDestino(Destino):
+        acumulador = 0
+        if Destino in ListaDestinos:
+            print(f"\nPasajeros que van para {Destino}:\n")
             for clave in ListaTuplasViajeros:
-                if clave[2] == n:
+                if clave[2] == Destino:
                     Diccionario2 = {
                             "Nombre": clave[0],
                             "Edad": clave[1],
                             "Destino": clave[2]
                          }   
-                    m = m + 1     
-                    print("|{}.|".format(m), Diccionario2)
-            if m == 1:
-                print("\nSe encontró: {} pasajero.".format(m)) 
+                    acumulador += 1     
+                    print(f"|{acumulador}.|", Diccionario2)
+            if acumulador == 1:
+                print(f"\nSe encontró: {acumulador} pasajero.") 
             else:
-                print("\nSe encontraron: {} pasajeros.".format(m))  
+                print(f"\nSe encontraron: {acumulador} pasajeros.")  
         else:
-            print("\n¡Lo siento! No hay pasajeros con destino a '{}'.".format(n))
+            print(f"\n¡Lo siento! No hay pasajeros con destino a '{Destino}'.")
 
 
-    def destino(x=0):
+    def destino():
         Destinos = set(ListaDestinos)
-        print("\nDestinos: {}".format(Destinos))
+        print(f"\nDestinos: {Destinos}")
         print("\nIngrese el destino para saber quien va a viajar para el mismo.")
 
 

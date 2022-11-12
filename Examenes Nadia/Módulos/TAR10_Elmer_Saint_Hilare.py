@@ -22,212 +22,212 @@ def programa10 ():
     Ellos entran como str, por eso los paso a int para luego sumarlos y con la suma de ellos poder continuar con las iteraciones.
     Con el bucle for también es para que me haga el proceso, empezando desde el 1 hasta la 1 + de la suma de dicha operación.
     Fin documentación funciones."""
-
+    
     #--------------# Función 1 #--------------#    
-    def Suma_Digitos1(x):
-        digito1 = x[0]
+    def Suma_Digitos1(numeroEntero):
+        digito1 = numeroEntero[0]
 
         operacion = int(digito1)
         print("\n",digito1, "=", operacion)
 
-        for n in range(1, operacion+1):
-            print(n)
-            if n %3 == 0:
-                if n %5 == 0: print("FizzBuzz")
+        for numero1 in range(1, operacion+1):
+            print(numero1)
+            if numero1 %3 == 0:
+                if numero1 %5 == 0: print("FizzBuzz")
                 else: print("Fizz")
-            elif n %5 == 0: print("Buzz")
+            elif numero1 %5 == 0: print("Buzz")
     #--------------# Función 2 #--------------#     
-    def Suma_Digitos2(x):
-        digito1 = x[0]
-        digito2 = x[1]
+    def Suma_Digitos2(numeroEntero):
+        digito1 = numeroEntero[0]
+        digito2 = numeroEntero[1]
 
-        operacion = int(digito1) + int(digito2)
-        print("\n",digito1, "+", digito2, "=", operacion)
+        operacion2 = int(digito1) + int(digito2)
+        print("\n",digito1, "+", digito2, "=", operacion2)
 
-        for n in range(1, operacion+1):
-            print(n)
-            if n %3 == 0:
-                if n %5 == 0: print("FizzBuzz")
+        for numero2 in range(1, operacion2+1):
+            print(numero2)
+            if numero2 %3 == 0:
+                if numero2 %5 == 0: print("FizzBuzz")
                 else: print("Fizz")
-            elif n %5 == 0: print("Buzz")
+            elif numero2 %5 == 0: print("Buzz")
     #--------------# Función 3 #--------------# 
-    def Suma_Digitos3(x):
-        digito1 = x[0]
-        digito2 = x[1]
-        digito3 = x[2]
+    def Suma_Digitos3(numeroEntero):
+        digito1 = numeroEntero[0]
+        digito2 = numeroEntero[1]
+        digito3 = numeroEntero[2]
 
-        operacion = int(digito1) + int(digito2) + int(digito3)
-        print("\n",digito1, "+", digito2, "+", digito3,"=", operacion)
+        operacion3 = int(digito1) + int(digito2) + int(digito3)
+        print("\n",digito1, "+", digito2, "+", digito3,"=", operacion3)
 
-        for n in range(1, operacion+1):
-            print(n)
-            if n %3 == 0:
-                if n %5 == 0: print("FizzBuzz")
+        for numero3 in range(1, operacion3+1):
+            print(numero3)
+            if numero3 %3 == 0:
+                if numero3 %5 == 0: print("FizzBuzz")
                 else: print("Fizz")
-            elif n %5 == 0: print("Buzz")
+            elif numero3 %5 == 0: print("Buzz")
     #--------------# Función 4 #--------------#        
-    def Suma_Digitos4(x):
-        digito1 = x[0]
-        digito2 = x[1]
-        digito3 = x[2]
-        digito4 = x[3]
+    def Suma_Digitos4(numeroEntero):
+        digito1 = numeroEntero[0]
+        digito2 = numeroEntero[1]
+        digito3 = numeroEntero[2]
+        digito4 = numeroEntero[3]
 
-        operacion = int(digito1) + int(digito2) + int(digito3) + int(digito4)
-        print("\n",digito1, "+", digito2, "+", digito3,"+", digito4,"=", operacion)
+        operacion4 = int(digito1) + int(digito2) + int(digito3) + int(digito4)
+        print("\n",digito1, "+", digito2, "+", digito3,"+", digito4,"=", operacion4)
 
-        for n in range(1, operacion+1):
-            print(n)
-            if n %3 == 0:
-                if n %5 == 0: print("FizzBuzz")
+        for numero4 in range(1, operacion4+1):
+            print(numero4)
+            if numero4 %3 == 0:
+                if numero4 %5 == 0: print("FizzBuzz")
                 else: print("Fizz")
-            elif n %5 == 0: print("Buzz")
+            elif numero4 %5 == 0: print("Buzz")
     #--------------# Función 5 #--------------#     
-    def Suma_Digitos5(x):
-        digito1 = x[0]
-        digito2 = x[1]
-        digito3 = x[2]
-        digito4 = x[3]
-        digito5 = x[4]
+    def Suma_Digitos5(numeroEntero):
+        digito1 = numeroEntero[0]
+        digito2 = numeroEntero[1]
+        digito3 = numeroEntero[2]
+        digito4 = numeroEntero[3]
+        digito5 = numeroEntero[4]
 
-        operacion = int(digito1) + int(digito2) + int(digito3) + int(digito4) + int(digito5)
-        print("\n",digito1, "+", digito2, "+", digito3,"+", digito4,"+", digito5, "=", operacion)
+        operacion5 = int(digito1) + int(digito2) + int(digito3) + int(digito4) + int(digito5)
+        print("\n",digito1, "+", digito2, "+", digito3,"+", digito4,"+", digito5, "=", operacion5)
 
         print("""
 *--------------*
 |   FizzBuzz   |
 *--------------*
 """)
-        for n in range(1, operacion+1):
-            print(n)
-            if n %3 == 0:
-                if n %5 == 0: print("FizzBuzz")
+        for numero5 in range(1, operacion5+1):
+            print(numero5)
+            if numero5 %3 == 0:
+                if numero5 %5 == 0: print("FizzBuzz")
                 else: print("Fizz")
-            elif n %5 == 0: print("Buzz")
+            elif numero5 %5 == 0: print("Buzz")
     #--------------# Función 6 #--------------#             
-    def Suma_Digitos6(x):
-        digito1 = x[0]
-        digito2 = x[1]
-        digito3 = x[2]
-        digito4 = x[3]
-        digito5 = x[4]
-        digito6 = x[5]
+    def Suma_Digitos6(numeroEntero):
+        digito1 = numeroEntero[0]
+        digito2 = numeroEntero[1]
+        digito3 = numeroEntero[2]
+        digito4 = numeroEntero[3]
+        digito5 = numeroEntero[4]
+        digito6 = numeroEntero[5]
 
-        operacion = int(digito1) + int(digito2) + int(digito3) + int(digito4) + int(digito5) + int(digito6)
-        print("\n",digito1, "+", digito2, "+", digito3,"+", digito4,"+", digito5, digito6, "=", operacion)
+        operacion6 = int(digito1) + int(digito2) + int(digito3) + int(digito4) + int(digito5) + int(digito6)
+        print("\n",digito1, "+", digito2, "+", digito3,"+", digito4,"+", digito5, digito6, "=", operacion6)
 
         print("""
 *--------------*
 |   FizzBuzz   |
 *--------------*
 """)
-        for n in range(1, operacion+1):
-            print(n)
-            if n %3 == 0:
-                if n %5 == 0: print("FizzBuzz")
+        for numero6 in range(1, operacion6+1):
+            print(numero6)
+            if numero6 %3 == 0:
+                if numero6 %5 == 0: print("FizzBuzz")
                 else: print("Fizz")
-            elif n %5 == 0: print("Buzz")
+            elif numero6 %5 == 0: print("Buzz")
     #--------------# Función 7 #--------------#             
-    def Suma_Digitos7(x):
-        digito1 = x[0]
-        digito2 = x[1]
-        digito3 = x[2]
-        digito4 = x[3]
-        digito5 = x[4]
-        digito6 = x[5]
-        digito7 = x[6]
+    def Suma_Digitos7(numeroEntero):
+        digito1 = numeroEntero[0]
+        digito2 = numeroEntero[1]
+        digito3 = numeroEntero[2]
+        digito4 = numeroEntero[3]
+        digito5 = numeroEntero[4]
+        digito6 = numeroEntero[5]
+        digito7 = numeroEntero[6]
 
-        operacion = int(digito1) + int(digito2) + int(digito3) + int(digito4) + int(digito5) + int(digito6) + int(digito7)
-        print("\n",digito1, "+", digito2, "+", digito3,"+", digito4,"+", digito5, digito6, "+", digito7, "=", operacion)
+        operacion7 = int(digito1) + int(digito2) + int(digito3) + int(digito4) + int(digito5) + int(digito6) + int(digito7)
+        print("\n",digito1, "+", digito2, "+", digito3,"+", digito4,"+", digito5, digito6, "+", digito7, "=", operacion7)
 
         print("""
 *--------------*
 |   FizzBuzz   |
 *--------------*
 """)
-        for n in range(1, operacion+1):
-            print(n)
-            if n %3 == 0:
-                if n %5 == 0: print("FizzBuzz")
+        for numero7 in range(1, operacion7+1):
+            print(numero7)
+            if numero7 %3 == 0:
+                if numero7 %5 == 0: print("FizzBuzz")
                 else: print("Fizz")
-            elif n %5 == 0: print("Buzz")
+            elif numero7 %5 == 0: print("Buzz")
     #--------------# Función 8 #--------------#             
-    def Suma_Digitos8(x):
-        digito1 = x[0]
-        digito2 = x[1]
-        digito3 = x[2]
-        digito4 = x[3]
-        digito5 = x[4]
-        digito6 = x[5]
-        digito7 = x[6]
-        digito8 = x[7]
+    def Suma_Digitos8(numeroEntero):
+        digito1 = numeroEntero[0]
+        digito2 = numeroEntero[1]
+        digito3 = numeroEntero[2]
+        digito4 = numeroEntero[3]
+        digito5 = numeroEntero[4]
+        digito6 = numeroEntero[5]
+        digito7 = numeroEntero[6]
+        digito8 = numeroEntero[7]
 
-        operacion = int(digito1) + int(digito2) + int(digito3) + int(digito4) + int(digito5) + int(digito6) + int(digito7) + int(digito8)
-        print("\n",digito1, "+", digito2, "+", digito3,"+", digito4,"+", digito5, digito6, "+", digito7, "+", digito8, "=", operacion)
+        operacion8 = int(digito1) + int(digito2) + int(digito3) + int(digito4) + int(digito5) + int(digito6) + int(digito7) + int(digito8)
+        print("\n",digito1, "+", digito2, "+", digito3,"+", digito4,"+", digito5, digito6, "+", digito7, "+", digito8, "=", operacion8)
 
         print("""
 *--------------*
 |   FizzBuzz   |
 *--------------*
 """)
-        for n in range(1, operacion+1):
-            print(n)
-            if n %3 == 0:
-                if n %5 == 0: print("FizzBuzz")
+        for numero8 in range(1, operacion8+1):
+            print(numero8)
+            if numero8 %3 == 0:
+                if numero8 %5 == 0: print("FizzBuzz")
                 else: print("Fizz")
-            elif n %5 == 0: print("Buzz")
+            elif numero8 %5 == 0: print("Buzz")
     #--------------# Función 9 #--------------#             
-    def Suma_Digitos9(x):
-        digito1 = x[0]
-        digito2 = x[1]
-        digito3 = x[2]
-        digito4 = x[3]
-        digito5 = x[4]
-        digito6 = x[5]
-        digito7 = x[6]
-        digito8 = x[7]
-        digito9 = x[8]
+    def Suma_Digitos9(numeroEntero):
+        digito1 = numeroEntero[0]
+        digito2 = numeroEntero[1]
+        digito3 = numeroEntero[2]
+        digito4 = numeroEntero[3]
+        digito5 = numeroEntero[4]
+        digito6 = numeroEntero[5]
+        digito7 = numeroEntero[6]
+        digito8 = numeroEntero[7]
+        digito9 = numeroEntero[8]
 
-        operacion = int(digito1) + int(digito2) + int(digito3) + int(digito4) + int(digito5) + int(digito6) + int(digito7) + int(digito8) + int(digito9)
-        print("\n",digito1, "+", digito2, "+", digito3,"+", digito4,"+", digito5, digito6, "+", digito7, "+", digito8,"+", digito9,"=", operacion)
+        operacion9 = int(digito1) + int(digito2) + int(digito3) + int(digito4) + int(digito5) + int(digito6) + int(digito7) + int(digito8) + int(digito9)
+        print("\n",digito1, "+", digito2, "+", digito3,"+", digito4,"+", digito5, digito6, "+", digito7, "+", digito8,"+", digito9,"=", operacion9)
 
         print("""
 *--------------*
 |   FizzBuzz   |
 *--------------*
 """)
-        for n in range(1, operacion+1):
-            print(n)
-            if n %3 == 0:
-                if n %5 == 0: print("FizzBuzz")
+        for numero9 in range(1, operacion9+1):
+            print(numero9)
+            if numero9 %3 == 0:
+                if numero9 %5 == 0: print("FizzBuzz")
                 else: print("Fizz")
-            elif n %5 == 0: print("Buzz")
+            elif numero9 %5 == 0: print("Buzz")
     #--------------# Función 10 #--------------#             
-    def Suma_Digitos10(x):
-        digito1 = x[0]
-        digito2 = x[1]
-        digito3 = x[2]
-        digito4 = x[3]
-        digito5 = x[4]
-        digito6 = x[5]
-        digito7 = x[6]
-        digito8 = x[7]
-        digito9 = x[8]
-        digito10 = x[9]
+    def Suma_Digitos10(numeroEntero):
+        digito1 = numeroEntero[0]
+        digito2 = numeroEntero[1]
+        digito3 = numeroEntero[2]
+        digito4 = numeroEntero[3]
+        digito5 = numeroEntero[4]
+        digito6 = numeroEntero[5]
+        digito7 = numeroEntero[6]
+        digito8 = numeroEntero[7]
+        digito9 = numeroEntero[8]
+        digito10 = numeroEntero[9]
 
-        operacion = int(digito1) + int(digito2) + int(digito3) + int(digito4) + int(digito5) + int(digito6) + int(digito7) + int(digito8) + int(digito9) + int(digito10)
-        print("\n",digito1, "+", digito2, "+", digito3,"+", digito4,"+", digito5, digito6, "+", digito7, "+", digito8,"+", digito9,"+", digito10, "=", operacion)
+        operacion10 = int(digito1) + int(digito2) + int(digito3) + int(digito4) + int(digito5) + int(digito6) + int(digito7) + int(digito8) + int(digito9) + int(digito10)
+        print("\n",digito1, "+", digito2, "+", digito3,"+", digito4,"+", digito5, digito6, "+", digito7, "+", digito8,"+", digito9,"+", digito10, "=", operacion10)
 
         print("""
 *--------------*
 |   FizzBuzz   |
 *--------------*
 """)
-        for n in range(1, operacion+1):
-            print(n)
-            if n %3 == 0:
-                if n %5 == 0: print("FizzBuzz")
+        for numero10 in range(1, operacion10+1):
+            print(numero10)
+            if numero10 %3 == 0:
+                if numero10 %5 == 0: print("FizzBuzz")
                 else: print("Fizz")
-            elif n %5 == 0: print("Buzz")
+            elif numero10 %5 == 0: print("Buzz")
     #============================ Fin Funciones ============================#
 
     #============================ Llamando Funciones ============================#
@@ -239,17 +239,17 @@ def programa10 ():
     Fin Documentación llamada de funciones."""
 
     while True:
-        x = str(input("Número entero: \n> "))
-        if len(x) == 1: Suma_Digitos1(x)
-        elif len(x) == 2: Suma_Digitos2(x)
-        elif len(x) == 3: Suma_Digitos3(x)
-        elif len(x) == 4: Suma_Digitos4(x)
-        elif len(x) == 5: Suma_Digitos5(x)
-        elif len(x) == 6: Suma_Digitos6(x)
-        elif len(x) == 7: Suma_Digitos7(x)
-        elif len(x) == 8: Suma_Digitos8(x)
-        elif len(x) == 9: Suma_Digitos9(x)
-        elif len(x) == 10: Suma_Digitos10(x)
+        numeroEntero = str(input("Número entero: \n> "))
+        if len(numeroEntero) == 1: Suma_Digitos1(numeroEntero)
+        elif len(numeroEntero) == 2: Suma_Digitos2(numeroEntero)
+        elif len(numeroEntero) == 3: Suma_Digitos3(numeroEntero)
+        elif len(numeroEntero) == 4: Suma_Digitos4(numeroEntero)
+        elif len(numeroEntero) == 5: Suma_Digitos5(numeroEntero)
+        elif len(numeroEntero) == 6: Suma_Digitos6(numeroEntero)
+        elif len(numeroEntero) == 7: Suma_Digitos7(numeroEntero)
+        elif len(numeroEntero) == 8: Suma_Digitos8(numeroEntero)
+        elif len(numeroEntero) == 9: Suma_Digitos9(numeroEntero)
+        elif len(numeroEntero) == 10: Suma_Digitos10(numeroEntero)
         else: print("Lo siento, no puedes introducir más de 10 digitos.")
         break
     #============================ Fin Llamando Funciones ============================#

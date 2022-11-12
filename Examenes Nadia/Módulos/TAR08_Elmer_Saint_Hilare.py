@@ -65,15 +65,15 @@ def programa8 ():
     """
 
     #----- Función Inicio -----#
-    def multiplicar (x):
+    def multiplicar (Inicio):
         print("""
 *--------------*
 |Tabla del:""", Inicio, """ | 
 *--------------*
 """)
-        for i in range(0, 11):
-            operacion = x * i
-            print(Inicio, "*", i ,"=", operacion)
+        for numero in range(0, 11):
+            operacion = Inicio * numero
+            print(Inicio, "*", numero ,"=", operacion)
 
         print("""
 *------------------*
@@ -83,33 +83,33 @@ def programa8 ():
 #----- Fin Función Inicio -----#
 
 #----- Función Desarrollo -----#         
-    def multiplicar3 (j):
+    def multiplicar3 (SumaIniAcu):
         print("""
 *--------------*
-|Tabla del:""", Inicio+n, """ | 
+|Tabla del:""", SumaIniAcu, """ | 
 *--------------*
 """)
-        for a in range(0, 11):
-            operacion2 = a * j
-            print((Inicio+n), "*", a ,"=", operacion2)
+        for numero3 in range(0, 11):
+            operacion2 = numero3 * SumaIniAcu
+            print((SumaIniAcu), "*", numero3 ,"=", operacion2)
 
         print("""
 *------------------*
-|Fin tabla del:""", Inicio+n, """ | 
+|Fin tabla del:""", SumaIniAcu, """ | 
 *------------------*
 """)
 #----- Fin Función Desarrollo -----# 
 
 #----- Función Final -----# 
-    def multiplicar2 (y):
+    def multiplicar2 (Final):
         print("""
 *--------------*
 |Tabla del:""", Final, """ | 
 *--------------*
 """)
-        for a in range(0,11):
-            operacion1 = y * a
-            print(Final, "*", a ,"=", operacion1)
+        for numero2 in range(0,11):
+            operacion1 = Final * numero2
+            print(Final, "*", numero2 ,"=", operacion1)
 
         print("""
 *------------------*
@@ -128,17 +128,17 @@ def programa8 ():
     Después entra al while y lo ejecuta hasta que la función Desarrollo, que en este caso va imprimir la multiplicación de las tablas hasta que llegue el turno de llamar a la última función.
     """
   
-    n = 1
+    acumulador = 1
     multiplicar(Inicio)
     while True:
-        multiplicar3(Inicio+n)
+        multiplicar3(Inicio+acumulador)
 
-        if (Final - 1) == Inicio + n:
+        if (Final - 1) == Inicio + acumulador:
             multiplicar2(Final)
             break
-        elif (Final) == Inicio + n:
+        elif (Final) == Inicio + acumulador:
             break
-        n = n + 1
+        acumulador += 1
         continue
     
 #========================== Fin Lógica para imprimir las tablas n veces =========================# 

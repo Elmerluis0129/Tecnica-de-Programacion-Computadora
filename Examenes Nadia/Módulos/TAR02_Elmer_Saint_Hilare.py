@@ -27,9 +27,9 @@ def programa2 (): # Esta linea no es parte del ejercicio, es del examen.
     print("|----------------------------------------------|")
     print("\n El resultado de: ", str(numero2) + "^2 =", numero2cuadrado)#Aquí le muestra el mismo elevado al cuadrado.
     print("|----------------------------------------------|")
-    print("\n La suma de ",'{}'.format(numero1cuadrado),'+ {}'.format(numero2cuadrado),"=", operacion) #Aquí le muestra la suma de los números cuadrados.
+    print("\n La suma de ",f'{numero1cuadrado}',f'+ {numero2cuadrado} =', operacion) #Aquí le muestra la suma de los números cuadrados.
     print("|----------------------------------------------|")
-    print(f"\n La raiz de ",'{}'.format(operacion)," es: ", round(math.sqrt(operacion), 2))#Aquí le muestra ya el resultado de el problema resuelto y utilizamos math.sqrt para sacar la raiz.
+    print("\n La raiz de ",f'{operacion} es:', round(math.sqrt(operacion), 2))#Aquí le muestra ya el resultado de el problema resuelto y utilizamos math.sqrt para sacar la raiz.
     print("|----------------------------------------------|")
 
     #========================== Agradecimiento por usar el programa =========================#  
