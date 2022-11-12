@@ -34,16 +34,16 @@ def programa12():
     Aquí almaceno la lista de tuplas con la informacion de los usuarios.
     """
     ListaTuplasViajeros = [
-        ('Juan'    , 30, 'Madrid'), 
-        ('Fernanda', 42, 'Portugal'), 
-        ('Raúl'    , 28, 'Brazil'), 
+        ('Juan'    , 30, 'Madrid'   ), 
+        ('Fernanda', 42, 'Portugal' ), 
+        ('Raúl'    , 28, 'Brazil'   ), 
         ('Julio'   , 32, 'Venezuela'), 
         ('Mateo'   , 26, 'Argentina'), 
-        ('María'   , 32, 'Portugal'), 
-        ('José'    , 29, 'Madrid'), 
+        ('María'   , 32, 'Portugal' ), 
+        ('José'    , 29, 'Madrid'   ), 
         ('Marcos'  , 29, 'Venezuela'), 
         ('Juana'   , 41, 'Venezuela'), 
-        ('Paulina' , 35, 'Madrid')
+        ('Paulina' , 35, 'Madrid'   )
     ]
     # ============ Fin Lista con los viajeros ============= #
 
@@ -62,13 +62,6 @@ def programa12():
     Y aquí también agrego de la lista de tuplas solamente los destinos en la lista creada anteriormente.
     """
     for clave in ListaTuplasViajeros:
-        Diccionario.append(
-            {
-                "Nombre": clave[0],
-                "Edad": clave[1],
-                "Destino": clave[2]
-            }
-        )
         ListaDestinos.append(
             clave[2]
         )

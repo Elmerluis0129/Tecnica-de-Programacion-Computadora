@@ -40,8 +40,7 @@ Operaciones:
     Dividir = num1/num2
 
 #Resultado operaciones.
-    print
-    ("""
+    print("""
 El resultado en todas las operaciones es:
 
 La suma de """, '{}'.format(num1),'+ {} = {}'.format(num2, Sumar),"""
