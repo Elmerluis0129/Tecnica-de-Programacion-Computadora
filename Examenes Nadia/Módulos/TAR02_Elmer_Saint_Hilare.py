@@ -20,16 +20,17 @@ def programa2 (): # Esta linea no es parte del ejercicio, es del examen.
     numero1cuadrado = numero1**2#Aquí elevo el primer número que me da el usuario al cuadrado.
     numero2cuadrado = numero2**2#Aquí elevo el segundo número que me da el usuario al cuadrado.
     operacion = (numero1cuadrado + numero2cuadrado)#Aquí es para que me sume los dos números ya elevados al cuadrado.
-
+    raizOperacion = round(math.sqrt(operacion),2) # Utilizamos math.sqrt para sacar la raiz y round para redondearla a 2 decimales.
+    
     #Salidas/proceso que el usuario verá.
     print("|----------------------------------------------|")
-    print("\n El resultado de: ", str(numero1) + "^2 =", numero1cuadrado) #Aquí le muestra el mismo elevado al cuadrado.
+    print("\n El resultado de: ", str(f'{numero1:,}') + "^2 =", f'{numero1cuadrado:,}') #Aquí le muestra el mismo elevado al cuadrado.
     print("|----------------------------------------------|")
-    print("\n El resultado de: ", str(numero2) + "^2 =", numero2cuadrado)#Aquí le muestra el mismo elevado al cuadrado.
+    print("\n El resultado de: ", str(f'{numero2:,}') + "^2 =", f'{numero2cuadrado:,}')#Aquí le muestra el mismo elevado al cuadrado.
     print("|----------------------------------------------|")
-    print("\n La suma de ",f'{numero1cuadrado}',f'+ {numero2cuadrado} =', operacion) #Aquí le muestra la suma de los números cuadrados.
+    print("\n La suma de ",f'{numero1cuadrado:,}',f'+ {numero2cuadrado:,} =', f'{operacion:,}') #Aquí le muestra la suma de los números cuadrados.
     print("|----------------------------------------------|")
-    print("\n La raiz de ",f'{operacion} es:', round(math.sqrt(operacion), 2))#Aquí le muestra ya el resultado de el problema resuelto y utilizamos math.sqrt para sacar la raiz.
+    print("\n La raiz de ",f'{operacion:,} es: {raizOperacion:,}')#Aquí le muestra ya el resultado de el problema resuelto.
     print("|----------------------------------------------|")
 
     #========================== Agradecimiento por usar el programa =========================#  

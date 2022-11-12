@@ -13,14 +13,14 @@ def programa5 ():
 """)#Decorando el nombre de la aplicación.
 
     ListaNumLot = []
-    x = 1
+    numeroAcumulador = 1
     
     numeroTicket = int(input("Ingrese la cantidad de números de su ticket\n> "))
     
     for i in range(1,numeroTicket+1):
-        print("Ingrese el número",x,":")
+        print("Ingrese el número",numeroAcumulador,":")
         numerosDeTickets = int(input("> "))
-        x = x + 1
+        numeroAcumulador += 1
         ListaNumLot.append(numerosDeTickets) 
     
     print("\nLista sin ordenar: ", ListaNumLot)#Lista normal sin ordenar.

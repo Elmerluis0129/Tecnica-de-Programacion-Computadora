@@ -42,14 +42,14 @@ def programa3 (): # Esta linea no es parte del ejercicio, es del examen.
             print("\nEl precio a pagar es de: RD$850.00")# Precio a pagar dependiendo de si su consumo es mayor a 500.
     elif TipoInstalacion == "C":# Aqui para saber si su instalacion es tipo C.
         if kwhConsumido == 1 or kwhConsumido <= 1000:#Sentencia para saber si la cantidad de Kilo watts es menor a 1000.
-            print("\nEl precio a pagar es de: RD$1300.00")#Precio a pagar dependiendo de si su consumo es menor a 1000.
+            print("\nEl precio a pagar es de: RD$1,300.00")#Precio a pagar dependiendo de si su consumo es menor a 1000.
         elif kwhConsumido > 1000:# Sentencia para saber si la cantidad de Kilo watts es mayor a 1000.
-            print("\nEl precio a pagar es de: RD$2500.00")#Precio a pagar dependiendo de si su consumo es mayor a 1000.
+            print("\nEl precio a pagar es de: RD$2,500.00")#Precio a pagar dependiendo de si su consumo es mayor a 1000.
     elif TipoInstalacion == "I":# Aqui para saber si su instalacion es tipo I.
         if kwhConsumido == 1 or kwhConsumido <= 5000:# Sentencia para saber si la cantidad de Kilo watts es menor a 5000.
-            print("\nEl precio a pagar es de: RD$3800.00")# Precio a pagar dependiendo de si su consumo es menor a 5000.
+            print("\nEl precio a pagar es de: RD$3,800.00")# Precio a pagar dependiendo de si su consumo es menor a 5000.
         elif kwhConsumido > 5000:# Sentencia para saber si la cantidad de Kilo watts es mayor a 5000.
-            print("\nEl precio a pagar es de: RD$4200.00")# Precio a pagar dependiendo de si su consumo es mayor a 5000.
+            print("\nEl precio a pagar es de: RD$4,200.00")# Precio a pagar dependiendo de si su consumo es mayor a 5000.
     else:
         print("\nLo siento, lo que haz introducido no es la letra que corresponde a una de las opciones de tipo de instalacion. ") #En caso de que el usuario no marque correctamente la letra de su tipo de instalacion.
         
