@@ -16,7 +16,7 @@ Muestre los destinos almacenados (sin repetir).
 Devuelva una lista de diccionarios de los pasajeros cuyo destino sea el solicitado por teclado.
 Si se coloca un destino que no se encuentra en los almacenados, el programa debe mostrar un mensaje diciendo: "No hay pasajeros para este destino".
 
-Elmer Saint-Hilare 21-1354.
+Elmer Saint-Hilare 21-1354. # Nombre del creador
 """
 from emoji import emojize as em # Esto no es parte del ejercicio, es decoración.
 
@@ -79,23 +79,38 @@ def programa12():
     """
     def BuscarPasajeroDestino(Destino):
         acumulador = 0
-        if Destino in ListaDestinos:
-            print(f"\nPasajeros que van para {Destino}:\n")
-            for clave in ListaTuplasViajeros:
-                if clave[2] == Destino:
-                    Diccionario2 = {
-                            "Nombre": clave[0],
-                            "Edad": clave[1],
-                            "Destino": clave[2]
-                         }   
-                    acumulador += 1     
-                    print(f"|{acumulador}.|", Diccionario2)
-            if acumulador == 1:
-                print(f"\nSe encontró: {acumulador} pasajero.") 
+        while True:
+            if Destino in ListaDestinos:
+                print(f"\nPasajeros que van para {Destino}:\n")
+                for clave in ListaTuplasViajeros:
+                    if clave[2] == Destino:
+                        Diccionario2 = {
+                                "Nombre": clave[0],
+                                "Edad": clave[1],
+                                "Destino": clave[2]
+                             }   
+                        acumulador += 1     
+                        print(f"|{acumulador}.|", Diccionario2)
+                if acumulador == 1:
+                    print(f"\nSe encontró: {acumulador} pasajero.") 
+                else:
+                    print(f"\nSe encontraron: {acumulador} pasajeros.")  
             else:
-                print(f"\nSe encontraron: {acumulador} pasajeros.")  
-        else:
-            print(f"\n¡Lo siento! No hay pasajeros con destino a '{Destino}'.")
+                while True: # DATA BASURA
+                    if Destino in ListaDestinos: 
+                        break
+                    else:
+                        print(f"\n¡Lo siento! No hay pasajeros con destino a '{Destino}'.")
+                        Destino = input("\nDestino: \n> ")
+                        
+                        if Destino in ListaDestinos:
+                            BuscarPasajeroDestino(Destino)
+                        else:
+                            continue
+            break
+
+                
+                
 
 
     def destino():
@@ -126,3 +141,4 @@ def programa12():
 *-----------------------------------------*
 """))
 #========================== Fin Agradecimiento por usar el programa =========================#
+programa12()

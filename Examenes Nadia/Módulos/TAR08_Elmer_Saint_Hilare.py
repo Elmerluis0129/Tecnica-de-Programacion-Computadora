@@ -8,7 +8,7 @@ Elmer Saint-Hilare 21-1354.
 from emoji import emojize as em # Esto no es parte del ejercicio, es decoración.
 
 def programa8 ():
-    #========================== Nombre programa =========================# 
+    # ========================== Nombre programa ========================= # 
     """
     Aquí es para imprimir el nombre del programa.
     """
@@ -17,9 +17,9 @@ def programa8 ():
 |Tabla de multiplicar|
 *--------------------*
 \n""")
-#========================== Fin Nombre programa =========================#
+# ========================== Fin Nombre programa ========================= #
 
-#========================== Inicio/Final =========================#  
+# ========================== Inicio/Final ========================= #  
 
     """
     Aquí declaro mis variables inicio y fin, a las cuales le doy de valor una entrada que el usuario procederá a darme.
@@ -28,14 +28,30 @@ def programa8 ():
     Aquí en el while tengo un control para saber si pone el iniciar las tablas igual al final o si el iniciar es mayor a final, para que solo haga las tablas cuando es posible
     Es posible cuando inicio es menor que el final o no es igual al final.
     """
-    Inicio = int(input("Escribe un número para comenzar la tabla: "))
-    Final = int(input("Escribe un número para terminar la tabla: ")) 
-    print("\n")
+    
+    while True:
+        try: # Aquí le digo al programa que intente las líneas de códigos que están dentro de la misma.
+            Inicio = int(input("Escribe un número para comenzar la tabla: "))
+            Final = int(input("Escribe un número para terminar la tabla: ")) 
+            print("\n")
+            break
+        except ValueError: # Lo utilizo para que cuando me lance ese error, le muestre otro mas entendible y tenga la opcion de cambiarlo.
+            print("\nLo siento, no se permite data basura.\nVuelva a intentarlo.\n")
+            continue
+
+    
     while True:
         if Inicio > Final:
             while True:
                 print("\nLo siento, el inicio no puede ser mayor a final.")
-                Final = int(input("\nEscribe un número para terminar la tabla: ")) 
+                while True:
+                    try: # Aquí le digo al programa que intente las líneas de códigos que están dentro de la misma.
+                        Final = int(input("\nEscribe un número para terminar la tabla: ")) 
+                        break
+                    except ValueError: # Lo utilizo para que cuando me lance ese error, le muestre otro mas entendible y tenga la opcion de cambiarlo.
+                        print("\nLo siento, no se permite data basura.\nVuelva a intentarlo.\n")
+                        continue
+
                 if Inicio <= Final:
                     break
             continue
@@ -43,16 +59,22 @@ def programa8 ():
         elif Inicio == Final:
             while True:
                 print("\nLo siento, el inicio no puede ser igual a Final.")
-                Inicio = int(input("\nEscribe un número para comenzar la tabla: "))
+                while True:
+                    try: # Aquí le digo al programa que intente las líneas de códigos que están dentro de la misma.
+                        Inicio = int(input("\nEscribe un número para comenzar la tabla: "))
+                        break
+                    except ValueError: # Lo utilizo para que cuando me lance ese error, le muestre otro mas entendible y tenga la opcion de cambiarlo.
+                        print("\nLo siento, no se permite data basura.\nVuelva a intentarlo.\n")
+                        continue
                 if Inicio != Final:
                     break
             continue
         else:
             break
         
-#========================== Fin Inicio/Final =========================# 
+# ========================== Fin Inicio/Final ========================= # 
 
-#========================== Funciones =========================#
+# ========================== Funciones ========================= #
 
     """
     En las funciones las utilizo para reutilizar la lógica n veces sin necesidad de repetir las líneas de códigos n veces.
@@ -64,7 +86,7 @@ def programa8 ():
     Aquí también le agrego lo que son los marcadores de inicio de la tabla y final de la tabla.
     """
 
-    #----- Función Inicio -----#
+    # ----- Función Inicio ----- #
     def multiplicar (Inicio):
         print("""
 *--------------*
@@ -80,9 +102,9 @@ def programa8 ():
 |Fin tabla del:""", Inicio, """ | 
 *------------------*
 """)
-#----- Fin Función Inicio -----#
+# ----- Fin Función Inicio ----- #
 
-#----- Función Desarrollo -----#         
+# ----- Función Desarrollo ----- #         
     def multiplicar3 (SumaIniAcu):
         print("""
 *--------------*
@@ -98,9 +120,9 @@ def programa8 ():
 |Fin tabla del:""", SumaIniAcu, """ | 
 *------------------*
 """)
-#----- Fin Función Desarrollo -----# 
+# ----- Fin Función Desarrollo ----- # 
 
-#----- Función Final -----# 
+# ------ Función Final ----- # 
     def multiplicar2 (Final):
         print("""
 *--------------*
@@ -116,11 +138,11 @@ def programa8 ():
 |Fin tabla del:""", Final, """ | 
 *------------------*
 """)
-#----- Fin Función Final -----# 
+# ----- Fin Función Final ----- # 
 
-#========================== Fin Funciones =========================#
+# ========================== Fin Funciones ========================= #
 
-#========================== Lógica para imprimir las tablas n veces =========================#
+#========================== Lógica para imprimir las tablas n veces ========================= #
 
     """
     Aquí es dónde está la magía del código, está compuesto por un while que es el que se encarga de ir llamando las funciones en orden.
@@ -141,9 +163,9 @@ def programa8 ():
         acumulador += 1
         continue
     
-#========================== Fin Lógica para imprimir las tablas n veces =========================# 
+# ========================== Fin Lógica para imprimir las tablas n veces ========================= # 
 
-#========================== Agradecimiento por usar el programa =========================#  
+# ========================== Agradecimiento por usar el programa ========================= #  
 
     """
     Aquí imprimo por pantalla el agradecimiento y por quién fue creado, en este caso por mi.
@@ -154,4 +176,4 @@ def programa8 ():
 |  ¡Programa 8 Finalizado exitosamente! :smiling_face_with_smiling_eyes:|
 *-----------------------------------------*
 """))
-#========================== Fin Agradecimiento por usar el programa =========================#
+# ========================== Fin Agradecimiento por usar el programa ========================= #

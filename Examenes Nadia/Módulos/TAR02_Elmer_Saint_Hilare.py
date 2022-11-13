@@ -12,11 +12,18 @@ def programa2 (): # Esta linea no es parte del ejercicio, es del examen.
 |Cálculo de la raíz cuadrada de la suma de los cuadrados |
 *--------------------------------------------------------*   
 """)
+    while True:
+        try: # Aquí le digo al programa que intente las líneas de códigos que están dentro de la misma.
+            print("|------------------------------------|")
+            numero1 = int(input(" Ingrese el primer número: "))#Aquí le pido al usuario el primer número.
+            print("|------------------------------------|")
+            numero2 = int(input(" Ingrese el segundo número: "))#Aquí le pido al usuario el segundo número.
+            break
+        except ValueError: # Lo utilizo para que cuando me lance ese error, le muestre otro mas entendible y tenga la opcion de cambiarlo.
+            print("\nLo siento, no se permite data basura.\nVuelva a intentarlo.\n")
+            continue
 
-    print("|------------------------------------|")
-    numero1 = int(input(" Ingrese el primer número: "))#Aquí le pido al usuario el primer número.
-    print("|------------------------------------|")
-    numero2 = int(input(" Ingrese el segundo número: "))#Aquí le pido al usuario el segundo número.
+            
     numero1cuadrado = numero1**2#Aquí elevo el primer número que me da el usuario al cuadrado.
     numero2cuadrado = numero2**2#Aquí elevo el segundo número que me da el usuario al cuadrado.
     operacion = (numero1cuadrado + numero2cuadrado)#Aquí es para que me sume los dos números ya elevados al cuadrado.

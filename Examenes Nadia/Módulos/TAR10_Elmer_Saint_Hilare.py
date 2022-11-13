@@ -26,7 +26,7 @@ def programa10 ():
     #--------------# Función 1 #--------------#    
     def Suma_Digitos1(numeroEntero):
         digito1 = numeroEntero[0]
-
+        
         operacion = int(digito1)
         print("\n",digito1, "=", operacion)
 
@@ -230,16 +230,30 @@ def programa10 ():
             elif numero10 %5 == 0: print("Buzz")
     #============================ Fin Funciones ============================#
 
-    #============================ Llamando Funciones ============================#
+    #============================ Llamando Funciones / Data basura ============================#
     """Documentación Llamanda de funciones:
     Aquí es para llamar las funciones dependiendo la cantidad de dígitos que el usuario entre.
     Hasta el momento sólo controlamos 10 digitos, ya que no quise estender el código mucho más.
     Aquí tengo condicionales que son las que se encargan de verificar la longitud de los dígitos, para así poder llamar a la función correcta para dicha cantidad de dígitos.
     Aquí también le tengo el mensaje de "Lo siento, no puedes introducir más de 10 digitos." para controlar cuando ponga más de 10 digitos.
-    Fin Documentación llamada de funciones."""
+    Fin Documentación llamada de funciones.
+    
+    En  la data basura controlo todo lo que no se necesita en el programa, como lo son caracteres especiales y letras, por lo que en el control me recive verdadero si es numero y falso si no lo es.
+    Si lanza falso pues se quedara diciendole que es basura y que lo vuelva intentar, hasta que ponga un numero, o varios que es lo que se espera.
+    """
 
+    control2 = "a" # Lo utilizo para preguntarle algo, sin que se lo vuelva a repetir cuando salga del while de mayor o igual a 11.
     while True:
-        numeroEntero = str(input("Número entero: \n> "))
+        if control2 != "x":
+            numeroEntero = input("Número entero: \n> ")
+            control1 = numeroEntero.isdigit()
+        while True: # DATA BASURA
+            if control1 == False:
+                print("\nLo siento, no se acepta data basura.\nVuelve a intentarlo.")
+                numeroEntero = input("\nNúmero entero: \n> ")
+                control1 = numeroEntero.isdigit()
+            else:
+                break
         if len(numeroEntero) == 1: Suma_Digitos1(numeroEntero)
         elif len(numeroEntero) == 2: Suma_Digitos2(numeroEntero)
         elif len(numeroEntero) == 3: Suma_Digitos3(numeroEntero)
@@ -250,8 +264,16 @@ def programa10 ():
         elif len(numeroEntero) == 8: Suma_Digitos8(numeroEntero)
         elif len(numeroEntero) == 9: Suma_Digitos9(numeroEntero)
         elif len(numeroEntero) == 10: Suma_Digitos10(numeroEntero)
-        else: print("Lo siento, no puedes introducir más de 10 digitos.")
+        elif len(numeroEntero) >= 11: 
+            while len(numeroEntero) >= 11:
+                print("Lo siento, no puedes introducir más de 10 digitos.\nIntente de nuevo.\n")
+                numeroEntero = input("Número entero: \n> ")
+                control2 = "x" # Lo utilizo para preguntarle algo, sin que se lo vuelva a repetir cuando salga del while de mayor o igual a 11.
+                
+            continue
         break
+        
+    
     #============================ Fin Llamando Funciones ============================#
 
     #========================== Agradecimiento por usar el programa =========================#  

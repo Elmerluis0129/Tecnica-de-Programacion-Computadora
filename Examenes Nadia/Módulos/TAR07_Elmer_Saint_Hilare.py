@@ -12,7 +12,6 @@ from emoji import emojize as em # Esto no es parte del ejercicio, es decoración
 def programa7 ():
 # Listas y variable a utilizar
     listaCaracteres = [] # Lista donde se guardan los caracteres. / PRINCIPAL.
-    listaVacia = [] # Lista secundaria (No tiene ni mucha importancia, ni mucha utilización sirve para identificar cuando sea 1 caracter o caracteres en una condición más adelante.) / SECUNDARIA.
     totalCaracteres =  len(listaCaracteres) # Para saber la longitud de la lista.
 
 
@@ -22,23 +21,22 @@ def programa7 ():
 *-------------------------------*
 """) # Decorando el nombre del programa.
 
-    maxCaracterLista = int(input("Ingrese la cantidad de caracter que va a introducir: ")) # Mandato para saber cuántos caracteres serán el límite (Longitud de la lista.)
+    while True:
+        try: # Aquí le digo al programa que intente las líneas de códigos que están dentro de la misma.
+            maxCaracterLista = int(input("Ingrese la cantidad de caracter que va a introducir: ")) # Mandato para saber cuántos caracteres serán el límite (Longitud de la lista.)
+            break
+        except ValueError: # Lo utilizo para que cuando me lance ese error, le muestre otro mas entendible y tenga la opcion de cambiarlo.
+            print("\nLo siento, no se permite data basura.\nVuelva a intentarlo.\n")
+            continue
+    
     
     # Función while para que me iteré las veces necesarias.
     while len(listaCaracteres) != maxCaracterLista:
         caracter = input("Ingresa el caracter: ") # Mandato para guardar los caracteres en una variable.
-        if caracter == "0" or caracter == "1" or caracter == "2" or caracter == "3" or caracter == "4" or caracter == "5" or caracter == "6" or caracter == "7" or caracter == "8" or caracter == "9": # Me sirve esta condición para saber si el usuario ingresa un dígito.
-            print("\nLo sentimos, no se permiten dígitos.") # Se le dice que no se permiten los dígitos.
-            if listaCaracteres == listaVacia: # Aquí uso la otra lista de arriba para especificar que si la lista principal se parece a la secundaria, entonces es porque la principal está vacía.
-                print("\nAl parecer lo primero que introdujiste fue un dígito, por lo que la lista se encuentra vacía.", listaCaracteres, "\n") # Y Aquí le pongo un mandato únicamente para cuando la lista principal sea igual a la secundaria (Está VACÍA).     
-            # Aquí es si se llegaron a capturar caracteres antes de que se interrumpiese el programa. Entonces los muestra.
-            else:
-                print("\nLa lista de caracteres capturados es: ", listaCaracteres, "\n")
-                if totalCaracteres == 1: # Aquí la condición para poner un sólo mandato cuando sea singular. Oséa que tenga sólo un caracter.
-                    print("Con el total de: ", totalCaracteres, "caracter.\n")
-                else:# Aquí la condición para poner un sólo mandato cuando sea plural. Oséa que tenga más de un caracter.
-                    print("Con el total de: ", totalCaracteres, "caracteres.\n")     
-            break # Romper el while, cómo especifica el mandato cuando se ingrese un dígito.
+        control = caracter.isdigit()
+        if control:  
+            print("\nLo sentimos, no se permiten dígitos. Por lo que el mismo no aparecerá en la lista.\nIntente de nuevo.\n") # Se le dice que no se permiten los dígitos.     
+            continue
         
         elif len(caracter) > 1: # Para omitir palabras, ósea aquellas que no cumplan con la condición del caracter, que sea 1, si es más de 1 ya no es un caractér.
             continue

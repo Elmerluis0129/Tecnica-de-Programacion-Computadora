@@ -52,7 +52,15 @@ def programa11 ():
 |Ingrese el producto """+str(NumeroProducto2)+""":|
 *-----------------------*""")
                     producto = input("> ")
-                    Lista1.append(producto)
+                    controlProducto = producto.isdigit()
+                    if controlProducto:
+                        while True:
+                            print("\nLo siento, no se permite data basura.\nVuelva a intentarlo.\n")
+                            producto = input("> ")
+                            controlProducto = producto.isdigit()
+                            if not controlProducto:
+                                Lista1.append(producto)
+                                break
                     # Contadores
                     controlIteracion += 1
                     NumeroProducto2 += 1
@@ -71,15 +79,29 @@ def programa11 ():
             
             # ================ Lista 2 ================ #
             elif iteraccion == 2: #Lista 2
-                cantidadProducto2 = int(input("\nIngrese la cantidad de producto lista 2: \n> "))
+                while True:
+                    try: # Aquí le digo al programa que intente las líneas de códigos que están dentro de la misma.
+                        cantidadProducto2 = int(input("\nIngrese la cantidad de producto lista 2: \n> "))
+                        break
+                    except ValueError: # Lo utilizo para que cuando me lance ese error, le muestre otro mas entendible y tenga la opcion de cambiarlo.
+                        print("\nLo siento, no se permite data basura.\nVuelva a intentarlo.\n")
+                        continue
                 print("\n================== Lista Dos ==================\n")
                 while cantidadProducto2 != controlIteracion:
                     print("""
 *-----------------------*
 |Ingrese el producto """+str(NumeroProducto2)+""":|
 *-----------------------*""")
-                    producto = input("> ")
-                    Lista2.append(producto)
+                    producto2 = input("> ")
+                    controlProducto2 = producto2.isdigit()
+                    if controlProducto2:
+                        while True:
+                            print("\nLo siento, no se permite data basura.\nVuelva a intentarlo.\n")
+                            producto2 = input("> ")
+                            controlProducto2 = producto2.isdigit()
+                            if not controlProducto2:
+                                Lista2.append(producto2)
+                                break
                     # Contadores
                     controlIteracion += 1
                     NumeroProducto2 += 1
@@ -119,7 +141,15 @@ def programa11 ():
     """
     Aquí llamo la función para que lleven acabo dichos códigos que tienen dentro.
     """
-    ListaDeCompras(int(input("\nIngrese la cantidad de producto lista 1: \n> ")))
+    while True:
+        try: # Aquí le digo al programa que intente las líneas de códigos que están dentro de la misma.
+            CantidadProducto = int(input("\nIngrese la cantidad de producto lista 1: \n> "))
+            break
+        except ValueError: # Lo utilizo para que cuando me lance ese error, le muestre otro mas entendible y tenga la opcion de cambiarlo.
+            print("\nLo siento, no se permite data basura.\nVuelva a intentarlo.\n")
+            continue
+
+    ListaDeCompras(CantidadProducto)
     # ================== Fin Llamada Función ================== #
 
     # ========================== Agradecimiento por usar el programa ========================= #  
@@ -134,3 +164,4 @@ def programa11 ():
 *------------------------------------------*
 """))
     # ========================== Fin Agradecimiento por usar el programa ========================= #
+programa11()
