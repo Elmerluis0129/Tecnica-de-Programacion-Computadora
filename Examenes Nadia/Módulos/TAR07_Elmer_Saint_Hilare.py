@@ -39,6 +39,7 @@ def programa7 ():
             continue
         
         elif len(caracter) > 1: # Para omitir palabras, ósea aquellas que no cumplan con la condición del caracter, que sea 1, si es más de 1 ya no es un caractér.
+            print("\nLo sentimos, no se permiten palabras. Por lo que la misma no aparecerá en la lista.\nIntente de nuevo.\n")
             continue
         
         else: # Aquí para que no me agregue a la lista los números, sólo me agregue los caractéres.

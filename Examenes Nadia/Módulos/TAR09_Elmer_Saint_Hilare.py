@@ -41,9 +41,15 @@ def programa9 ():
         elif not " " in pcnsr:
             while True: 
                 cadenaCaracteresLongitud = len(pcnsr) 
-                primerCaracterRepetido = pcnsr[0]
-                pcnsr = pcnsr.replace(pcnsr[0], "")
-                cadenaCaracteresLongitud2 = len(pcnsr)
+                try: # Aquí le digo al programa que intente las líneas de códigos que están dentro de la misma. // DATA BASURA
+                    primerCaracterRepetido = pcnsr[0]
+                    pcnsr = pcnsr.replace(pcnsr[0], "")
+                except IndexError: # Lo utilizo para que cuando ocurra ese eror, me ejecute las lineas de codigo que tiene dentro, y es mas entendible al error en si.
+                    print("\nNo hay caracteres que no se repitan, todos se repiten.\n Vuelve a intentarlo.\n")
+                    pcnsr = input("Ingrese la cadena de caracteres: \n> ")
+                    continue #Aqui lo uso para que continue el bucle y haga el proceso de nuevo.
+                
+                cadenaCaracteresLongitud2 = len(pcnsr) #Aqui la longitud la entro en una variable, para manejar la longitud de la cadena de caracteres.
                 if cadenaCaracteresLongitud2 == cadenaCaracteresLongitud-1: 
                     print ("\nEl primer carácter que no se repite es: ", primerCaracterRepetido, "\n")
                     break

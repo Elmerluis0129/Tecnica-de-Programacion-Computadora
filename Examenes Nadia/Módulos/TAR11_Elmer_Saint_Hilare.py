@@ -36,6 +36,12 @@ def programa11 ():
     """
 
     def ListaDeCompras(cantidadProducto):
+        """
+        En la data basura.
+        con controlProducto controlo si es numero o no, con controlProducto2 controlo si es letra o no.
+        Con las condiciones para saber si es un numero o 2 o mas, para saber si es caracter especial o mas de 1, y para romper con el bloque basura si cumple todas las condiciones (Ser una palabra)
+        """
+        x = 1
         iteraccion = 1
         while True:
             # Acumuladores
@@ -44,27 +50,125 @@ def programa11 ():
             controlIteracion = 0
             PosicionLista = 0
             # ================ Lista 1 ================ #
+            """
+            En la data basura controlo a detalle si ingresa un caracter o varios, o un numero o varios.
+            """
             if iteraccion == 1:
                 print("\n================== Lista Uno ==================\n")
                 while cantidadProducto != controlIteracion:
-                    print("""
+                    if x:
+                        print("""
 *-----------------------*
-|Ingrese el producto """+str(NumeroProducto2)+""":|
+|Ingrese el producto """+str(NumeroProducto2)+""": |
 *-----------------------*""")
-                    producto = input("> ")
+                        producto = input("> ")
                     controlProducto = producto.isdigit()
-                    if controlProducto:
+                    controlProducto2 = producto.isalpha()
+                    if controlProducto and len(producto) >= 2: # CONTROL DATA BASURA
                         while True:
-                            print("\nLo siento, no se permite data basura.\nVuelva a intentarlo.\n")
+                            if controlProducto and len(producto) >= 2:
+                                print("\nLo siento, no se permite data basura (Dígitos).\nVuelva a intentarlo.\n")
+                            elif controlProducto and len(producto) < 2:
+                                print("\nLo siento, no se permite data basura (Dígito).\nVuelva a intentarlo.\n")
+                                
+                            if not controlProducto2 and not controlProducto and len(producto) >= 2:
+                                print("\nLo siento, no se permite data basura (Caracteres Especiales).\nVuelva a intentarlo.\n")
+                            elif not controlProducto2 and not controlProducto and len(producto) < 2:
+                                print("\nLo siento, no se permite data basura (Caracter Especial).\nVuelva a intentarlo.\n")
+                            print("""
+*-----------------------*
+|Ingrese el producto """+str(NumeroProducto2)+""": |
+*-----------------------*""")
+                            producto = input("> ")
+                            controlProducto = producto.isdigit() # Aqui veo si es numero o no
+                            controlProducto2 = producto.isalpha() # Aqui veo si es letra o no
+                            if not controlProducto and controlProducto2 and len(producto) >= 2: # No es numero, es letra y longitud mayor o igual a 2
+                                x = 0
+                                break
+                            else: continue
+                        continue
+                            
+                    elif not controlProducto  and not controlProducto2 and len(producto) >= 2:  # CONTROL DATA BASURA
+                        while True:
+                            if not controlProducto and not controlProducto2 and len(producto) >= 2:
+                                print("\nLo siento, no se permite data basura (Caracteres Especiales).\nVuelva a intentarlo.\n")
+                            elif not controlProducto and not controlProducto2 and len(producto) < 2:
+                                print("\nLo siento, no se permite data basura (Caracter Especial).\nVuelva a intentarlo.\n")
+                            
+                            if controlProducto and len(producto) >= 2:
+                                print("\nLo siento, no se permite data basura (Dígitos).\nVuelva a intentarlo.\n")
+                            elif controlProducto and len(producto) < 2:
+                                print("\nLo siento, no se permite data basura (Dígito).\nVuelva a intentarlo.\n")
+                            print("""
+*-----------------------*
+|Ingrese el producto """+str(NumeroProducto2)+""": |
+*-----------------------*""")
                             producto = input("> ")
                             controlProducto = producto.isdigit()
-                            if not controlProducto:
-                                Lista1.append(producto)
+                            controlProducto2 = producto.isalpha()
+                            if not controlProducto and controlProducto2 and len(producto) >= 2: # No es numero, es letra y longitud mayor o igual a 2
+                                x = 0
                                 break
+                            else: continue
+                        continue
+                    
+                    elif controlProducto and len(producto) < 2: # CONTROL DATA BASURA
+                        while True:
+                            if controlProducto and len(producto) >= 2:
+                                print("\nLo siento, no se permite data basura (Dígitos).\nVuelva a intentarlo.\n")
+                            elif controlProducto and len(producto) < 2:
+                                print("\nLo siento, no se permite data basura (Dígito).\nVuelva a intentarlo.\n")
+                                
+                            if not controlProducto2 and not controlProducto and len(producto) >= 2:
+                                print("\nLo siento, no se permite data basura (Caracteres Especiales).\nVuelva a intentarlo.\n")
+                            elif not controlProducto2 and not controlProducto and len(producto) < 2:
+                                print("\nLo siento, no se permite data basura (Caracter Especial).\nVuelva a intentarlo.\n")
+                            print("""
+*-----------------------*
+|Ingrese el producto """+str(NumeroProducto2)+""": |
+*-----------------------*""")
+                            producto = input("> ")
+                            controlProducto = producto.isdigit()
+                            controlProducto2 = producto.isalpha()
+                            if not controlProducto and controlProducto2 and len(producto) >= 2: # No es numero, es letra y longitud mayor o igual a 2
+                                x = 0
+                                break
+                            else: continue
+                        continue
+                    
+                    elif not controlProducto  and not controlProducto2 and len(producto) < 2:  # CONTROL DATA BASURA
+                        while True:
+                            if not controlProducto and not controlProducto2 and len(producto) >= 2: # Si no es numero, no es letra y mayor  o igual a 2
+                                print("\nLo siento, no se permite data basura (Caracteres Especiales).\nVuelva a intentarlo.\n")
+                            elif not controlProducto and not controlProducto2 and len(producto) < 2: # Si no es numero, no es letra y menor a 2
+                                print("\nLo siento, no se permite data basura (Caracter Especial).\nVuelva a intentarlo.\n")
+                            
+                            if controlProducto and len(producto) >= 2:
+                                print("\nLo siento, no se permite data basura (Dígitos).\nVuelva a intentarlo.\n")
+                            elif controlProducto and len(producto) < 2:
+                                print("\nLo siento, no se permite data basura (Dígito).\nVuelva a intentarlo.\n")
+                            print("""
+*-----------------------*
+|Ingrese el producto """+str(NumeroProducto2)+""": |
+*-----------------------*""")
+                            producto = input("> ")
+                            controlProducto = producto.isdigit()
+                            controlProducto2 = producto.isalpha()
+                            if not controlProducto and controlProducto2 and len(producto) >= 2: # No es numero, es letra y longitud mayor o igual a 2
+                                x = 0
+                                break
+                            else: continue
+                        continue
+                    
+                    else:
+                        x = 1
+                        Lista1.append(producto)
                     # Contadores
                     controlIteracion += 1
                     NumeroProducto2 += 1
-
+                            
+                    
+                    
                 print("\nCantidad de producto lista 1: ", len(Lista1))
                 for e in Lista1:
                     print("\nProducto",str(NumeroProducto)+":", Lista1[PosicionLista])
@@ -74,6 +178,7 @@ def programa11 ():
 
                 print("\nLista 1: ", Lista1)
                 iteraccion = 2
+                x = 1
                 continue
             # ============== Fin Lista 1 ============== #
             
@@ -88,20 +193,113 @@ def programa11 ():
                         continue
                 print("\n================== Lista Dos ==================\n")
                 while cantidadProducto2 != controlIteracion:
-                    print("""
+                    if x:
+                        print("""
 *-----------------------*
-|Ingrese el producto """+str(NumeroProducto2)+""":|
+|Ingrese el producto """+str(NumeroProducto2)+""": |
 *-----------------------*""")
-                    producto2 = input("> ")
-                    controlProducto2 = producto2.isdigit()
-                    if controlProducto2:
+                        producto = input("> ")
+                    controlProducto = producto.isdigit()
+                    controlProducto2 = producto.isalpha()
+                    if controlProducto and len(producto) >= 2: # CONTROL DATA BASURA
                         while True:
-                            print("\nLo siento, no se permite data basura.\nVuelva a intentarlo.\n")
-                            producto2 = input("> ")
-                            controlProducto2 = producto2.isdigit()
-                            if not controlProducto2:
-                                Lista2.append(producto2)
+                            if controlProducto and len(producto) >= 2:
+                                print("\nLo siento, no se permite data basura (Dígitos).\nVuelva a intentarlo.\n")
+                            elif controlProducto and len(producto) < 2:
+                                print("\nLo siento, no se permite data basura (Dígito).\nVuelva a intentarlo.\n")
+                                
+                            if not controlProducto2 and not controlProducto and len(producto) >= 2: # Si no es letra, no es numero y mayor a 2
+                                print("\nLo siento, no se permite data basura (Caracteres Especiales).\nVuelva a intentarlo.\n")
+                            elif not controlProducto2 and not controlProducto and len(producto) < 2: # Si no es letra, no es numero y menor a 2
+                                print("\nLo siento, no se permite data basura (Caracter Especial).\nVuelva a intentarlo.\n")
+                            print("""
+*-----------------------*
+|Ingrese el producto """+str(NumeroProducto2)+""": |
+*-----------------------*""")
+                            producto = input("> ")
+                            controlProducto = producto.isdigit()
+                            controlProducto2 = producto.isalpha()
+                            if not controlProducto and controlProducto2 and len(producto) >= 2: # No es numero, es letra y longitud mayor o igual a 2
+                                x = 0
                                 break
+                            else: continue
+                        continue
+                            
+                    elif not controlProducto  and not controlProducto2 and len(producto) >= 2: # CONTROL DATA BASURA
+                        while True:
+                            if not controlProducto and not controlProducto2 and len(producto) >= 2: # Si no es numero, no es letra y mayor o igual a 2
+                                print("\nLo siento, no se permite data basura (Caracteres Especiales).\nVuelva a intentarlo.\n")
+                            elif not controlProducto and not controlProducto2 and len(producto) < 2: # Si no es numero, no es letra y menor a 2
+                                print("\nLo siento, no se permite data basura (Caracter Especial).\nVuelva a intentarlo.\n")
+                            
+                            if controlProducto and len(producto) >= 2:
+                                print("\nLo siento, no se permite data basura (Dígitos).\nVuelva a intentarlo.\n")
+                            elif controlProducto and len(producto) < 2:
+                                print("\nLo siento, no se permite data basura (Dígito).\nVuelva a intentarlo.\n")
+                            print("""
+*-----------------------*
+|Ingrese el producto """+str(NumeroProducto2)+""": |
+*-----------------------*""")
+                            producto = input("> ")
+                            controlProducto = producto.isdigit()
+                            controlProducto2 = producto.isalpha()
+                            if not controlProducto and controlProducto2 and len(producto) >= 2: # No es numero, es letra y longitud mayor o igual a 2
+                                x = 0
+                                break
+                            else: continue
+                        continue
+                    
+                    elif controlProducto and len(producto) < 2:  # CONTROL DATA BASURA
+                        while True:
+                            if controlProducto and len(producto) >= 2: # Si es numero mayor o igual a 2
+                                print("\nLo siento, no se permite data basura (Dígitos).\nVuelva a intentarlo.\n")
+                            elif controlProducto and len(producto) < 2: # si es numero menor a 2
+                                print("\nLo siento, no se permite data basura (Dígito).\nVuelva a intentarlo.\n")
+                                
+                            if not controlProducto2 and not controlProducto and len(producto) >= 2: # Si no es numero, no es letra y mayor o igual a 2
+                                print("\nLo siento, no se permite data basura (Caracteres Especiales).\nVuelva a intentarlo.\n")
+                            elif not controlProducto2 and not controlProducto and len(producto) < 2: # Si no es numero, no es letra y menor a 2
+                                print("\nLo siento, no se permite data basura (Caracter Especial).\nVuelva a intentarlo.\n")
+                            print("""
+*-----------------------*
+|Ingrese el producto """+str(NumeroProducto2)+""": |
+*-----------------------*""")
+                            producto = input("> ")
+                            controlProducto = producto.isdigit()
+                            controlProducto2 = producto.isalpha()
+                            if not controlProducto and controlProducto2 and len(producto) >= 2: # No es numero, es letra y longitud mayor o igual a 2
+                                x = 0
+                                break
+                            else: continue
+                        continue
+                    
+                    elif not controlProducto  and not controlProducto2 and len(producto) < 2:  # CONTROL DATA BASURA
+                        while True:
+                            if not controlProducto and not controlProducto2 and len(producto) >= 2: # Si no es numero, no es letra y mayor o igual a 2
+                                print("\nLo siento, no se permite data basura (Caracteres Especiales).\nVuelva a intentarlo.\n")
+                            elif not controlProducto and not controlProducto2 and len(producto) < 2:  # Si no es numero, no es letra y menor a 2
+                                print("\nLo siento, no se permite data basura (Caracter Especial).\nVuelva a intentarlo.\n")
+                            
+                            if controlProducto and len(producto) >= 2: # Si es numero mayor o igual a 2
+                                print("\nLo siento, no se permite data basura (Dígitos).\nVuelva a intentarlo.\n")
+                            elif controlProducto and len(producto) < 2: # Si es numero menr a 2
+                                print("\nLo siento, no se permite data basura (Dígito).\nVuelva a intentarlo.\n")
+                            print("""
+*-----------------------*
+|Ingrese el producto """+str(NumeroProducto2)+""": |
+*-----------------------*""")
+                            producto = input("> ")
+                            controlProducto = producto.isdigit()
+                            controlProducto2 = producto.isalpha()
+                            if not controlProducto and controlProducto2 and len(producto) >= 2: # No es numero, es letra y longitud mayor o igual a 2
+                                x = 0
+                                break
+                            else: continue
+                        continue
+                    
+                    else:
+                        x = 1
+                        Lista2.append(producto)
                     # Contadores
                     controlIteracion += 1
                     NumeroProducto2 += 1
@@ -164,4 +362,3 @@ def programa11 ():
 *------------------------------------------*
 """))
     # ========================== Fin Agradecimiento por usar el programa ========================= #
-programa11()

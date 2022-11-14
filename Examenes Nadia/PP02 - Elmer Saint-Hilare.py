@@ -64,7 +64,7 @@ def barraProgreso(segmento, total, longitud):
     porcentaje = segmento / total
     completado = int(porcentaje * longitud)
     restante = longitud - completado
-    barra = f"[{'+' * completado}{'-' * restante}{porcentaje:.2%}]"
+    barra = f"[{'+' * completado}{'-' * restante}{porcentaje:.0%}]"
     return barra
 
 def barraFormato(decision):

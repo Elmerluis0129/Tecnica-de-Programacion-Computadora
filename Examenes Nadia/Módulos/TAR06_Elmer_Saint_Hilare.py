@@ -139,6 +139,8 @@ Límite de tiempo por cantidad de préstamo:
                             print("\nLo siento, no se permite data basura.\nVuelva a intentarlo.\n")
                             control = "no" # Control para saber cuál mensaje mostrar, dependiendo de lo que introduzca el usuario.
                             continue
+                    mesesApagar = MontoPrestamo / CantidadMensual
+                    AñosApagar = mesesApagar / 12
                     break
             
     #---------------------------------------------------------------------------------------------------------------------------------------------------------#
@@ -168,6 +170,8 @@ Límite de tiempo por cantidad de préstamo:
                             print("\nLo siento, no se permite data basura.\nVuelva a intentarlo.\n")
                             control = "no" # Control para saber cuál mensaje mostrar, dependiendo de lo que introduzca el usuario.
                             continue
+                    mesesApagar = MontoPrestamo / CantidadMensual
+                    AñosApagar = mesesApagar / 12
                     break
             
         #---------------------------------------------------------------------------------------------------------------------------------------------------------#
@@ -197,6 +201,8 @@ Límite de tiempo por cantidad de préstamo:
                             print("\nLo siento, no se permite data basura.\nVuelva a intentarlo.\n")
                             control = "no" # Control para saber cuál mensaje mostrar, dependiendo de lo que introduzca el usuario.
                             continue
+                    mesesApagar = MontoPrestamo / CantidadMensual
+                    AñosApagar = mesesApagar / 12
                     break
             
         #---------------------------------------------------------------------------------------------------------------------------------------------------------#
@@ -227,6 +233,8 @@ Límite de tiempo por cantidad de préstamo:
                                 print("\nLo siento, no se permite data basura.\nVuelva a intentarlo.\n")
                                 control = "no" # Control para saber cuál mensaje mostrar, dependiendo de lo que introduzca el usuario.
                                 continue
+                        mesesApagar = MontoPrestamo / CantidadMensual
+                        AñosApagar = mesesApagar / 12
                         break           
         
 
