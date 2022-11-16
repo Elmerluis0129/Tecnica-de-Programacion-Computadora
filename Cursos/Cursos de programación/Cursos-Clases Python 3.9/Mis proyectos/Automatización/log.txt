@@ -1,2 +1,0 @@
-hola como estas
-hola mi gran amigoKey.delete
