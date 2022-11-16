@@ -1,3 +1,0 @@
-Algoritmo calificacionesEscolares
-	
-FinAlgoritmo
