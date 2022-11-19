@@ -29,13 +29,13 @@ def barraProgreso(segmento, total, longitud):
     porcentaje = segmento / total
     completado = int(porcentaje * longitud)
     restante = longitud - completado
-    barra = f"[{'+' * completado}{'-' * restante}{porcentaje:.2%}]"
+    barra = f"[{'+' * completado}{'-' * restante}{porcentaje:.0%}]"
     return barra
 
 input("\nPresione Enter para iniciar el programa... \n")
 print("\nCargando... Por favor espere.")
 for i in range(limite+1):
-    time.sleep(0.07)
+    time.sleep(0.03)
     print(barraProgreso(i, limite, 50), end = "\r")
     
 print("\n")
@@ -57,7 +57,19 @@ ListaCosto = []
 ListaCantidadProducto = []
 ListaITBS = ["manzana", "pera", "huevos", "pan", "salami", "chinola", "mandarina", "aguacate", "refresco", "leche", "mantequilla"]
 ListaCalcularITBS = []
-cantidadProductosComprados = int(input("Ingrese la cantidad de productos comprados: "))
+while True: 
+    try:
+        cantidadProductosComprados = int(input("Ingrese la cantidad de productos comprados: "))
+        while True:
+            print("\nLo siento, este programa solo trabaja con un max de 10 productos.\nVuelva a intentarlo.\n")
+            cantidadProductosComprados = int(input("Ingrese la cantidad de productos comprados: "))
+            if cantidadProductosComprados <= 10:
+                break
+        break
+    except ValueError:
+        print("\nLo siento, no se acepta data basura (Caracteres, letras).\nVuelve a intentarlo \n")
+        continue
+
 x = 0
 
 
@@ -72,8 +84,14 @@ while cantidadProductosComprados != x:
     if cantidadProductosComprados != x: 
         cantidadProducto = str(input("Cantidad Producto: ")) # Aqui pide la cantidad del producto
         ListaCantidadProducto.append(cantidadProducto) # Aqui agrega el cantidad del producto
-        precioProducto = int(input("Precio Producto: ")) # Aqui pide el precio del producto
-        ListaValor.append(precioProducto) # Aqui agrega el precio del producto.
+        while True: 
+            try:
+                precioProducto = int(input("Precio Producto: ")) # Aqui pide el precio del producto
+                ListaValor.append(precioProducto) # Aqui agrega el precio del producto.
+                break
+            except ValueError:
+                print("\nLo siento, no se acepta data basura (Caracteres, letras).\nVuelve a intentarlo \n")
+                continue
     if nombreProducto in ListaITBS:
         calcularITBS = (precioProducto / 1.18) * 0.18
         ListaCalcularITBS.append(calcularITBS)
@@ -85,6 +103,7 @@ while cantidadProductosComprados != x:
     ListaCosto.append(precioCompraProducto)
     ListaCompra.append(nombreProducto)# Aqui para agregar el producto a la lista
     x = x + 1 # Aqui mi contador.
+    
     
 
 CalcularPrecioTodo = precioCompraProducto + calcularITBS
@@ -101,7 +120,7 @@ print("""
         #Encabezado de la factura
 print("""
 *-----------------------------------------------------------------------------------------*
-|      Descripcion       | Cantidad Producto |   ITBIS   |      Valor    |      Costo     |
+|      Descripcion      | Cantidad Producto |   ITBIS   |      Valor    |      Costo      |
 *-----------------------------------------------------------------------------------------*
 """)
 a = 0
@@ -109,6 +128,12 @@ for e in ListaCompra:
     n = ListaCantidadProducto[a]
     i = ListaCalcularITBS[a]
     v = ListaValor[a]
+    csp = ListaCosto[a]
+    
+    if len (ListaCalcularITBS) == 1:
+        it = ListaCalcularITBS[0]
+        vl = ListaValor[0]
+        cs = ListaCosto[0]
     if len(ListaCalcularITBS) == 2:
         it = ListaCalcularITBS[0] + ListaCalcularITBS[1]
         vl = ListaValor[0] + ListaValor[1]
@@ -145,25 +170,17 @@ for e in ListaCompra:
         it = ListaCalcularITBS[0] + ListaCalcularITBS[1] + ListaCalcularITBS[2] + ListaCalcularITBS[3] + ListaCalcularITBS[4] + ListaCalcularITBS[5] + ListaCalcularITBS[6] + ListaCalcularITBS[7] + ListaCalcularITBS[8] + ListaCalcularITBS[9]
         vl = ListaValor[0] + ListaValor[1] + ListaValor[2] + ListaValor[3] + ListaValor[4] + ListaValor[5] + ListaValor[6] + ListaValor[7] + ListaValor[8] + ListaValor[9]
         cs = ListaCosto[0] + ListaCosto[1] + ListaCosto[2] + ListaCosto[3] + ListaCosto[4] + ListaCosto[5] + ListaCosto[6] + ListaCosto[7]  + ListaCosto[8] + ListaCosto[9]
-    else:
-        it = ListaCalcularITBS[a]
-        vl = ListaValor[a]
-        cs = ListaCosto[a]
+    
         
-    if len(ListaCompra[a]) >= 7 and len(ListaCantidadProducto[a]) <= 10:
-        print("\t",e, "\t\t", n, "\t\t", round(i, 2), "\t\t", float(v), "\t\t", float(cs))
-    elif len(ListaCompra[a]) >= 5 and len(ListaCantidadProducto[a]) <= 6:
-        print("\t",e, "\t\t\t", n, "\t\t", round(i, 2), "\t\t", float(v), "\t\t", float(cs))
-    elif len(ListaCompra[a]) >= 2 and len(ListaCantidadProducto[a]) <= 4:
-        print("\t",e, "\t\t\t", n, "\t\t", round(i, 2), "\t\t", float(v), "\t\t", float(cs))
+    
+    print(f"""\t{e}\t\t\t{n}\t\t{round(i, 2)}\t\t{float(v)}\t\t{float(csp)}""")
         
     a = a + 1
 
 print("*-----------------------------------------------------------------------------------------*")
-print("""\tSubtotal:\t\t\t\t""", round(it, 2), "\t\t", float(vl))
-print("""\tTotal:""", round(CalcularPrecioTodo, 2))
+print(f"""\tSubtotal:\t\t\t\tRD$ {round(it, 2)}\t{float(vl)}\t\tRD$ {float(cs)}""")
+print(f"""\tTotal: RD$ {round(cs+it, 2)} pesos.""")
 
-#TODO ARREGLAR LO COSTO Y QUE TOTAL SEA LA SUMA DE COSTO.
     
 #========================== Agradecimiento por usar el programa =========================#  
 
