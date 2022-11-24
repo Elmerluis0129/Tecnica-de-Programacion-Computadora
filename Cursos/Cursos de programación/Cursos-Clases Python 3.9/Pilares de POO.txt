@@ -1,5 +1,0 @@
-PILARES DE POO
-
-Abstración: Definir la clase con los métodos y atributos necesarios.
-Encapsulación: Es el bloqueo de métodos y/o atributos (Privacidad🔏) para que no se puedan modificar por fuera del mismo.
-Herencia: Es el reutilizar una clase en más clases, sin necesidad de escribir de nuevo todo.
