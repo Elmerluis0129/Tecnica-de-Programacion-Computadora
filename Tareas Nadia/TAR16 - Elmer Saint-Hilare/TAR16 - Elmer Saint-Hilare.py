@@ -79,60 +79,31 @@ n = 1
 while x != Peliculas.CantidadPelis:
     archivo = open("Peliculas registradas.txt", "a")
     if n:
-        archivo.write("Nombre|Categoria|Director|Año|Total taquillas")
-        archivo.write("\n")
+        archivo.write("Nombre|Categoria|Director|Año|Total taquillas\n")
         n = 0
     nombrePeli = input("Nombre pelicula\n> ")
-    archivo.write(nombrePeli)
-    archivo.write("|")
+    archivo.write(nombrePeli+"|")
     while True:
         categoria = input("Categoría pelicula\n> ")
-        if categoria == "1":
-            archivo.write("Horror")
-            archivo.write("|")
-        elif categoria == "2":
-            archivo.write("Drama")
-            archivo.write("|")
-        elif categoria == "3":
-            archivo.write("Comedia")
-            archivo.write("|")
-        elif categoria == "4":
-            archivo.write("Sangrienta")
-            archivo.write("|")
-        elif categoria == "5":
-            archivo.write("Acción")
-            archivo.write("|")
-        elif categoria == "6":
-            archivo.write("Aventura")
-            archivo.write("|")
-        elif categoria == "7":
-            archivo.write("Thrieler")
-            archivo.write("|")
-        elif categoria == "8":
-            archivo.write("Infantil")
-            archivo.write("|")
-        elif categoria == "9":
-            archivo.write("Animadas")
-            archivo.write("|")
-        elif categoria == "10":
-            archivo.write("Cartoon")
-            archivo.write("|")
-        elif categoria == "11":
-            archivo.write("Animales")
-            archivo.write("|")
-        elif categoria == "12":
-            archivo.write("Naturaleza")
-            archivo.write("|")
-        elif categoria == "13":
-            archivo.write("Otra")
-            archivo.write("|")
+        if categoria == "1": archivo.write("Horror|")
+        elif categoria == "2": archivo.write("Drama|")
+        elif categoria == "3": archivo.write("Comedia|")
+        elif categoria == "4": archivo.write("Sangrienta|")
+        elif categoria == "5": archivo.write("Acción|")
+        elif categoria == "6": archivo.write("Aventura|")
+        elif categoria == "7": archivo.write("Thrieler|")
+        elif categoria == "8": archivo.write("Infantil|")
+        elif categoria == "9": archivo.write("Animadas|")
+        elif categoria == "10": archivo.write("Cartoon|")
+        elif categoria == "11": archivo.write("Animales|")
+        elif categoria == "12": archivo.write("Naturaleza|")
+        elif categoria == "13": archivo.write("Otra|")
         else: 
             print("\nLo siento, no ha marcado una categoría del menú de categorías, vuelva a intentarlo.\n")
             continue
         break
     directorPeli = input("Director pelicula\n> ")
-    archivo.write(directorPeli)
-    archivo.write("|")
+    archivo.write(directorPeli+"|")
     while True:
         try:
             año = int(input("Año de lanzamiento de la pelicula\n> "))
@@ -158,59 +129,30 @@ while x != Peliculas.CantidadPelis:
             archivo2.write(nombrePeli)
             archivo2.write(",")
             while True:
-                if categoria == "1":
-                    archivo2.write("Horror")
-                    archivo2.write(",")
-                elif categoria == "2":
-                    archivo2.write("Drama")
-                    archivo2.write(",")
-                elif categoria == "3":
-                    archivo2.write("Comedia")
-                    archivo2.write(",")
-                elif categoria == "4":
-                    archivo2.write("Sangrienta")
-                    archivo2.write(",")
-                elif categoria == "5":
-                    archivo2.write("Acción")
-                    archivo2.write(",")
-                elif categoria == "6":
-                    archivo2.write("Aventura")
-                    archivo2.write(",")
-                elif categoria == "7":
-                    archivo2.write("Thrieler")
-                    archivo2.write(",")
-                elif categoria == "8":
-                    archivo2.write("Infantil")
-                    archivo2.write(",")
-                elif categoria == "9":
-                    archivo2.write("Animadas")
-                    archivo2.write(",")
-                elif categoria == "10":
-                    archivo2.write("Cartoon")
-                    archivo2.write(",")
-                elif categoria == "11":
-                    archivo2.write("Animales")
-                    archivo2.write(",")
-                elif categoria == "12":
-                    archivo2.write("Naturaleza")
-                    archivo2.write(",")
-                elif categoria == "13":
-                    archivo2.write("Otra")
-                    archivo2.write(",")
+                if categoria == "1": archivo2.write("Horror,")
+                elif categoria == "2": archivo2.write("Drama,")
+                elif categoria == "3": archivo2.write("Comedia,")
+                elif categoria == "4": archivo2.write("Sangrienta,")
+                elif categoria == "5": archivo2.write("Acción,")
+                elif categoria == "6": archivo2.write("Aventura,")
+                elif categoria == "7": archivo2.write("Thrieler,")
+                elif categoria == "8": archivo2.write("Infantil,")
+                elif categoria == "9": archivo2.write("Animadas,")
+                elif categoria == "10": archivo2.write("Cartoon,")
+                elif categoria == "11": archivo2.write("Animales,")
+                elif categoria == "12": archivo2.write("Naturaleza",)
+                elif categoria == "13": archivo2.write("Otra,")
                 else: 
                     print("\nLo siento, no ha marcado una categoría del menú de categorías, vuelva a intentarlo.\n")
                     continue
                 break
-            archivo2.write(directorPeli)
-            archivo2.write(",")
-            archivo2.write(str(año))
-            archivo2.write(",")
+            archivo2.write(directorPeli+",")
+            archivo2.write(str(año)+",")
             archivo2.write(f"{taquillas}")
             archivo2.close()
 
-        x += 1
-        p += 5
-        archivo.close()
+    x += 1
+    archivo.close()
 
 
 
