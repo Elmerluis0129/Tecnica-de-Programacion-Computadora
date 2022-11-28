@@ -52,13 +52,33 @@ print("\n")
     
 # ============== Fin Barra de porcentaje ============== #
 
-T16.Catego.categorias()
+T16.Catego.categorias() # Llamo mi tabla de categorias, que la tengo en otro archivo.
+
+# ===================== Clase peliculas ===================== #
+"""
+Creo una clase pelis, donde en el constructor le especifico la cantidadPelis, y archivoCSV, en los cuales es donde entran los valores de la cantidad de peliculas y en el otro si quiere el archivo CSV o no respectivamente. 
+"""
 class Pelis():
     def __init__(self, cantidadPelis, archivoCSV):
         self.CantidadPelis = cantidadPelis
         self.archivoCSV = archivoCSV
-        
-        
+# =================== Fin Clase peliculas =================== #
+
+# =================== Lógica de programación =================== #   
+"""
+Aquí es dónde controlo los diferentes tipos de datas basura, aquí también hago instancia de mi clase, dónde les paso los valores que obtengo de mi bloque de control de data basuraa con try'except.
+
+Tengo unos contadores, que los uso tanto para controlar las vueltas de iteración, como para saber cuándo me va escribir algo y que no me lo vuelva hacer, ya que solo lo necesito una única vez.
+
+En el while de más abajo, abro un archivo de texto plano (txt) luego escribo los headers, nombre, categoría etc.
+
+Luego le pido el nombre de la pelicula y cuando lo ingresa, lo escribe en el texto plano, en el while de adentro, es dónde sé cuál categoría del menú seleccionó dependiendo del número que digite.
+AHí también controlo data basura, dándole la opción de volver a elegir siempre y cuando haya ingresado algo no esperado.
+Luego paso con el director de la pelicula, también lo pido por teclado y lo escribo directamente al texto plano siempre y cuando no contenga data basura, numero, y/o caracteres especiales.
+Luego sigo con el año y las taquillas vendidas, que también les controlo la data basura, si cumple con sus requerimientos de ser números, entonces automaticamente lo escribo en ele archivo de texto plano.
+Luego ya paso a revisar si me dijo que quiere el CSV o no, si lo hizo, entonces entra en la condición y me crea un nuevo archivo pero ahora .csv y si son mayor a 2000 taquillas vendidas entonces escribe todo lo que se ha digitado anteriormente, nombre, director, etc.
+Y ya para culminar cierro los dos archivos, tanto el primero de texto plano, como el segundo de csv.
+"""
 while True:
     try:
         CantidadPelis = int(input("Ingrese la cantidad de peliculas que quiere registrar: \n> "))
@@ -75,7 +95,7 @@ p = 0
 n = 1
 while x != Peliculas.CantidadPelis:
     archivo = open("Peliculas registradas.txt", "a")
-    if n:
+    if n == 1:
         archivo.write("Nombre|Categoria|Director|Año|Total taquillas\n")
         n = 0
     nombrePeli = input("Nombre pelicula\n> ")
@@ -100,7 +120,24 @@ while x != Peliculas.CantidadPelis:
             continue
         break
     directorPeli = input("Director pelicula\n> ")
-    archivo.write(directorPeli+"|")
+    controlDataBasura = directorPeli.isdigit()
+    controlDataBasura2 = directorPeli.isalpha()
+    if controlDataBasura or not controlDataBasura2:
+        while True:
+            if not controlDataBasura and not controlDataBasura2 and " " in directorPeli:
+                archivo.write(directorPeli+"|")
+                break
+            else:
+                print("\nLo siento, no se acepta data basura.\n") 
+            directorPeli = input("Director pelicula\n> ")
+            controlDataBasura2 = directorPeli.isalpha()
+            controlDataBasura = directorPeli.isdigit()
+            if not controlDataBasura and controlDataBasura2:
+                archivo.write(directorPeli+"|")
+                break
+    else:
+        archivo.write(directorPeli+"|")
+    
     while True:
         try:
             año = int(input("Año de lanzamiento de la pelicula\n> "))
@@ -119,12 +156,11 @@ while x != Peliculas.CantidadPelis:
     if Peliculas.archivoCSV:
         archivo2 = open("Peliculas taquillas 2000.csv", "a")
         if taquillas >= 2000:
-            if not n:
+            if n == 0:
                 archivo2.write("Nombre,Categoria,Director,Año,Total taquillas")
-                archivo2.write("\n")
-                n = None
-            archivo2.write(nombrePeli)
-            archivo2.write(",")
+                n = 3
+            archivo2.write("\n"+nombrePeli+",")
+            
             while True:
                 if categoria == "1": archivo2.write("Horror,")
                 elif categoria == "2": archivo2.write("Drama,")
@@ -150,7 +186,7 @@ while x != Peliculas.CantidadPelis:
 
     x += 1
     archivo.close()
-
+# ===================== Fin Lógica de programación ===================== #
 
 
 # ========================== Agradecimiento por usar el programa ========================= #  
@@ -160,8 +196,8 @@ Aquí imprimo por pantalla el agradecimiento y por quién fue creado, en este ca
 """
 
 print("""
-*----------------------------------------------------------------------------*
-| ¡Muchas gracias por utilizar mi programa! / By: Elmer Saint-Hilare 21-1354 |
-*----------------------------------------------------------------------------*
+*------------------------------------------------------------------------------------*
+| ¡Muchas gracias por utilizar mi programa! (●'◡'●) / By: Elmer Saint-Hilare 21-1354 |
+*------------------------------------------------------------------------------------*
 """)
 # ========================== Fin Agradecimiento por usar el programa ========================= #
