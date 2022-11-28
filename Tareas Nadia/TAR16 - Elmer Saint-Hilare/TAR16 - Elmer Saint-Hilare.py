@@ -53,9 +53,6 @@ print("\n")
 # ============== Fin Barra de porcentaje ============== #
 
 T16.Catego.categorias()
-
-
-
 class Pelis():
     def __init__(self, cantidadPelis, archivoCSV):
         self.CantidadPelis = cantidadPelis
