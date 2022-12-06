@@ -1,0 +1,2 @@
+class Videojuegos():
+    pass
