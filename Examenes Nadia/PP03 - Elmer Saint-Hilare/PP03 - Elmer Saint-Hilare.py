@@ -17,20 +17,94 @@ Se deben controlar las excepciones (data basura) haciendo uso de try-except.
 
 Elmer Saint-Hilare 21-1354
 """
+
+import PP03_Clientes as Cls
+import PP03_Ventas as Vns
+import PP03_VideoJuegos as VJs
+
 def MenuPrincipal():
     print(
 """
    Menú CRUD
----------------
-1. Listar
-2. Crear
-3. Leer
-4. Actualizar
-5. Eliminar
-""")
+*--------------*
+|1.| Listar
+|2.| Crear
+|3.| Leer
+|4.| Actualizar
+|5.| Eliminar
+*--------------*
 
+       Menú adicional
+*---------------------------*
+|1.-| Carga-Exportacion CSV
+|2.-| Videojuegos Ventas CSV 
+*---------------------------*
+""")
 MenuPrincipal()
 
+def elegirOpcionEnMenu(x):
+    while True:
+        try:
+            if x == 1:
+                eleccionCRUD = int(input("¿Qué desea hacer?\n> "))
+                if eleccionCRUD == 0:
+                    print(f"Lo siento, '{eleccionCRUD}' no se encuentra en el menú. \n")
 
+                elif eleccionCRUD >= 1 and eleccionCRUD <= 5:
+                    if eleccionCRUD == 1:
+                        pass
+                    elif eleccionCRUD == 2:
+                        pass
+                    elif eleccionCRUD == 3:
+                        pass
+                    elif eleccionCRUD == 4:
+                        pass
+                    else:
+                        pass
+                    break
+                else:
+                    print(f"Lo siento, '{eleccionCRUD}' no se encuentra en el menú. \n")
+                    continue
+            elif x == 2:
+                eleccionAdicional = int(input("¿Qué desea hacer?\n> "))
+                if eleccionAdicional == 0:
+                    print(f"Lo siento, '{eleccionAdicional}' no se encuentra en el menú. \n")
 
-    
+                elif eleccionAdicional >= 1 and eleccionAdicional <= 2:
+                    if eleccionAdicional == 1:
+                        pass
+                    else:
+                        pass
+                    break
+                else:
+                    print(f"Lo siento, '{eleccionAdicional}' no se encuentra en el menú. \n")
+                    continue
+                
+        except ValueError:
+            print("Lo siento, no aceptamos data basura.\n")
+            continue
+        
+def elegirMenu():
+    while True:
+        try:
+            eleccionMenu = int(input("¿Qué menú desea utilizar? '1' para 'Menú CRUD' y '2' para 'Menú adicional'\n> "))
+            if eleccionMenu == 0:
+                print(f"Lo siento, '{eleccionMenu}' no se encuentra en el menú. \n")
+
+            elif eleccionMenu == 1:
+                print("Haz seleccionado el menú CRUD...")
+                elegirOpcionEnMenu(1)
+                
+            elif eleccionMenu == 2:
+                print("Haz seleccionado el menú adicional...")
+                elegirOpcionEnMenu(2)
+                
+            else:
+                print(f"Lo siento, '{eleccionMenu}' no se encuentra en el menú. \n")
+                continue
+            break
+        except ValueError:
+            print("Lo siento, no aceptamos data basura.\n")
+            continue
+        
+elegirMenu()
