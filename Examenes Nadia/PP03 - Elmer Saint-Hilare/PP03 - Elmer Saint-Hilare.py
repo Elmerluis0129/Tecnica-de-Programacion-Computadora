@@ -22,6 +22,8 @@ import PP03_Clientes as Cls
 import PP03_Ventas as Vns
 import PP03_VideoJuegos as VJs
 
+j = 5
+
 def MenuPrincipal():
     print(
 """
@@ -48,7 +50,7 @@ def elegirOpcionEnMenu(x):
             if x == 1:
                 eleccionCRUD = int(input("¿Qué desea hacer?\n> "))
                 if eleccionCRUD == 0:
-                    print(f"Lo siento, '{eleccionCRUD}' no se encuentra en el menú. \n")
+                    print(f"Lo siento, el '{eleccionCRUD}' no se encuentra en el menú. \n")
 
                 elif eleccionCRUD >= 1 and eleccionCRUD <= 5:
                     if eleccionCRUD == 1:
@@ -63,12 +65,13 @@ def elegirOpcionEnMenu(x):
                         pass
                     break
                 else:
-                    print(f"Lo siento, '{eleccionCRUD}' no se encuentra en el menú. \n")
+                    print(f"Lo siento, el '{eleccionCRUD}' no se encuentra en el menú. \n")
                     continue
+                
             elif x == 2:
                 eleccionAdicional = int(input("¿Qué desea hacer?\n> "))
                 if eleccionAdicional == 0:
-                    print(f"Lo siento, '{eleccionAdicional}' no se encuentra en el menú. \n")
+                    print(f"Lo siento, el '{eleccionAdicional}' no se encuentra en el menú. \n")
 
                 elif eleccionAdicional >= 1 and eleccionAdicional <= 2:
                     if eleccionAdicional == 1:
@@ -77,7 +80,7 @@ def elegirOpcionEnMenu(x):
                         pass
                     break
                 else:
-                    print(f"Lo siento, '{eleccionAdicional}' no se encuentra en el menú. \n")
+                    print(f"Lo siento, el '{eleccionAdicional}' no se encuentra en el menú. \n")
                     continue
                 
         except ValueError:
@@ -89,7 +92,7 @@ def elegirMenu():
         try:
             eleccionMenu = int(input("¿Qué menú desea utilizar? '1' para 'Menú CRUD' y '2' para 'Menú adicional'\n> "))
             if eleccionMenu == 0:
-                print(f"Lo siento, '{eleccionMenu}' no se encuentra en el menú. \n")
+                print(f"Lo siento, el '{eleccionMenu}' no se encuentra dentro de las opciones (1 y 2). \n")
 
             elif eleccionMenu == 1:
                 print("Haz seleccionado el menú CRUD...")
@@ -100,7 +103,7 @@ def elegirMenu():
                 elegirOpcionEnMenu(2)
                 
             else:
-                print(f"Lo siento, '{eleccionMenu}' no se encuentra en el menú. \n")
+                print(f"Lo siento, el '{eleccionMenu}' no se encuentra dentro de las opciones (1 y 2). \n")
                 continue
             break
         except ValueError:
@@ -108,3 +111,4 @@ def elegirMenu():
             continue
         
 elegirMenu()
+#TODO escuchar la nota de voz de nadia, para saber cual es el proximo paso.
