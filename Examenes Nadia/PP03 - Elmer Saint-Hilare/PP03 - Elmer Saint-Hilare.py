@@ -93,100 +93,62 @@ def Leer(c, control1, control2, control3, control4, control5):
         ListaActualizarAuxiliar = ListaClientes.copy()
         ListaClientes.clear()
         if operacion == 1:
-            if control1:
-                # ============= Cliente 1 ============= #
-                ListaClientes.append(ListaActualizar1[0])
-                ListaClientes.append(ListaActualizar1[1])
-                ListaClientes.append(ListaActualizar1[2])
-                ListaClientes.append(ListaActualizar1[3])
+            # ============= Cliente 1 ============= #
+            if control1: ListaClientes.append(ListaActualizar1[0]) ,ListaClientes.append(ListaActualizar1[1]) ,ListaClientes.append(ListaActualizar1[2]) ,ListaClientes.append(ListaActualizar1[3])
             else: ListaClientes.append(ListaActualizarAuxiliar[0]),ListaClientes.append(ListaActualizarAuxiliar[1]),ListaClientes.append(ListaActualizarAuxiliar[2]),ListaClientes.append(ListaActualizarAuxiliar[3])
             
         elif operacion == 2:
-            if control1:
-                # ============= Cliente 1 ============= #
-                ListaClientes.append(ListaActualizar1[0])
-                ListaClientes.append(ListaActualizar1[1])
-                ListaClientes.append(ListaActualizar1[2])
-                ListaClientes.append(ListaActualizar1[3])
+            # ============= Cliente 1 ============= #
+            if control1: ListaClientes.append(ListaActualizar1[0]) ,ListaClientes.append(ListaActualizar1[1]) ,ListaClientes.append(ListaActualizar1[2]) ,ListaClientes.append(ListaActualizar1[3])
             else: ListaClientes.append(ListaActualizarAuxiliar[0]),ListaClientes.append(ListaActualizarAuxiliar[1]),ListaClientes.append(ListaActualizarAuxiliar[2]),ListaClientes.append(ListaActualizarAuxiliar[3])
-            
-            if control2:    
-                # ============= Cliente 2 ============= #
-                ListaClientes.append(ListaActualizar2[0])
-                ListaClientes.append(ListaActualizar2[1])
-                ListaClientes.append(ListaActualizar2[2])
-                ListaClientes.append(ListaActualizar2[3])
+                
+            # ============= Cliente 2 ============= #
+            if control2: ListaClientes.append(ListaActualizar2[0]) ,ListaClientes.append(ListaActualizar2[1]) ,ListaClientes.append(ListaActualizar2[2]) ,ListaClientes.append(ListaActualizar2[3])
             else: ListaClientes.append(ListaActualizarAuxiliar[4]),ListaClientes.append(ListaActualizarAuxiliar[5]),ListaClientes.append(ListaActualizarAuxiliar[6]),ListaClientes.append(ListaActualizarAuxiliar[7])
                 
         elif operacion == 3:
-            if control1:
-                # ============= Cliente 1 ============= #
-                ListaClientes.append(ListaActualizar1[0])
-                ListaClientes.append(ListaActualizar1[1])
-                ListaClientes.append(ListaActualizar1[2])
-                ListaClientes.append(ListaActualizar1[3])
+            # ============= Cliente 1 ============= #
+            if control1: ListaClientes.append(ListaActualizar1[0]) ,ListaClientes.append(ListaActualizar1[1]) ,ListaClientes.append(ListaActualizar1[2]) ,ListaClientes.append(ListaActualizar1[3])
             else: ListaClientes.append(ListaActualizarAuxiliar[0]),ListaClientes.append(ListaActualizarAuxiliar[1]),ListaClientes.append(ListaActualizarAuxiliar[2]),ListaClientes.append(ListaActualizarAuxiliar[3])
             
-            if control2:    
-                # ============= Cliente 2 ============= #
-                ListaClientes.append(ListaActualizar2[0])
-                ListaClientes.append(ListaActualizar2[1])
-                ListaClientes.append(ListaActualizar2[2])
-                ListaClientes.append(ListaActualizar2[3])
+            # ============= Cliente 2 ============= #
+            if control2: ListaClientes.append(ListaActualizar2[0]) ,ListaClientes.append(ListaActualizar2[1]) ,ListaClientes.append(ListaActualizar2[2]) ,ListaClientes.append(ListaActualizar2[3])
             else: ListaClientes.append(ListaActualizarAuxiliar[4]),ListaClientes.append(ListaActualizarAuxiliar[5]),ListaClientes.append(ListaActualizarAuxiliar[6]),ListaClientes.append(ListaActualizarAuxiliar[7])
-                
-            if control3:
-                # ============= Cliente 3 ============= #
-                ListaClientes.append(ListaActualizar3[0])
-                ListaClientes.append(ListaActualizar3[1])
-                ListaClientes.append(ListaActualizar3[2])
-                ListaClientes.append(ListaActualizar3[3])
+            
+            # ============= Cliente 3 ============= #    
+            if control3: ListaClientes.append(ListaActualizar3[0]) ,ListaClientes.append(ListaActualizar3[1]) ,ListaClientes.append(ListaActualizar3[2]) ,ListaClientes.append(ListaActualizar3[3])
             else: ListaClientes.append(ListaActualizarAuxiliar[8]),ListaClientes.append(ListaActualizarAuxiliar[9]),ListaClientes.append(ListaActualizarAuxiliar[10]),ListaClientes.append(ListaActualizarAuxiliar[11])
                 
         elif operacion == 4:
-            if control1:
-                # ============= Cliente 1 ============= #
-                ListaClientes.append(ListaActualizar1[0])
-                ListaClientes.append(ListaActualizar1[1])
-                ListaClientes.append(ListaActualizar1[2])
-                ListaClientes.append(ListaActualizar1[3])
+            # ============= Cliente 1 ============= #
+            if control1: ListaClientes.append(ListaActualizar1[0]) ,ListaClientes.append(ListaActualizar1[1]) ,ListaClientes.append(ListaActualizar1[2]) ,ListaClientes.append(ListaActualizar1[3])
             else: ListaClientes.append(ListaActualizarAuxiliar[0]),ListaClientes.append(ListaActualizarAuxiliar[1]),ListaClientes.append(ListaActualizarAuxiliar[2]),ListaClientes.append(ListaActualizarAuxiliar[3])
             
-            if control2:    
-                # ============= Cliente 2 ============= #
-                ListaClientes.append(ListaActualizar2[0])
-                ListaClientes.append(ListaActualizar2[1])
-                ListaClientes.append(ListaActualizar2[2])
-                ListaClientes.append(ListaActualizar2[3])
+            # ============= Cliente 2 ============= #
+            if control2: ListaClientes.append(ListaActualizar2[0]) ,ListaClientes.append(ListaActualizar2[1]) ,ListaClientes.append(ListaActualizar2[2]) ,ListaClientes.append(ListaActualizar2[3])
             else: ListaClientes.append(ListaActualizarAuxiliar[4]),ListaClientes.append(ListaActualizarAuxiliar[5]),ListaClientes.append(ListaActualizarAuxiliar[6]),ListaClientes.append(ListaActualizarAuxiliar[7])
-                
-            if control3:
-                # ============= Cliente 3 ============= #
-                ListaClientes.append(ListaActualizar3[0])
-                ListaClientes.append(ListaActualizar3[1])
-                ListaClientes.append(ListaActualizar3[2])
-                ListaClientes.append(ListaActualizar3[3])
+            
+            # ============= Cliente 3 ============= #    
+            if control3: ListaClientes.append(ListaActualizar3[0]) ,ListaClientes.append(ListaActualizar3[1]) ,ListaClientes.append(ListaActualizar3[2]) ,ListaClientes.append(ListaActualizar3[3])
             else: ListaClientes.append(ListaActualizarAuxiliar[8]),ListaClientes.append(ListaActualizarAuxiliar[9]),ListaClientes.append(ListaActualizarAuxiliar[10]),ListaClientes.append(ListaActualizarAuxiliar[11])
-                
-            if control4:
-                # ============= Cliente 4 ============= #
-                ListaClientes.append(ListaActualizar4[0])
-                ListaClientes.append(ListaActualizar4[1])
-                ListaClientes.append(ListaActualizar4[2])
-                ListaClientes.append(ListaActualizar4[3])
+            
+            # ============= Cliente 4 ============= #    
+            if control4: ListaClientes.append(ListaActualizar4[0]) ,ListaClientes.append(ListaActualizar4[1]) ,ListaClientes.append(ListaActualizar4[2]) ,ListaClientes.append(ListaActualizar4[3])
             else: ListaClientes.append(ListaActualizarAuxiliar[12]),ListaClientes.append(ListaActualizarAuxiliar[13]),ListaClientes.append(ListaActualizarAuxiliar[14]),ListaClientes.append(ListaActualizarAuxiliar[15])
                 
         elif operacion == 5:
             # ============= Cliente 1 ============= #
             if control1: ListaClientes.append(ListaActualizar1[0]) ,ListaClientes.append(ListaActualizar1[1]) ,ListaClientes.append(ListaActualizar1[2]) ,ListaClientes.append(ListaActualizar1[3])
             else: ListaClientes.append(ListaActualizarAuxiliar[0]),ListaClientes.append(ListaActualizarAuxiliar[1]),ListaClientes.append(ListaActualizarAuxiliar[2]),ListaClientes.append(ListaActualizarAuxiliar[3])
+            
             # ============= Cliente 2 ============= #
             if control2: ListaClientes.append(ListaActualizar2[0]),ListaClientes.append(ListaActualizar2[1]),ListaClientes.append(ListaActualizar2[2]),ListaClientes.append(ListaActualizar2[3])
             else: ListaClientes.append(ListaActualizarAuxiliar[4]),ListaClientes.append(ListaActualizarAuxiliar[5]),ListaClientes.append(ListaActualizarAuxiliar[6]),ListaClientes.append(ListaActualizarAuxiliar[7])
             
             # ============= Cliente 3 ============= #    
             if control3: ListaClientes.append(ListaActualizar3[0]) ,ListaClientes.append(ListaActualizar3[1]) ,ListaClientes.append(ListaActualizar3[2]) ,ListaClientes.append(ListaActualizar3[3])
-            else: ListaClientes.append(ListaActualizarAuxiliar[8]),ListaClientes.append(ListaActualizarAuxiliar[9]),ListaClientes.append(ListaActualizarAuxiliar[10]),ListaClientes.append(ListaActualizarAuxiliar[11])    
+            else: ListaClientes.append(ListaActualizarAuxiliar[8]),ListaClientes.append(ListaActualizarAuxiliar[9]),ListaClientes.append(ListaActualizarAuxiliar[10]),ListaClientes.append(ListaActualizarAuxiliar[11]) 
+               
             # ============= Cliente 4 ============= #    
             if control4: ListaClientes.append(ListaActualizar4[0]),ListaClientes.append(ListaActualizar4[1]),ListaClientes.append(ListaActualizar4[2]),ListaClientes.append(ListaActualizar4[3])
             else: ListaClientes.append(ListaActualizarAuxiliar[12]),ListaClientes.append(ListaActualizarAuxiliar[13]),ListaClientes.append(ListaActualizarAuxiliar[14]),ListaClientes.append(ListaActualizarAuxiliar[15])
@@ -299,6 +261,8 @@ def Menus(a):
                                         
                                         print("\nPara dejar de actualizar y guardar todas las actualizaciones, presionar: '6'")
                                         eleccionUsuarioActualizar = int(input("¿Cuál quieres actualizar?\nIngresa el número: "))
+                                        
+#===================================================================================ACTUALIZACION CLIENTE 1==================================================================================================================================== #
                                         if eleccionUsuarioActualizar == 1:
                                             print(f"El usuario seleccionado es: {ListaClientes[0]} {ListaClientes[1]} {ListaClientes[2]} {ListaClientes[3]}")
                                             print("¿Seguro que quieres actualizar este usuario?\n '1' para Sí y '0' para No.")
@@ -356,7 +320,7 @@ def Menus(a):
                                                     elif UsuarioQuiereActualizarEl == "5":
                                                         break
                                 
-#======================================================================================================================================================================================================================= #
+#===================================================================================ACTUALIZACION CLIENTE 2==================================================================================================================================== #
 
                                         elif eleccionUsuarioActualizar == 2:
                                             print(f"El usuario seleccionado es: {ListaClientes[4]} {ListaClientes[5]} {ListaClientes[6]} {ListaClientes[7]}")
@@ -419,7 +383,7 @@ def Menus(a):
                                             else:
                                                 print("Lo siento, no hay  esa cantidad de clientes registrados.\n")
                                                 
-#======================================================================================================================================================================================================================= #
+#=======================================================================================ACTUALIZACION CLIENTE 3================================================================================================================================ #
 
                                         elif eleccionUsuarioActualizar == 3:
                                             print(f"El usuario seleccionado es: {ListaClientes[8]} {ListaClientes[9]} {ListaClientes[10]} {ListaClientes[11]}")
@@ -480,7 +444,7 @@ def Menus(a):
                                                     
                                             else:
                                                 print("Lo siento, no hay  esa cantidad de clientes registrados.\n")
-#======================================================================================================================================================================================================================= #
+#====================================================================================ACTUALIZACION CLIENTE 4=================================================================================================================================== #
 
                                         elif eleccionUsuarioActualizar == 4:
                                             print(f"El usuario seleccionado es: {ListaClientes[12]} {ListaClientes[13]} {ListaClientes[14]} {ListaClientes[15]}")
@@ -539,7 +503,7 @@ def Menus(a):
                                                     elif UsuarioQuiereActualizarEl == "5":
                                                         break
 
-#======================================================================================================================================================================================================================= #
+#======================================================================================ACTUALIZACION CLIENTE 5================================================================================================================================= #
 
                                         elif eleccionUsuarioActualizar == 5:
                                             print(f"El usuario seleccionado es: {ListaClientes[16]} {ListaClientes[17]} {ListaClientes[18]} {ListaClientes[19]}")
@@ -613,7 +577,30 @@ def Menus(a):
                                    
 # ================================================================== Eliminar =================================================================== #
                         else:
-                            pass
+                            while True:
+                                try:
+                                    print("Haz seleeccionado eliminar.\n\n¿Qué cliente desea eliminar?\n")
+                                    eliminarOpcion = int(input("> "))
+                                    break
+                                except ValueError:
+                                    print("No aceptamos data basura. Vuelva intentarlo.\n")
+                                    continue
+                                
+                            while True:
+                                if eliminarOpcion == 1:
+                                    break
+                                elif eliminarOpcion == 2:
+                                    break
+                                elif eliminarOpcion == 3:
+                                    break
+                                elif eliminarOpcion == 4:
+                                    break
+                                elif eliminarOpcion == 5:
+                                    break
+                                else:
+                                    print("Lo siento, no existe esa cantidad de clientes... Vuelva intentarlo.\n")
+                                    continue
+                            
                         
                     else:
                         print(f"Lo siento, el '{eleccionCRUD}' no se encuentra en el menú. \n")
