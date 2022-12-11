@@ -13,7 +13,6 @@ Videojuegos.
 Ventas.
 El sistema debe permitir la carga y la exportación de data a través de archivos .csv (para todos los modelos).
 El sistema debe tener una opción que permita generar un archivo .csv con los videojuegos cuyas ventas sean mayores a RD$500.00.
-Se deben controlar las excepciones (data basura) haciendo uso de try-except.
 
 Elmer Saint-Hilare 21-1354
 """
@@ -23,6 +22,14 @@ import PP03_Ventas as Vns
 import PP03_VideoJuegos as VJs
 
 ListaClientes = []
+ListaActualizar = []
+ListaActualizar1 = []
+ListaActualizar2 = []
+ListaActualizar3 = []
+ListaActualizar4 = []
+ListaActualizar5 = []
+ListaActualizarAuxiliar = []
+
 
 def MenuPrincipal():
     print(
@@ -36,48 +43,161 @@ def MenuPrincipal():
 """)
 MenuPrincipal()
 
-def Leer():
-    contador1 = 0
-    contador2 = 0
-    contador3 = 0
-    contador4 = 1
-    prueba = 1
-    while True:
-        contador1 += 3
-        contador2 += 4
-        
-        if len(ListaClientes) == contador2:
-            print(f"Se encontraron: {contador2-contador1} cliente/s.\n")
-            for x in range((contador2-contador1)+1):
-                if prueba:
-                    print("""       Cedula  |  Nombre   |  Apellido  |  Metodo de Pago""")
-                    prueba = 0
-                else:
-                    print("*---*------------------------------------------------------------*")
-                    print(f"|{contador4}.-|",ListaClientes[contador3], ListaClientes[contador3+1], ListaClientes[contador3+2], ListaClientes[contador3+3])
-                    contador3 += 4
-                    contador4 += 1
-            print("*---*------------------------------------------------------------*")
-            print("""
-   Menú CRUD
-*--------------*
-|1.| Crear
-|2.| Leer
-|3.| Actualizar
-|4.| Eliminar
-*--------------*""")
-            Menus(0)
-        elif len(ListaClientes) == 0:
-            print("""\nNo hay data creada para 'Clientes'. Vuelva a intentarlo más tarde, por favor.\n
-   Menú CRUD
-*--------------*
-|1.| Crear
-|2.| Leer
-|3.| Actualizar
-|4.| Eliminar
-*--------------*""")
-            Menus(0)
+def Leer(c, control1, control2, control3, control4, control5):
+    if c:
+        contador1 = 0
+        contador2 = 0
+        contador3 = 0
+        contador4 = 1
+        prueba = 1
+        while True:
+            contador1 += 3
+            contador2 += 4
 
+            if len(ListaClientes) == contador2:
+                global operacion
+                operacion = contador2-contador1
+                print(f"Se encontraron: {operacion} cliente/s.\n")
+                for x in range((contador2-contador1)+1):
+                    if prueba:
+                        print("""       Cedula  |  Nombre   |  Apellido  |  Metodo de Pago""")
+                        prueba = 0
+                    else:
+                        print("*---*------------------------------------------------------------*")
+                        print(f"|{contador4}.-|",ListaClientes[contador3], ListaClientes[contador3+1], ListaClientes[contador3+2], ListaClientes[contador3+3])
+                        contador3 += 4
+                        contador4 += 1
+                print("*---*------------------------------------------------------------*")
+                print("""
+   Menú CRUD
+*--------------*
+|1.| Crear
+|2.| Leer
+|3.| Actualizar
+|4.| Eliminar
+*--------------*""")
+                Menus(0)
+            elif len(ListaClientes) == 0:
+                print("""\nNo hay data creada para 'Clientes'. Vuelva a intentarlo más tarde, por favor.\n
+   Menú CRUD
+*--------------*
+|1.| Crear
+|2.| Leer
+|3.| Actualizar
+|4.| Eliminar
+*--------------*""")
+                Menus(0)
+
+# =========== AÑADIENDO LAS ACTUALIZACIONES ============ #
+    if not c:
+        ListaActualizarAuxiliar = ListaClientes.copy()
+        ListaClientes.clear()
+        if operacion == 1:
+            if control1:
+                # ============= Cliente 1 ============= #
+                ListaClientes.append(ListaActualizar1[0])
+                ListaClientes.append(ListaActualizar1[1])
+                ListaClientes.append(ListaActualizar1[2])
+                ListaClientes.append(ListaActualizar1[3])
+            else: ListaClientes.append(ListaActualizarAuxiliar[0]),ListaClientes.append(ListaActualizarAuxiliar[1]),ListaClientes.append(ListaActualizarAuxiliar[2]),ListaClientes.append(ListaActualizarAuxiliar[3])
+            
+        elif operacion == 2:
+            if control1:
+                # ============= Cliente 1 ============= #
+                ListaClientes.append(ListaActualizar1[0])
+                ListaClientes.append(ListaActualizar1[1])
+                ListaClientes.append(ListaActualizar1[2])
+                ListaClientes.append(ListaActualizar1[3])
+            else: ListaClientes.append(ListaActualizarAuxiliar[0]),ListaClientes.append(ListaActualizarAuxiliar[1]),ListaClientes.append(ListaActualizarAuxiliar[2]),ListaClientes.append(ListaActualizarAuxiliar[3])
+            
+            if control2:    
+                # ============= Cliente 2 ============= #
+                ListaClientes.append(ListaActualizar2[0])
+                ListaClientes.append(ListaActualizar2[1])
+                ListaClientes.append(ListaActualizar2[2])
+                ListaClientes.append(ListaActualizar2[3])
+            else: ListaClientes.append(ListaActualizarAuxiliar[4]),ListaClientes.append(ListaActualizarAuxiliar[5]),ListaClientes.append(ListaActualizarAuxiliar[6]),ListaClientes.append(ListaActualizarAuxiliar[7])
+                
+        elif operacion == 3:
+            if control1:
+                # ============= Cliente 1 ============= #
+                ListaClientes.append(ListaActualizar1[0])
+                ListaClientes.append(ListaActualizar1[1])
+                ListaClientes.append(ListaActualizar1[2])
+                ListaClientes.append(ListaActualizar1[3])
+            else: ListaClientes.append(ListaActualizarAuxiliar[0]),ListaClientes.append(ListaActualizarAuxiliar[1]),ListaClientes.append(ListaActualizarAuxiliar[2]),ListaClientes.append(ListaActualizarAuxiliar[3])
+            
+            if control2:    
+                # ============= Cliente 2 ============= #
+                ListaClientes.append(ListaActualizar2[0])
+                ListaClientes.append(ListaActualizar2[1])
+                ListaClientes.append(ListaActualizar2[2])
+                ListaClientes.append(ListaActualizar2[3])
+            else: ListaClientes.append(ListaActualizarAuxiliar[4]),ListaClientes.append(ListaActualizarAuxiliar[5]),ListaClientes.append(ListaActualizarAuxiliar[6]),ListaClientes.append(ListaActualizarAuxiliar[7])
+                
+            if control3:
+                # ============= Cliente 3 ============= #
+                ListaClientes.append(ListaActualizar3[0])
+                ListaClientes.append(ListaActualizar3[1])
+                ListaClientes.append(ListaActualizar3[2])
+                ListaClientes.append(ListaActualizar3[3])
+            else: ListaClientes.append(ListaActualizarAuxiliar[8]),ListaClientes.append(ListaActualizarAuxiliar[9]),ListaClientes.append(ListaActualizarAuxiliar[10]),ListaClientes.append(ListaActualizarAuxiliar[11])
+                
+        elif operacion == 4:
+            if control1:
+                # ============= Cliente 1 ============= #
+                ListaClientes.append(ListaActualizar1[0])
+                ListaClientes.append(ListaActualizar1[1])
+                ListaClientes.append(ListaActualizar1[2])
+                ListaClientes.append(ListaActualizar1[3])
+            else: ListaClientes.append(ListaActualizarAuxiliar[0]),ListaClientes.append(ListaActualizarAuxiliar[1]),ListaClientes.append(ListaActualizarAuxiliar[2]),ListaClientes.append(ListaActualizarAuxiliar[3])
+            
+            if control2:    
+                # ============= Cliente 2 ============= #
+                ListaClientes.append(ListaActualizar2[0])
+                ListaClientes.append(ListaActualizar2[1])
+                ListaClientes.append(ListaActualizar2[2])
+                ListaClientes.append(ListaActualizar2[3])
+            else: ListaClientes.append(ListaActualizarAuxiliar[4]),ListaClientes.append(ListaActualizarAuxiliar[5]),ListaClientes.append(ListaActualizarAuxiliar[6]),ListaClientes.append(ListaActualizarAuxiliar[7])
+                
+            if control3:
+                # ============= Cliente 3 ============= #
+                ListaClientes.append(ListaActualizar3[0])
+                ListaClientes.append(ListaActualizar3[1])
+                ListaClientes.append(ListaActualizar3[2])
+                ListaClientes.append(ListaActualizar3[3])
+            else: ListaClientes.append(ListaActualizarAuxiliar[8]),ListaClientes.append(ListaActualizarAuxiliar[9]),ListaClientes.append(ListaActualizarAuxiliar[10]),ListaClientes.append(ListaActualizarAuxiliar[11])
+                
+            if control4:
+                # ============= Cliente 4 ============= #
+                ListaClientes.append(ListaActualizar4[0])
+                ListaClientes.append(ListaActualizar4[1])
+                ListaClientes.append(ListaActualizar4[2])
+                ListaClientes.append(ListaActualizar4[3])
+            else: ListaClientes.append(ListaActualizarAuxiliar[12]),ListaClientes.append(ListaActualizarAuxiliar[13]),ListaClientes.append(ListaActualizarAuxiliar[14]),ListaClientes.append(ListaActualizarAuxiliar[15])
+                
+        elif operacion == 5:
+            # ============= Cliente 1 ============= #
+            if control1: ListaClientes.append(ListaActualizar1[0]) ,ListaClientes.append(ListaActualizar1[1]) ,ListaClientes.append(ListaActualizar1[2]) ,ListaClientes.append(ListaActualizar1[3])
+            else: ListaClientes.append(ListaActualizarAuxiliar[0]),ListaClientes.append(ListaActualizarAuxiliar[1]),ListaClientes.append(ListaActualizarAuxiliar[2]),ListaClientes.append(ListaActualizarAuxiliar[3])
+            # ============= Cliente 2 ============= #
+            if control2: ListaClientes.append(ListaActualizar2[0]),ListaClientes.append(ListaActualizar2[1]),ListaClientes.append(ListaActualizar2[2]),ListaClientes.append(ListaActualizar2[3])
+            else: ListaClientes.append(ListaActualizarAuxiliar[4]),ListaClientes.append(ListaActualizarAuxiliar[5]),ListaClientes.append(ListaActualizarAuxiliar[6]),ListaClientes.append(ListaActualizarAuxiliar[7])
+            
+            # ============= Cliente 3 ============= #    
+            if control3: ListaClientes.append(ListaActualizar3[0]) ,ListaClientes.append(ListaActualizar3[1]) ,ListaClientes.append(ListaActualizar3[2]) ,ListaClientes.append(ListaActualizar3[3])
+            else: ListaClientes.append(ListaActualizarAuxiliar[8]),ListaClientes.append(ListaActualizarAuxiliar[9]),ListaClientes.append(ListaActualizarAuxiliar[10]),ListaClientes.append(ListaActualizarAuxiliar[11])    
+            # ============= Cliente 4 ============= #    
+            if control4: ListaClientes.append(ListaActualizar4[0]),ListaClientes.append(ListaActualizar4[1]),ListaClientes.append(ListaActualizar4[2]),ListaClientes.append(ListaActualizar4[3])
+            else: ListaClientes.append(ListaActualizarAuxiliar[12]),ListaClientes.append(ListaActualizarAuxiliar[13]),ListaClientes.append(ListaActualizarAuxiliar[14]),ListaClientes.append(ListaActualizarAuxiliar[15])
+            
+            # ============= Cliente 5 ============= #
+            if control5: ListaClientes.append(ListaActualizar5[0]),ListaClientes.append(ListaActualizar5[1]),ListaClientes.append(ListaActualizar5[2]),ListaClientes.append(ListaActualizar5[3])
+            else: ListaClientes.append(ListaActualizarAuxiliar[16]),ListaClientes.append(ListaActualizarAuxiliar[17]),ListaClientes.append(ListaActualizarAuxiliar[18]),ListaClientes.append(ListaActualizarAuxiliar[19])
+                
+# =========== FIN AÑADIENDO LAS ACTUALIZACIONES ============ #
+
+        
 def Menus(a):
     if a:
         print(
@@ -156,21 +276,341 @@ def Menus(a):
 *--------------*""")
                                 elegirOpcionEnMenu(x,y)
                             else:
-                                Leer()
+                                Leer(1,0,0,0,0,0)
                             
 # ================================================================== Actualizar =================================================================== #
                         elif eleccionCRUD == 3:
-                            print("¿Quieres primero leer la data para saber cuál vas a modificar? '1' para Sí y '0' para No")
+                            print("¿Quieres primero leer la data para saber cuál vas a actualizar? '1' para Sí y '0' para No")
                             while True:
-                                try: # Aquí le digo al programa que intente las líneas de códigos que están dentro de la misma.
-                                    eleccionData = int(input("> "))
-                                    if eleccionData:
-                                        Leer()
+                                eleccionData = int(input("> "))
+                                if eleccionData:
+                                    Leer(1,0,0,0,0,0)
+                                else:
+                                    contador = 0
+                                    control1 = 0
+                                    control2 = 0
+                                    control3 = 0
+                                    control4 = 0
+                                    control5 = 0
+                                    
+                                    while True:
+                                            
+                                        contador += 1
+                                        
+                                        print("\nPara dejar de actualizar y guardar todas las actualizaciones, presionar: '6'")
+                                        eleccionUsuarioActualizar = int(input("¿Cuál quieres actualizar?\nIngresa el número: "))
+                                        if eleccionUsuarioActualizar == 1:
+                                            print(f"El usuario seleccionado es: {ListaClientes[0]} {ListaClientes[1]} {ListaClientes[2]} {ListaClientes[3]}")
+                                            print("¿Seguro que quieres actualizar este usuario?\n '1' para Sí y '0' para No.")
+                                            respuestaSioNo = int(input("> "))
+                                            while respuestaSioNo:
+                                                if respuestaSioNo:
+                                                    print("|1.-| Cédula\n|2.-| Nombre\n|3.-| Apellidos\n|4.-| Método de pag\n|5.-| Dejar actualizar")
+                                                    UsuarioQuiereActualizarEl = input(f"¿Qué quiere actualizar del usuario {eleccionUsuarioActualizar}?\n> ")
+                                                    
+                                                    if UsuarioQuiereActualizarEl == "1": # ACTUALIZAR CEDULA DEL CLIENTE
+                                                        print(f"Ha seleccionado el usuario {eleccionUsuarioActualizar}, para actualizar la cédula.\n")
+                                                        nuevaCedula = int(input("Ingrese la nueva cédula: "))
+                                                        NuevaCedulaEnString = str(nuevaCedula)
+                                                        ListaActualizar1.append(NuevaCedulaEnString)
+                                                        ListaActualizar1.append(ListaClientes[1])
+                                                        ListaActualizar1.append(ListaClientes[2])
+                                                        ListaActualizar1.append(ListaClientes[3])
+                                                        print(f"Cédula actualizada éxitosamente...\nUsuario: {ListaActualizar1[0]} {ListaActualizar1[1]} {ListaActualizar1[2]} {ListaActualizar1[3]}")
+                                                        control1 = 1
+
+                                                    elif UsuarioQuiereActualizarEl == "2": # ACTUALIZAR NOMBRE DEL CLIENTE
+                                                        print(f"Ha seleccionado el usuario {eleccionUsuarioActualizar}, para actualizar el nombre.\n")
+                                                        nuevoNombre = input("Ingrese el nuevo nombre: ")
+                                                        ListaActualizar1.append(ListaClientes[0])
+                                                        ListaActualizar1.append(nuevoNombre)
+                                                        ListaActualizar1.append(ListaClientes[2])
+                                                        ListaActualizar1.append(ListaClientes[3])
+                                                        print(f"Nombre actualizado éxitosamente...\nUsuario: {ListaActualizar1[0]} {ListaActualizar1[1]} {ListaActualizar1[2]} {ListaActualizar1[3]}")
+                                                        control1 = 1
+                                                                                                                
+                                                    elif UsuarioQuiereActualizarEl == "3": # ACTUALIZAR APELLIDO DEL CLIENTE
+                                                        print(f"Ha seleccionado el usuario {eleccionUsuarioActualizar}, para actualizar el apellido.\n")
+                                                        nuevoApellido = input("Ingrese el nuevo apellido: ")
+                                                        ListaActualizar1.append(ListaClientes[0])
+                                                        ListaActualizar1.append(ListaClientes[1])
+                                                        ListaActualizar1.append(nuevoApellido)
+                                                        ListaActualizar1.append(ListaClientes[3])
+                                                        print(f"Apellido actualizado éxitosamente...\nUsuario: {ListaActualizar1[0]} {ListaActualizar1[1]} {ListaActualizar1[2]} {ListaActualizar1[3]}")
+                                                        control1 = 1
+                                                                                                                
+                                                    elif UsuarioQuiereActualizarEl == "4": # ACTUALIZAR MÉTODO DEL CLIENTE
+                                                        print(f"Ha seleccionado el usuario {eleccionUsuarioActualizar}, para actualizar el método de pago.\n")
+                                                        nuevoMetodo = input("Ingrese el nuevo método. '1' para pagar con tarjeta de crédito o débito. '2' para pagar en efectivo.\n> ")
+                                                        if nuevoMetodo == "1":
+                                                            nuevoMetodoActualizado = "Tarjeta de crédito o débito"
+                                                        elif nuevoMetodo == "2":
+                                                            nuevoMetodoActualizado = "Efectivo"                                                            
+                                                        ListaActualizar1.append(ListaClientes[0])
+                                                        ListaActualizar1.append(ListaClientes[1])
+                                                        ListaActualizar1.append(ListaClientes[2])
+                                                        ListaActualizar1.append(nuevoMetodoActualizado)
+                                                        print(f"Método de pago actualizado éxitosamente...\nUsuario: {ListaActualizar1[0]} {ListaActualizar1[1]} {ListaActualizar1[2]} {ListaActualizar1[3]}")
+                                                        control1 = 1
+                                                        
+                                                    elif UsuarioQuiereActualizarEl == "5":
+                                                        break
+                                
+#======================================================================================================================================================================================================================= #
+
+                                        elif eleccionUsuarioActualizar == 2:
+                                            print(f"El usuario seleccionado es: {ListaClientes[4]} {ListaClientes[5]} {ListaClientes[6]} {ListaClientes[7]}")
+                                            print("¿Seguro que quieres actualizar este usuario?\n '1' para Sí y '0' para No.")
+                                            respuestaSioNo = int(input("> "))
+                                            while respuestaSioNo:
+                                                if respuestaSioNo:
+                                                    print("|1.-| Cédula\n|2.-| Nombre\n|3.-| Apellidos\n|4.-| Método de pag\n|5.-| Dejar actualizar")
+                                                    UsuarioQuiereActualizarEl = input(f"¿Qué quiere actualizar del usuario {eleccionUsuarioActualizar}?\n> ")
+                                                    
+                                                    if UsuarioQuiereActualizarEl == "1": # ACTUALIZAR CEDULA DEL CLIENTE
+                                                        print(f"Ha seleccionado el usuario {eleccionUsuarioActualizar}, para actualizar la cédula.\n")
+                                                        nuevaCedula = int(input("Ingrese la nueva cédula: "))
+                                                        NuevaCedulaEnString = str(nuevaCedula)
+                                                        ListaActualizar2.append(NuevaCedulaEnString)
+                                                        ListaActualizar2.append(ListaClientes[5])
+                                                        ListaActualizar2.append(ListaClientes[6])
+                                                        ListaActualizar2.append(ListaClientes[7])
+                                                        print(f"Cédula actualizada éxitosamente...\nUsuario: {ListaActualizar2[0]} {ListaActualizar2[1]} {ListaActualizar2[2]} {ListaActualizar2[3]}")
+                                                        control2 = 1
+
+                                                    elif UsuarioQuiereActualizarEl == "2": # ACTUALIZAR NOMBRE DEL CLIENTE
+                                                        print(f"Ha seleccionado el usuario {eleccionUsuarioActualizar}, para actualizar el nombre.\n")
+                                                        nuevoNombre = input("Ingrese el nuevo nombre: ")
+                                                        ListaActualizar2.append(ListaClientes[4])
+                                                        ListaActualizar2.append(nuevoNombre)
+                                                        ListaActualizar2.append(ListaClientes[6])
+                                                        ListaActualizar2.append(ListaClientes[7])
+                                                        print(f"Nombre actualizado éxitosamente...\nUsuario: {ListaActualizar2[0]} {ListaActualizar2[1]} {ListaActualizar2[2]} {ListaActualizar2[3]}")
+                                                        control2 = 1
+                                                                                                                
+                                                    elif UsuarioQuiereActualizarEl == "3": # ACTUALIZAR APELLIDO DEL CLIENTE
+                                                        print(f"Ha seleccionado el usuario {eleccionUsuarioActualizar}, para actualizar el apellido.\n")
+                                                        nuevoApellido = input("Ingrese el nuevo apellido: ")
+                                                        ListaActualizar2.append(ListaClientes[4])
+                                                        ListaActualizar2.append(ListaClientes[5])
+                                                        ListaActualizar2.append(nuevoApellido)
+                                                        ListaActualizar2.append(ListaClientes[7])
+                                                        print(f"Apellido actualizado éxitosamente...\nUsuario: {ListaActualizar2[0]} {ListaActualizar2[1]} {ListaActualizar2[2]} {ListaActualizar2[3]}")
+                                                        control2 = 1
+                                                                                                                
+                                                    elif UsuarioQuiereActualizarEl == "4": # ACTUALIZAR MÉTODO DEL CLIENTE
+                                                        print(f"Ha seleccionado el usuario {eleccionUsuarioActualizar}, para actualizar el método de pago.\n")
+                                                        nuevoMetodo = input("Ingrese el nuevo método. '1' para pagar con tarjeta de crédito o débito. '2' para pagar en efectivo.\n> ")
+                                                        if nuevoMetodo == "1":
+                                                            nuevoMetodoActualizado = "Tarjeta de crédito o débito"
+                                                        elif nuevoMetodo == "2":
+                                                            nuevoMetodoActualizado = "Efectivo"                                                            
+                                                        ListaActualizar2.append(ListaClientes[4])
+                                                        ListaActualizar2.append(ListaClientes[5])
+                                                        ListaActualizar2.append(ListaClientes[6])
+                                                        ListaActualizar2.append(nuevoMetodoActualizado)
+                                                        print(f"Método de pago actualizado éxitosamente...\nUsuario: {ListaActualizar2[0]} {ListaActualizar2[1]} {ListaActualizar2[2]} {ListaActualizar2[3]}")
+                                                        control2 = 1
+                                                        
+                                                    elif UsuarioQuiereActualizarEl == "5":
+                                                        break
+                                                    
+                                                
+                                            else:
+                                                print("Lo siento, no hay  esa cantidad de clientes registrados.\n")
+                                                
+#======================================================================================================================================================================================================================= #
+
+                                        elif eleccionUsuarioActualizar == 3:
+                                            print(f"El usuario seleccionado es: {ListaClientes[8]} {ListaClientes[9]} {ListaClientes[10]} {ListaClientes[11]}")
+                                            print("¿Seguro que quieres actualizar este usuario?\n '1' para Sí y '0' para No.")
+                                            respuestaSioNo = int(input("> "))
+                                            while respuestaSioNo:
+                                                if respuestaSioNo:
+                                                    print("|1.-| Cédula\n|2.-| Nombre\n|3.-| Apellidos\n|4.-| Método de pag\n|5.-| Dejar actualizar")
+                                                    UsuarioQuiereActualizarEl = input(f"¿Qué quiere actualizar del usuario {eleccionUsuarioActualizar}?\n> ")
+                                                    
+                                                    if UsuarioQuiereActualizarEl == "1": # ACTUALIZAR CEDULA DEL CLIENTE
+                                                        print(f"Ha seleccionado el usuario {eleccionUsuarioActualizar}, para actualizar la cédula.\n")
+                                                        nuevaCedula = int(input("Ingrese la nueva cédula: "))
+                                                        NuevaCedulaEnString = str(nuevaCedula)
+                                                        ListaActualizar3.append(NuevaCedulaEnString)
+                                                        ListaActualizar3.append(ListaClientes[9])
+                                                        ListaActualizar3.append(ListaClientes[10])
+                                                        ListaActualizar3.append(ListaClientes[11])
+                                                        print(f"Cédula actualizada éxitosamente...\nUsuario: {ListaActualizar3[0]} {ListaActualizar3[1]} {ListaActualizar3[2]} {ListaActualizar3[3]}")
+                                                        control3 = 1
+
+                                                    elif UsuarioQuiereActualizarEl == "2": # ACTUALIZAR NOMBRE DEL CLIENTE
+                                                        print(f"Ha seleccionado el usuario {eleccionUsuarioActualizar}, para actualizar el nombre.\n")
+                                                        nuevoNombre = input("Ingrese el nuevo nombre: ")
+                                                        ListaActualizar3.append(ListaClientes[8])
+                                                        ListaActualizar3.append(nuevoNombre)
+                                                        ListaActualizar3.append(ListaClientes[10])
+                                                        ListaActualizar3.append(ListaClientes[11])
+                                                        print(f"Nombre actualizado éxitosamente...\nUsuario: {ListaActualizar3[0]} {ListaActualizar3[1]} {ListaActualizar3[2]} {ListaActualizar3[3]}")
+                                                        control3 = 1
+                                                                                                                
+                                                    elif UsuarioQuiereActualizarEl == "3": # ACTUALIZAR APELLIDO DEL CLIENTE
+                                                        print(f"Ha seleccionado el usuario {eleccionUsuarioActualizar}, para actualizar el apellido.\n")
+                                                        nuevoApellido = input("Ingrese el nuevo apellido: ")
+                                                        ListaActualizar3.append(ListaClientes[8])
+                                                        ListaActualizar3.append(ListaClientes[9])
+                                                        ListaActualizar3.append(nuevoApellido)
+                                                        ListaActualizar3.append(ListaClientes[11])
+                                                        print(f"Apellido actualizado éxitosamente...\nUsuario: {ListaActualizar3[0]} {ListaActualizar3[1]} {ListaActualizar3[2]} {ListaActualizar3[3]}")
+                                                        control3 = 1
+                                                                                                                
+                                                    elif UsuarioQuiereActualizarEl == "4": # ACTUALIZAR MÉTODO DEL CLIENTE
+                                                        print(f"Ha seleccionado el usuario {eleccionUsuarioActualizar}, para actualizar el método de pago.\n")
+                                                        nuevoMetodo = input("Ingrese el nuevo método. '1' para pagar con tarjeta de crédito o débito. '2' para pagar en efectivo.\n> ")
+                                                        if nuevoMetodo == "1":
+                                                            nuevoMetodoActualizado = "Tarjeta de crédito o débito"
+                                                        elif nuevoMetodo == "2":
+                                                            nuevoMetodoActualizado = "Efectivo"                                                            
+                                                        ListaActualizar3.append(ListaClientes[8])
+                                                        ListaActualizar3.append(ListaClientes[9])
+                                                        ListaActualizar3.append(ListaClientes[10])
+                                                        ListaActualizar3.append(nuevoMetodoActualizado)
+                                                        print(f"Método de pago actualizado éxitosamente...\nUsuario: {ListaActualizar3[0]} {ListaActualizar3[1]} {ListaActualizar3[2]} {ListaActualizar3[3]}")
+                                                        control3 = 1
+                                                        
+                                                    elif UsuarioQuiereActualizarEl == "5":
+                                                        break
+                                                    
+                                            else:
+                                                print("Lo siento, no hay  esa cantidad de clientes registrados.\n")
+#======================================================================================================================================================================================================================= #
+
+                                        elif eleccionUsuarioActualizar == 4:
+                                            print(f"El usuario seleccionado es: {ListaClientes[12]} {ListaClientes[13]} {ListaClientes[14]} {ListaClientes[15]}")
+                                            print("¿Seguro que quieres actualizar este usuario?\n '1' para Sí y '0' para No.")
+                                            respuestaSioNo = int(input("> "))
+                                            while respuestaSioNo:
+                                                if respuestaSioNo:
+                                                    print("|1.-| Cédula\n|2.-| Nombre\n|3.-| Apellidos\n|4.-| Método de pag\n|5.-| Dejar actualizar")
+                                                    UsuarioQuiereActualizarEl = input(f"¿Qué quiere actualizar del usuario {eleccionUsuarioActualizar}?\n> ")
+                                                    
+                                                    if UsuarioQuiereActualizarEl == "1": # ACTUALIZAR CEDULA DEL CLIENTE
+                                                        print(f"Ha seleccionado el usuario {eleccionUsuarioActualizar}, para actualizar la cédula.\n")
+                                                        nuevaCedula = int(input("Ingrese la nueva cédula: "))
+                                                        NuevaCedulaEnString = str(nuevaCedula)
+                                                        ListaActualizar4.append(NuevaCedulaEnString)
+                                                        ListaActualizar4.append(ListaClientes[13])
+                                                        ListaActualizar4.append(ListaClientes[14])
+                                                        ListaActualizar4.append(ListaClientes[15])
+                                                        print(f"Cédula actualizada éxitosamente...\nUsuario: {ListaActualizar4[0]} {ListaActualizar4[1]} {ListaActualizar4[2]} {ListaActualizar4[3]}")
+                                                        control4 = 1
+
+                                                    elif UsuarioQuiereActualizarEl == "2": # ACTUALIZAR NOMBRE DEL CLIENTE
+                                                        print(f"Ha seleccionado el usuario {eleccionUsuarioActualizar}, para actualizar el nombre.\n")
+                                                        nuevoNombre = input("Ingrese el nuevo nombre: ")
+                                                        ListaActualizar4.append(ListaClientes[12])
+                                                        ListaActualizar4.append(nuevoNombre)
+                                                        ListaActualizar4.append(ListaClientes[13])
+                                                        ListaActualizar4.append(ListaClientes[14])
+                                                        print(f"Nombre actualizado éxitosamente...\nUsuario: {ListaActualizar4[0]} {ListaActualizar4[1]} {ListaActualizar4[2]} {ListaActualizar4[3]}")
+                                                        control4 = 1
+                                                                                                                
+                                                    elif UsuarioQuiereActualizarEl == "3": # ACTUALIZAR APELLIDO DEL CLIENTE
+                                                        print(f"Ha seleccionado el usuario {eleccionUsuarioActualizar}, para actualizar el apellido.\n")
+                                                        nuevoApellido = input("Ingrese el nuevo apellido: ")
+                                                        ListaActualizar4.append(ListaClientes[12])
+                                                        ListaActualizar4.append(ListaClientes[13])
+                                                        ListaActualizar4.append(nuevoApellido)
+                                                        ListaActualizar4.append(ListaClientes[15])
+                                                        print(f"Apellido actualizado éxitosamente...\nUsuario: {ListaActualizar4[0]} {ListaActualizar4[1]} {ListaActualizar4[2]} {ListaActualizar4[3]}")
+                                                        control4 = 1
+                                                                                                                
+                                                    elif UsuarioQuiereActualizarEl == "4": # ACTUALIZAR MÉTODO DEL CLIENTE
+                                                        print(f"Ha seleccionado el usuario {eleccionUsuarioActualizar}, para actualizar el método de pago.\n")
+                                                        nuevoMetodo = input("Ingrese el nuevo método. '1' para pagar con tarjeta de crédito o débito. '2' para pagar en efectivo.\n> ")
+                                                        if nuevoMetodo == "1":
+                                                            nuevoMetodoActualizado = "Tarjeta de crédito o débito"
+                                                        elif nuevoMetodo == "2":
+                                                            nuevoMetodoActualizado = "Efectivo"                                                            
+                                                        ListaActualizar4.append(ListaClientes[12])
+                                                        ListaActualizar4.append(ListaClientes[13])
+                                                        ListaActualizar4.append(ListaClientes[14])
+                                                        ListaActualizar4.append(nuevoMetodoActualizado)
+                                                        print(f"Método de pago actualizado éxitosamente...\nUsuario: {ListaActualizar4[0]} {ListaActualizar4[1]} {ListaActualizar4[2]} {ListaActualizar4[3]}")
+                                                        control4 = 1
+                                                        
+                                                    elif UsuarioQuiereActualizarEl == "5":
+                                                        break
+
+#======================================================================================================================================================================================================================= #
+
+                                        elif eleccionUsuarioActualizar == 5:
+                                            print(f"El usuario seleccionado es: {ListaClientes[16]} {ListaClientes[17]} {ListaClientes[18]} {ListaClientes[19]}")
+                                            print("¿Seguro que quieres actualizar este usuario?\n '1' para Sí y '0' para No.")
+                                            respuestaSioNo = int(input("> "))
+                                            while respuestaSioNo:
+                                                print(f"Para dejar de actualizar el cliente: {eleccionUsuarioActualizar}, presione '5'")
+                                                if respuestaSioNo:
+                                                    print("|1.-| Cédula\n|2.-| Nombre\n|3.-| Apellidos\n|4.-| Método de pag\n|5.-| Dejar actualizar")
+                                                    UsuarioQuiereActualizarEl = input(f"¿Qué quiere actualizar del usuario {eleccionUsuarioActualizar}?\n> ")
+                                                    
+                                                    if UsuarioQuiereActualizarEl == "1": # ACTUALIZAR CEDULA DEL CLIENTE
+                                                        print(f"Ha seleccionado el usuario {eleccionUsuarioActualizar}, para actualizar la cédula.\n")
+                                                        nuevaCedula = int(input("Ingrese la nueva cédula: "))
+                                                        NuevaCedulaEnString = str(nuevaCedula)
+                                                        ListaActualizar5.append(NuevaCedulaEnString)
+                                                        ListaActualizar5.append(ListaClientes[17])
+                                                        ListaActualizar5.append(ListaClientes[18])
+                                                        ListaActualizar5.append(ListaClientes[19])
+                                                        print(f"Cédula actualizada éxitosamente...\nUsuario: {ListaActualizar5[0]} {ListaActualizar5[1]} {ListaActualizar5[2]} {ListaActualizar5[3]}")
+                                                        control5 = 1
+
+                                                    elif UsuarioQuiereActualizarEl == "2": # ACTUALIZAR NOMBRE DEL CLIENTE
+                                                        print(f"Ha seleccionado el usuario {eleccionUsuarioActualizar}, para actualizar el nombre.\n")
+                                                        nuevoNombre = input("Ingrese el nuevo nombre: ")
+                                                        ListaActualizar5.append(ListaClientes[16])
+                                                        ListaActualizar5.append(nuevoNombre)
+                                                        ListaActualizar5.append(ListaClientes[18])
+                                                        ListaActualizar5.append(ListaClientes[19])
+                                                        print(f"Nombre actualizado éxitosamente...\nUsuario: {ListaActualizar5[0]} {ListaActualizar5[1]} {ListaActualizar5[2]} {ListaActualizar5[3]}")
+                                                        control5 = 1
+                                                                                                                
+                                                    elif UsuarioQuiereActualizarEl == "3": # ACTUALIZAR APELLIDO DEL CLIENTE
+                                                        print(f"Ha seleccionado el usuario {eleccionUsuarioActualizar}, para actualizar el apellido.\n")
+                                                        nuevoApellido = input("Ingrese el nuevo apellido: ")
+                                                        ListaActualizar5.append(ListaClientes[16])
+                                                        ListaActualizar5.append(ListaClientes[17])
+                                                        ListaActualizar5.append(nuevoApellido)
+                                                        ListaActualizar5.append(ListaClientes[19])
+                                                        print(f"Apellido actualizado éxitosamente...\nUsuario: {ListaActualizar5[0]} {ListaActualizar5[1]} {ListaActualizar5[2]} {ListaActualizar5[3]}")
+                                                        control5 = 1
+                                                                                                                
+                                                    elif UsuarioQuiereActualizarEl == "4": # ACTUALIZAR MÉTODO DEL CLIENTE
+                                                        print(f"Ha seleccionado el usuario {eleccionUsuarioActualizar}, para actualizar el método de pago.\n")
+                                                        nuevoMetodo = input("Ingrese el nuevo método. '1' para pagar con tarjeta de crédito o débito. '2' para pagar en efectivo.\n> ")
+                                                        if nuevoMetodo == "1":
+                                                            nuevoMetodoActualizado = "Tarjeta de crédito o débito"
+                                                        elif nuevoMetodo == "2":
+                                                            nuevoMetodoActualizado = "Efectivo"                                                            
+                                                        ListaActualizar5.append(ListaClientes[16])
+                                                        ListaActualizar5.append(ListaClientes[17])
+                                                        ListaActualizar5.append(ListaClientes[18])
+                                                        ListaActualizar5.append(nuevoMetodoActualizado)
+                                                        print(f"Método de pago actualizado éxitosamente...\nUsuario: {ListaActualizar5[0]} {ListaActualizar5[1]} {ListaActualizar5[2]} {ListaActualizar5[3]}")
+                                                        control5 = 1
+                                                        
+                                                    elif UsuarioQuiereActualizarEl == "5":
+                                                        break
+                                                
+                                            else:
+                                                print("Lo siento, no hay  esa cantidad de clientes registrados.\n")
+
+                                        elif eleccionUsuarioActualizar == 6:
+                                            Leer(0, control1,control2,control3,control4,control5)
+                                            break
+                                        
                                     break
-                                except ValueError:
-                                    print("Lo siento, no aceptamos data basura. Vuelva a intentarlo.\n")
-                                    continue
-                            pass
+                                        
+                                                    
+                                            
+                                   
 # ================================================================== Eliminar =================================================================== #
                         else:
                             pass
@@ -319,7 +759,7 @@ while True:
                 print("Haz seleccionado 'Clientes'...")
                 Menus(1)
             elif eleccionPrincipal == 2:
-                print("Haz seleccionado 'Video Juegos'...")
+                print("Haz seleccionado 'VideoJuegos'...")
                 Menus(1)
             else:
                 print("Haz seleccionado 'Ventas'...")
