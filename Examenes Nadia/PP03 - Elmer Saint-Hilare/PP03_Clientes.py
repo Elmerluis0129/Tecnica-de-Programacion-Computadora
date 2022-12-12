@@ -5,5 +5,3 @@ class Clientes():
         self.apellido_clientes = apellido
         self.metodoPago_clientes= metodoPago
 
-        
-    
