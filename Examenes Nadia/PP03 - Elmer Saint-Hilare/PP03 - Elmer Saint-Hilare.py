@@ -527,8 +527,8 @@ def LeerVideoJuegos():
     contador4 = 1
     prueba = 1
     while True:
-        contador1 += 4
-        contador2 += 5
+        contador1 += 2
+        contador2 += 3
         if len(ListaVideoJuegos) == contador2:
             operacion1 = contador2-contador1
             print(f"Se encontraron: {operacion1} videojuego/s.\n")
@@ -539,7 +539,7 @@ def LeerVideoJuegos():
                 else:
                     print("*---*------------------------------------------------------------*")
                     print(f"|{contador4}.-|",ListaVideoJuegos[contador3], ListaVideoJuegos[contador3+1], ListaVideoJuegos[contador3+2])
-                    contador3 += 5
+                    contador3 += 3
                     contador4 += 1
             print("*---*------------------------------------------------------------*")
             print("""
@@ -561,6 +561,7 @@ def LeerVideoJuegos():
 |4.| Eliminar
 *--------------*""")
             Menus(0)
+
         
 def Leer(c, control1, control2, control3, control4, control5):
     if c == 1:
@@ -746,6 +747,8 @@ def Leer(c, control1, control2, control3, control4, control5):
     
     # ============================== ============================== ============================= ACTUALIZAR LOS VIDEOJUEGOS (GUARDARLOS ACTUALIZADOS O NO) ============================== ============================== ============================= ============================= ============================= ============================= ============================= =============================
     elif c == 4:
+        ListaActualizarAuxiliarVideoJuegos = ListaVideoJuegos.copy()
+        ListaVideoJuegos.clear()
         if len(ListaActualizarAuxiliarVideoJuegos) == 3:
             # ============= Videojuego 1 ============= #
             if control1: ListaVideoJuegos.append(ListaActualizarVideoJuegos1[0]) ,ListaVideoJuegos.append(ListaActualizarVideoJuegos1[1]) ,ListaVideoJuegos.append(ListaActualizarVideoJuegos1[2])
@@ -831,9 +834,13 @@ def Menus(a):
 |2.-| Ventas Ventas CSV 
 *---------------------------*
 """)
+        
 
     def elegirOpcionEnMenu(x, y):
+        apagar = 0
         while True:
+            if apagar:
+                break
 # ---------------------------------------------------------------- CLIENTES MENU 1 ---------------------------------------------------------------- #
             if x == 1 and y == 1: # CONFIGURACION MENU 1 EN CLIENTES
                 eleccionCRUD = int(input("¿Qué desea hacer?\n> "))
@@ -1617,7 +1624,7 @@ def Menus(a):
                                                 print("\nOJO: DEBES GUARDAR LA ACTUALIZACIÓN ANTES DE VOLVER ACTUALIZAR LA MISMA VENTA.")
                                                 continue
                                             else:
-                                                print(f"El Venta seleccionado es (sin actualizar): {ListaVentas[5]} {ListaVentas[6]} {ListaVentas[7]} {ListaVentas[8]} {ListaVentas[9]}")
+                                                print(f"La Venta seleccionado es (sin actualizar): {ListaVentas[5]} {ListaVentas[6]} {ListaVentas[7]} {ListaVentas[8]} {ListaVentas[9]}")
                                                 print("¿Seguro que quieres actualizar este Venta?\n '1' para Sí y '0' para No.")
                                                 respuestaSioNo = int(input("> "))
                                             while respuestaSioNo:
@@ -2333,7 +2340,7 @@ def Menus(a):
                                                 print("\nOJO: DEBES GUARDAR LA ACTUALIZACIÓN ANTES DE VOLVER ACTUALIZAR EL MISMO VIDEOJUEGO.")
                                                 continue
                                             else:
-                                                print(f"El videojuego seleccionado es (sin actualizar): {ListaActualizarVideoJuegos2[3]} {ListaActualizarVideoJuegos2[4]} {ListaActualizarVideoJuegos2[5]}")
+                                                print(f"El videojuego seleccionado es (sin actualizar): {ListaVideoJuegos[3]} {ListaVideoJuegos[4]} {ListaVideoJuegos[5]}")
                                                 print("¿Seguro que quieres actualizar este videojuego?\n '1' para Sí y '0' para No.")
                                                 respuestaSioNo = int(input("> "))
                                             while respuestaSioNo:
@@ -2347,7 +2354,7 @@ def Menus(a):
                                                         ListaActualizarVideoJuegos2.append(nuevoNombre)
                                                         ListaActualizarVideoJuegos2.append(ListaVideoJuegos[4])
                                                         ListaActualizarVideoJuegos2.append(ListaVideoJuegos[5])
-                                                        print(f"Nombre actualizado éxitosamente...\Videojuego: {ListaActualizarVideoJuegos2[3]} {ListaActualizarVideoJuegos2[4]} {ListaActualizarVideoJuegos2[5]}")
+                                                        print(f"Nombre actualizado éxitosamente...\Videojuego: {ListaActualizarVideoJuegos2[0]} {ListaActualizarVideoJuegos2[1]} {ListaActualizarVideoJuegos2[2]}")
                                                         control2 = 1
                                                         ControlVueltas2 += 1
                                                         break
@@ -2358,7 +2365,7 @@ def Menus(a):
                                                         ListaActualizarVideoJuegos2.append(ListaVideoJuegos[3])
                                                         ListaActualizarVideoJuegos2.append(nuevoTipo)
                                                         ListaActualizarVideoJuegos2.append(ListaVideoJuegos[5])
-                                                        print(f"Tipo actualizado éxitosamente...\nVideojuego {ListaActualizarVideoJuegos2[3]} {ListaActualizarVideoJuegos2[4]} {ListaActualizarVideoJuegos2[5]}")
+                                                        print(f"Tipo actualizado éxitosamente...\nVideojuego {ListaActualizarVideoJuegos2[0]} {ListaActualizarVideoJuegos2[1]} {ListaActualizarVideoJuegos2[2]}")
                                                         control2 = 1
                                                         ControlVueltas2 += 1
                                                         break
@@ -2375,7 +2382,7 @@ def Menus(a):
                                                         ListaActualizarVideoJuegos2.append(ListaVideoJuegos[3])
                                                         ListaActualizarVideoJuegos2.append(ListaVideoJuegos[4])
                                                         ListaActualizarVideoJuegos2.append(nuevoPrecio)
-                                                        print(f"Precio actualizado éxitosamente...\nVideojuego {ListaActualizarVideoJuegos2[3]} {ListaActualizarVideoJuegos2[4]} {ListaActualizarVideoJuegos2[5]}")
+                                                        print(f"Precio actualizado éxitosamente...\nVideojuego {ListaActualizarVideoJuegos2[0]} {ListaActualizarVideoJuegos2[1]} {ListaActualizarVideoJuegos2[2]}")
                                                         control2 = 1
                                                         ControlVueltas2 += 1
                                                         break
@@ -2386,12 +2393,12 @@ def Menus(a):
                                                         continue
                                                     
 #==================================================================================ACTUALIZACION VIDEOJUEGO 3==================================================================================================================================== #
-                                        elif eleccionVideojuegoActualizar == 2:
+                                        elif eleccionVideojuegoActualizar == 3:
                                             if ControlVueltas3 >= 1:
                                                 print("\nOJO: DEBES GUARDAR LA ACTUALIZACIÓN ANTES DE VOLVER ACTUALIZAR EL MISMO VIDEOJUEGO.")
                                                 continue
                                             else:
-                                                print(f"El videojuego seleccionado es (sin actualizar): {ListaActualizarVideoJuegos3[6]} {ListaActualizarVideoJuegos3[7]} {ListaActualizarVideoJuegos3[8]}")
+                                                print(f"El videojuego seleccionado es (sin actualizar): {ListaVideoJuegos[6]} {ListaVideoJuegos[7]} {ListaVideoJuegos[8]}")
                                                 print("¿Seguro que quieres actualizar este videojuego?\n '1' para Sí y '0' para No.")
                                                 respuestaSioNo = int(input("> "))
                                             while respuestaSioNo:
@@ -2405,18 +2412,18 @@ def Menus(a):
                                                         ListaActualizarVideoJuegos3.append(nuevoNombre)
                                                         ListaActualizarVideoJuegos3.append(ListaVideoJuegos[7])
                                                         ListaActualizarVideoJuegos3.append(ListaVideoJuegos[8])
-                                                        print(f"Nombre actualizado éxitosamente...\Videojuego: {ListaActualizarVideoJuegos3[6]} {ListaActualizarVideoJuegos3[7]} {ListaActualizarVideoJuegos3[8]}")
+                                                        print(f"Nombre actualizado éxitosamente...\Videojuego: {ListaActualizarVideoJuegos3[0]} {ListaActualizarVideoJuegos3[1]} {ListaActualizarVideoJuegos3[2]}")
                                                         control3 = 1
                                                         ControlVueltas3 += 1
                                                         break
                                                     elif UsuarioQuiereActualizarEl == "2": # ACTUALIZAR TIPO DEL VIDEOJUEGO
-                                                        print(f"Ha seleccionado el videojuego {eleccionVideojuegoActualizar}, para actualizar el nombre.\n")
+                                                        print(f"Ha seleccionado el videojuego {eleccionVideojuegoActualizar}, para actualizar el tipo.\n")
                                                         nuevoTipo = input("Ingrese el nuevo tipo: ")
                                                         ListaActualizarVideoJuegos3.clear()
                                                         ListaActualizarVideoJuegos3.append(ListaVideoJuegos[6])
                                                         ListaActualizarVideoJuegos3.append(nuevoTipo)
                                                         ListaActualizarVideoJuegos3.append(ListaVideoJuegos[8])
-                                                        print(f"Tipo actualizado éxitosamente...\nVideojuego {ListaActualizarVideoJuegos3[6]} {ListaActualizarVideoJuegos3[7]} {ListaActualizarVideoJuegos3[8]}")
+                                                        print(f"Tipo actualizado éxitosamente...\nVideojuego {ListaActualizarVideoJuegos3[0]} {ListaActualizarVideoJuegos3[1]} {ListaActualizarVideoJuegos3[2]}")
                                                         control3 = 1
                                                         ControlVueltas3 += 1
                                                         break
@@ -2433,7 +2440,7 @@ def Menus(a):
                                                         ListaActualizarVideoJuegos3.append(ListaVideoJuegos[6])
                                                         ListaActualizarVideoJuegos3.append(ListaVideoJuegos[7])
                                                         ListaActualizarVideoJuegos3.append(nuevoPrecio)
-                                                        print(f"Precio actualizado éxitosamente...\nVideojuego {ListaActualizarVideoJuegos3[6]} {ListaActualizarVideoJuegos3[7]} {ListaActualizarVideoJuegos3[8]}")
+                                                        print(f"Precio actualizado éxitosamente...\nVideojuego {ListaActualizarVideoJuegos3[0]} {ListaActualizarVideoJuegos3[1]} {ListaActualizarVideoJuegos3[2]}")
                                                         control3 = 1
                                                         ControlVueltas3 += 1
                                                         break
@@ -2449,7 +2456,7 @@ def Menus(a):
                                                 print("\nOJO: DEBES GUARDAR LA ACTUALIZACIÓN ANTES DE VOLVER ACTUALIZAR EL MISMO VIDEOJUEGO.")
                                                 continue
                                             else:
-                                                print(f"El videojuego seleccionado es (sin actualizar): {ListaActualizarVideoJuegos4[9]} {ListaActualizarVideoJuegos4[10]} {ListaActualizarVideoJuegos4[11]}")
+                                                print(f"El videojuego seleccionado es (sin actualizar): {ListaVideoJuegos[9]} {ListaVideoJuegos[10]} {ListaVideoJuegos[11]}")
                                                 print("¿Seguro que quieres actualizar este videojuego?\n '1' para Sí y '0' para No.")
                                                 respuestaSioNo = int(input("> "))
                                             while respuestaSioNo:
@@ -2463,18 +2470,18 @@ def Menus(a):
                                                         ListaActualizarVideoJuegos4.append(nuevoNombre)
                                                         ListaActualizarVideoJuegos4.append(ListaVideoJuegos[10])
                                                         ListaActualizarVideoJuegos4.append(ListaVideoJuegos[11])
-                                                        print(f"Nombre actualizado éxitosamente...\Videojuego: {ListaActualizarVideoJuegos4[9]} {ListaActualizarVideoJuegos4[10]} {ListaActualizarVideoJuegos4[11]}")
+                                                        print(f"Nombre actualizado éxitosamente...\Videojuego: {ListaActualizarVideoJuegos4[0]} {ListaActualizarVideoJuegos4[1]} {ListaActualizarVideoJuegos4[2]}")
                                                         control4 = 1
                                                         ControlVueltas4 += 1
                                                         break
                                                     elif UsuarioQuiereActualizarEl == "2": # ACTUALIZAR TIPO DEL VIDEOJUEGO
-                                                        print(f"Ha seleccionado el videojuego {eleccionVideojuegoActualizar}, para actualizar el nombre.\n")
+                                                        print(f"Ha seleccionado el videojuego {eleccionVideojuegoActualizar}, para actualizar el tipo.\n")
                                                         nuevoTipo = input("Ingrese el nuevo tipo: ")
                                                         ListaActualizarVideoJuegos4.clear()
                                                         ListaActualizarVideoJuegos4.append(ListaVideoJuegos[9])
                                                         ListaActualizarVideoJuegos4.append(nuevoTipo)
                                                         ListaActualizarVideoJuegos4.append(ListaVideoJuegos[11])
-                                                        print(f"Tipo actualizado éxitosamente...\nVideojuego {ListaActualizarVideoJuegos4[9]} {ListaActualizarVideoJuegos4[10]} {ListaActualizarVideoJuegos4[11]}")
+                                                        print(f"Tipo actualizado éxitosamente...\nVideojuego {ListaActualizarVideoJuegos4[0]} {ListaActualizarVideoJuegos4[1]} {ListaActualizarVideoJuegos4[2]}")
                                                         control4 = 1
                                                         ControlVueltas4 += 1
                                                         break
@@ -2491,7 +2498,7 @@ def Menus(a):
                                                         ListaActualizarVideoJuegos4.append(ListaVideoJuegos[9])
                                                         ListaActualizarVideoJuegos4.append(ListaVideoJuegos[10])
                                                         ListaActualizarVideoJuegos4.append(nuevoPrecio)
-                                                        print(f"Precio actualizado éxitosamente...\nVideojuego {ListaActualizarVideoJuegos4[9]} {ListaActualizarVideoJuegos4[10]} {ListaActualizarVideoJuegos4[11]}")
+                                                        print(f"Precio actualizado éxitosamente...\nVideojuego {ListaActualizarVideoJuegos4[0]} {ListaActualizarVideoJuegos4[1]} {ListaActualizarVideoJuegos4[2]}")
                                                         control4 = 1
                                                         ControlVueltas4 += 1
                                                         break
@@ -2507,7 +2514,7 @@ def Menus(a):
                                                 print("\nOJO: DEBES GUARDAR LA ACTUALIZACIÓN ANTES DE VOLVER ACTUALIZAR EL MISMO VIDEOJUEGO.")
                                                 continue
                                             else:
-                                                print(f"El videojuego seleccionado es (sin actualizar): {ListaActualizarVideoJuegos5[12]} {ListaActualizarVideoJuegos5[13]} {ListaActualizarVideoJuegos5[14]}")
+                                                print(f"El videojuego seleccionado es (sin actualizar): {ListaVideoJuegos[12]} {ListaVideoJuegos[13]} {ListaVideoJuegos[14]}")
                                                 print("¿Seguro que quieres actualizar este videojuego?\n '1' para Sí y '0' para No.")
                                                 respuestaSioNo = int(input("> "))
                                             while respuestaSioNo:
@@ -2519,20 +2526,20 @@ def Menus(a):
                                                         nuevoNombre = input("Ingrese el nuevo nombre: ")
                                                         ListaActualizarVideoJuegos5.clear()
                                                         ListaActualizarVideoJuegos5.append(nuevoNombre)
-                                                        ListaActualizarVideoJuegos5.append(ListaVideoJuegos[7])
-                                                        ListaActualizarVideoJuegos5.append(ListaVideoJuegos[8])
-                                                        print(f"Nombre actualizado éxitosamente...\Videojuego: {ListaActualizarVideoJuegos5[12]} {ListaActualizarVideoJuegos5[13]} {ListaActualizarVideoJuegos5[14]}")
+                                                        ListaActualizarVideoJuegos5.append(ListaVideoJuegos[13])
+                                                        ListaActualizarVideoJuegos5.append(ListaVideoJuegos[14])
+                                                        print(f"Nombre actualizado éxitosamente...\Videojuego: {ListaActualizarVideoJuegos5[0]} {ListaActualizarVideoJuegos5[1]} {ListaActualizarVideoJuegos5[2]}")
                                                         control5 = 1
                                                         ControlVueltas5 += 1
                                                         break
                                                     elif UsuarioQuiereActualizarEl == "2": # ACTUALIZAR TIPO DEL VIDEOJUEGO
-                                                        print(f"Ha seleccionado el videojuego {eleccionVideojuegoActualizar}, para actualizar el nombre.\n")
+                                                        print(f"Ha seleccionado el videojuego {eleccionVideojuegoActualizar}, para actualizar el tipo.\n")
                                                         nuevoTipo = input("Ingrese el nuevo tipo: ")
                                                         ListaActualizarVideoJuegos5.clear()
-                                                        ListaActualizarVideoJuegos5.append(ListaVideoJuegos[6])
+                                                        ListaActualizarVideoJuegos5.append(ListaVideoJuegos[12])
                                                         ListaActualizarVideoJuegos5.append(nuevoTipo)
-                                                        ListaActualizarVideoJuegos5.append(ListaVideoJuegos[8])
-                                                        print(f"Tipo actualizado éxitosamente...\nVideojuego {ListaActualizarVideoJuegos5[12]} {ListaActualizarVideoJuegos5[13]} {ListaActualizarVideoJuegos5[14]}")
+                                                        ListaActualizarVideoJuegos5.append(ListaVideoJuegos[14])
+                                                        print(f"Tipo actualizado éxitosamente...\nVideojuego {ListaActualizarVideoJuegos5[0]} {ListaActualizarVideoJuegos5[1]} {ListaActualizarVideoJuegos5[2]}")
                                                         control5 = 1
                                                         ControlVueltas5 += 1
                                                         break
@@ -2546,10 +2553,10 @@ def Menus(a):
                                                                 print("No aceptamos data basura.")
                                                                 continue
                                                         ListaActualizarVideoJuegos5.clear()                                                          
-                                                        ListaActualizarVideoJuegos5.append(ListaVideoJuegos[6])
-                                                        ListaActualizarVideoJuegos5.append(ListaVideoJuegos[7])
+                                                        ListaActualizarVideoJuegos5.append(ListaVideoJuegos[12])
+                                                        ListaActualizarVideoJuegos5.append(ListaVideoJuegos[13])
                                                         ListaActualizarVideoJuegos5.append(nuevoPrecio)
-                                                        print(f"Precio actualizado éxitosamente...\nVideojuego {ListaActualizarVideoJuegos5[12]} {ListaActualizarVideoJuegos5[13]} {ListaActualizarVideoJuegos5[14]}")
+                                                        print(f"Precio actualizado éxitosamente...\nVideojuego {ListaActualizarVideoJuegos5[0]} {ListaActualizarVideoJuegos5[1]} {ListaActualizarVideoJuegos5[2]}")
                                                         control5 = 1
                                                         ControlVueltas5 += 1
                                                         break
@@ -2593,7 +2600,7 @@ def Menus(a):
                                                     print("¿Estás seguro de que quieres eliminar este videojuego?\nPresiona '1' para Sí y presiona '0' para No.")
                                                     eliminarVideoJuegoSIoNo = int(input("> "))
                                                     if eliminarVideoJuegoSIoNo:
-                                                        EliminarVentas(eliminarOpcion)
+                                                        EliminarVideoJuegos(eliminarOpcion)
                                                     else:
                                                         print("De acuerdo, el videojuego no se ha eliminado. Saliendo...")
                                                     break
@@ -2610,7 +2617,7 @@ def Menus(a):
                                                     print("¿Estás seguro de que quieres eliminar este videojuego?\nPresiona '1' para Sí y presiona '0' para No.")
                                                     eliminarVideoJuegoSIoNo = int(input("> "))
                                                     if eliminarVideoJuegoSIoNo:
-                                                        EliminarVentas(eliminarOpcion)
+                                                        EliminarVideoJuegos(eliminarOpcion)
                                                     else:
                                                         print("De acuerdo, el videojuego no se ha eliminado. Saliendo...")
                                                     break
@@ -2626,7 +2633,7 @@ def Menus(a):
                                                     print("¿Estás seguro de que quieres eliminar este videojuego?\nPresiona '1' para Sí y presiona '0' para No.\n")
                                                     eliminarVideoJuegoSIoNo = int(input("> "))
                                                     if eliminarVideoJuegoSIoNo:
-                                                        EliminarVentas(eliminarOpcion)
+                                                        EliminarVideoJuegos(eliminarOpcion)
                                                     else:
                                                         print("De acuerdo, el videojuego no se ha eliminado. Saliendo...")
                                                     break
@@ -2642,7 +2649,7 @@ def Menus(a):
                                                     print("¿Estás seguro de que quieres eliminar este videojuego?\nPresiona '1' para Sí y presiona '0' para No.\n")
                                                     eliminarVideoJuegoSIoNo = int(input("> "))
                                                     if eliminarVideoJuegoSIoNo:
-                                                        EliminarVentas(eliminarOpcion)
+                                                        EliminarVideoJuegos(eliminarOpcion)
                                                     else:
                                                         print("De acuerdo, el videojuego no se ha eliminado. Saliendo...")
                                                     break
@@ -2658,7 +2665,7 @@ def Menus(a):
                                                     print("¿Estás seguro de que quieres eliminar este videojuego?\nPresiona '1' para Sí y presiona '0' para No.\n")
                                                     eliminarVideoJuegoSIoNo = int(input("> "))
                                                     if eliminarVideoJuegoSIoNo:
-                                                        EliminarVentas(eliminarOpcion)
+                                                        EliminarVideoJuegos(eliminarOpcion)
                                                     else:
                                                         print("De acuerdo, el videojuego no se ha eliminado. Saliendo...")
                                                     break
@@ -2689,34 +2696,35 @@ def Menus(a):
                             try:
                                 if len(ListaClientes) == 0:
                                     print("\nLo siento, no existe ninguna data para clientes, por favor crearla en el menú 1 CRUD, opción 1.\n")
+                                    elegirMenu()
                                 else:
-                                    print("¿Deseas cargar en un archivo csv la data de clientes para luego exportarla?\nPresiona '1' para Sí y presiona '0' para No.")
+                                    print("¿Deseas cargar en un archivo csv con la data de clientes para luego exportarla?\nPresiona '1' para Sí y presiona '0' para No.")
                                     elecionSIoNo = int(input("> "))
-                                break
+                                    
                             except ValueError:
                                 print("No aceptamos data basura. No ingresaste un dígito, vuelve a intentarlo.\n")
                                 continue
+                            
                         if elecionSIoNo:
                             archivoCargaExportacion = open("Carga_Exportacion_Clientes.csv", "a")
-                            if len(ListaVentas) == 5:
+                            if len(ListaClientes) == 4:
                                 archivoCargaExportacion.write("Cedula,Nombre,Apellido,Metodo de pago\n"+ListaClientes[0]+","+ListaClientes[1]+","+ListaClientes[2]+","+ListaClientes[3])
-                            if len(ListaClientes) == 10:
+                            elif len(ListaClientes) == 8:
                                 archivoCargaExportacion.write("Cedula,Nombre,Apellido,Metodo de pago\n"+ListaClientes[0]+","+ListaClientes[1]+","+ListaClientes[2]+","+ListaClientes[3]+"\n"+ListaClientes[4]+","+ListaClientes[5]+","+ListaClientes[6]+","+ListaClientes[7])
-                            elif len(ListaClientes) == 15:
+                            elif len(ListaClientes) == 12:
                                 archivoCargaExportacion.write("Cedula,Nombre,Apellido,Metodo de pago\n"+ListaClientes[0]+","+ListaClientes[1]+","+ListaClientes[2]+","+ListaClientes[3]+"\n"+ListaClientes[4]+","+ListaClientes[5]+","+ListaClientes[6]+","+ListaClientes[7]+"\n"+ListaClientes[8]+","+ListaClientes[9]+","+ListaClientes[10]+","+ListaClientes[11])
-                            elif len(ListaClientes) == 20:
+                            elif len(ListaClientes) == 26:
                                 archivoCargaExportacion.write("Cedula,Nombre,Apellido,Metodo de pago\n"+ListaClientes[0]+","+ListaClientes[1]+","+ListaClientes[2]+","+ListaClientes[3]+"\n"+ListaClientes[4]+","+ListaClientes[5]+","+ListaClientes[6]+","+ListaClientes[7]+"\n"+ListaClientes[8]+","+ListaClientes[9]+","+ListaClientes[10]+","+ListaClientes[11]+"\n"+ListaClientes[12]+","+ListaClientes[13]+","+ListaClientes[14]+","+ListaClientes[15])
-                            elif len(ListaClientes) == 25:
+                            elif len(ListaClientes) == 20:
                                 archivoCargaExportacion.write("Cedula,Nombre,Apellido,Metodo de pago\n"+ListaClientes[0]+","+ListaClientes[1]+","+ListaClientes[2]+","+ListaClientes[3]+"\n"+ListaClientes[4]+","+ListaClientes[5]+","+ListaClientes[6]+","+ListaClientes[7]+"\n"+ListaClientes[8]+","+ListaClientes[9]+","+ListaClientes[10]+","+ListaClientes[11]+"\n"+ListaClientes[12]+","+ListaClientes[13]+","+ListaClientes[14]+","+ListaClientes[15]+"\n"+ListaClientes[16]+","+ListaClientes[17]+","+ListaClientes[18]+","+ListaClientes[19])
-                            
                         else:
                             archivoCargaExportacion.close()
                             print("\nCerrando... No se creó el archivo de Carga_Exportacion_Clientes.csv\n")
                             break
 # ================================================================= CSV VENTAS MAYOR A RD$500.00 =================================================================== #
                     else:
-                        pass
-                    break
+                        print("Lo siento, el cliente no está vinculado directamente con un juego, por lo que no se puede exportar data de Venta mayor a RD$500.00.")
+                    elegirMenu()
                 else:
                     print(f"Lo siento, el '{eleccionAdicional}' no se encuentra en el menú. \n")
                     continue
@@ -2733,6 +2741,7 @@ def Menus(a):
                             try:
                                 if len(ListaVentas) == 0:
                                     print("\nLo siento, no existe ninguna data para ventas, por favor crearla en el menú 1 CRUD, opción 1.\n")
+                                    elegirMenu()
                                 else:
                                     print("¿Deseas cargar en un archivo csv la data de Ventas para luego exportarla?\nPresiona '1' para Sí y presiona '0' para No.")
                                     elecionSIoNo = int(input("> "))
@@ -2743,23 +2752,124 @@ def Menus(a):
                         if elecionSIoNo:
                             archivoCargaExportacion = open("Carga_Exportacion_Ventas.csv", "a")
                             if len(ListaVentas) == 5:
-                                archivoCargaExportacion.write("No. Venta,Nombre,Cedula,Precio,Tipo\n"+ListaVentas[0]+","+ListaVentas[1]+","+ListaVentas[2]+","+ListaVentas[3]+","+ListaVentas[4])
-                            if len(ListaVentas) == 10:
-                                archivoCargaExportacion.write("No. Venta,Nombre,Cedula,Precio,Tipo\n"+ListaVentas[0]+","+ListaVentas[1]+","+ListaVentas[2]+","+ListaVentas[3]+","+ListaVentas[4]+"\n"+ListaVentas[5]+","+ListaVentas[6]+","+ListaVentas[7]+","+ListaVentas[8]+","+ListaVentas[9])
+                                archivoCargaExportacion.write("No. Venta,Nombre,Cedula,Precio,Tipo\n"+str(ListaVentas[0])+","+str(ListaVentas[1])+","+str(ListaVentas[2])+","+str(ListaVentas[3])+","+str(ListaVentas[4]))
+                            elif len(ListaVentas) == 10:
+                                archivoCargaExportacion.write("No. Venta,Nombre,Cedula,Precio,Tipo\n"+str(ListaVentas[0])+","+str(ListaVentas[1])+","+str(ListaVentas[2])+","+str(ListaVentas[3])+","+str(ListaVentas[4])+"\n"+str(ListaVentas[5])+","+str(ListaVentas[6])+","+str(ListaVentas[7])+","+str(ListaVentas[8])+","+str(ListaVentas[9]))
                             elif len(ListaVentas) == 15:
-                                archivoCargaExportacion.write("No. Venta,Nombre,Cedula,Precio,Tipo\n"+ListaVentas[0]+","+ListaVentas[1]+","+ListaVentas[2]+","+ListaVentas[3]+","+ListaVentas[4]+"\n"+ListaVentas[5]+","+ListaVentas[6]+","+ListaVentas[7]+","+ListaVentas[8]+","+ListaVentas[9]+"\n"+ListaVentas[10]+","+ListaVentas[11]+","+ListaVentas[12]+","+ListaVentas[13]+","+ListaVentas[14])
+                                archivoCargaExportacion.write("No. Venta,Nombre,Cedula,Precio,Tipo\n"+str(ListaVentas[0])+","+str(ListaVentas[1])+","+str(ListaVentas[2])+","+str(ListaVentas[3])+","+str(ListaVentas[4])+"\n"+str(ListaVentas[5])+","+str(ListaVentas[6])+","+str(ListaVentas[7])+","+str(ListaVentas[8])+","+str(ListaVentas[9])+"\n"+str(ListaVentas[10])+","+str(ListaVentas[11])+","+str(ListaVentas[12])+","+str(ListaVentas[13])+","+str(ListaVentas[14]))
                             elif len(ListaVentas) == 20:
-                                archivoCargaExportacion.write("No. Venta,Nombre,Cedula,Precio,Tipo\n"+ListaVentas[0]+","+ListaVentas[1]+","+ListaVentas[2]+","+ListaVentas[3]+","+ListaVentas[4]+"\n"+ListaVentas[5]+","+ListaVentas[6]+","+ListaVentas[7]+","+ListaVentas[8]+","+ListaVentas[9]+"\n"+ListaVentas[10]+","+ListaVentas[11]+","+ListaVentas[12]+","+ListaVentas[13]+","+ListaVentas[14]+"\n"+ListaVentas[15]+","+ListaVentas[16]+","+ListaVentas[17]+","+ListaVentas[18]+","+ListaVentas[19])
+                                archivoCargaExportacion.write("No. Venta,Nombre,Cedula,Precio,Tipo\n"+str(ListaVentas[0])+","+str(ListaVentas[1])+","+str(ListaVentas[2])+","+str(ListaVentas[3])+","+str(ListaVentas[4])+"\n"+str(ListaVentas[5])+","+str(ListaVentas[6])+","+str(ListaVentas[7])+","+str(ListaVentas[8])+","+str(ListaVentas[9])+"\n"+str(ListaVentas[10])+","+str(ListaVentas[11])+","+str(ListaVentas[12])+","+str(ListaVentas[13])+","+str(ListaVentas[14])+"\n"+str(ListaVentas[15])+","+str(ListaVentas[16])+","+str(ListaVentas[17])+","+str(ListaVentas[18])+","+str(ListaVentas[19]))
                             elif len(ListaVentas) == 25:
-                                archivoCargaExportacion.write("No. Venta,Nombre,Cedula,Precio,Tipo\n"+ListaVentas[0]+","+ListaVentas[1]+","+ListaVentas[2]+","+ListaVentas[3]+","+ListaVentas[4]+"\n"+ListaVentas[5]+","+ListaVentas[6]+","+ListaVentas[7]+","+ListaVentas[8]+","+ListaVentas[9]+"\n"+ListaVentas[10]+","+ListaVentas[11]+","+ListaVentas[12]+","+ListaVentas[13]+","+ListaVentas[14]+"\n"+ListaVentas[15]+","+ListaVentas[16]+","+ListaVentas[17]+","+ListaVentas[18]+","+ListaVentas[19]+"\n"+ListaVentas[20]+","+ListaVentas[21]+","+ListaVentas[22]+","+ListaVentas[23]+","+ListaVentas[24])
+                                archivoCargaExportacion.write("No. Venta,Nombre,Cedula,Precio,Tipo\n"+str(ListaVentas[0])+","+str(ListaVentas[1])+","+str(ListaVentas[2])+","+str(ListaVentas[3])+","+str(ListaVentas[4])+"\n"+str(ListaVentas[5])+","+str(ListaVentas[6])+","+str(ListaVentas[7])+","+str(ListaVentas[8])+","+str(ListaVentas[9])+"\n"+str(ListaVentas[10])+","+str(ListaVentas[11])+","+str(ListaVentas[12])+","+str(ListaVentas[13])+","+str(ListaVentas[14])+"\n"+str(ListaVentas[15])+","+str(ListaVentas[16])+","+str(ListaVentas[17])+","+str(ListaVentas[18])+","+str(ListaVentas[19])+"\n"+str(ListaVentas[20])+","+str(ListaVentas[21])+","+str(ListaVentas[22])+","+str(ListaVentas[23])+","+str(ListaVentas[24]))
                                 
                         else:
                             print("\nCerrando... No se creó el archivo de Carga_Exportacion_Ventas.csv\n")
                             break
 # ================================================================= CSV VENTAS MAYOR A RD$500.00 =================================================================== #
                     else:
-                        pass
-                    break
+                        while True:
+                            try:
+                                if len(ListaVentas) == 0:
+                                    print("\nLo siento, no existe ninguna data para ventas, por favor crearla en el menú 1 CRUD, opción 1.\n")
+                                    elegirMenu()
+                                else:
+                                    print("¿Deseas cargar en un archivo csv la data de ventas con ventas mayores a RD$500.00 para luego exportarla?\nPresiona '1' para Sí y presiona '0' para No.")
+                                    elecionSIoNo = int(input("> "))
+                                break
+                            except ValueError:
+                                print("No aceptamos data basura. No ingresaste un dígito, vuelve a intentarlo.\n")
+                                continue
+                        if elecionSIoNo:
+                            archivoVideojuegoVentasMayor = open("Videojuegos_Ventas_Mayor.csv", "a")
+                            contadorIteracionWhile = 0
+                            archivoVideojuegoVentasMayor.write("No. Venta,Nombre,Cedula,Precio,Tipo\n")
+                            while True:
+                                try:
+                                    if len(ListaVentas) == 5:
+                                        if contadorIteracionWhile:
+                                            break
+                                        else:
+                                            if int(ListaVentas[3] )>= 500: 
+                                                archivoVideojuegoVentasMayor.write(str(ListaVentas[0])+","+str(ListaVentas[1])+","+str(ListaVentas[2])+","+str(ListaVentas[3])+","+str(ListaVentas[4])+"\n")
+                                            
+                                    if len(ListaVentas) == 10:
+                                        if contadorIteracionWhile:
+                                            break
+                                        else:
+                                            if int(ListaVentas[3] )>= 500: 
+                                                archivoVideojuegoVentasMayor.write(str(ListaVentas[0])+","+str(ListaVentas[1])+","+str(ListaVentas[2])+","+str(ListaVentas[3])+","+str(ListaVentas[4])+"\n")
+                                            
+                                            
+                                            if int(ListaVentas[8] )>= 500:
+                                                archivoVideojuegoVentasMayor.write(str(ListaVentas[5])+","+str(ListaVentas[6])+","+str(ListaVentas[7])+","+str(ListaVentas[8])+","+str(ListaVentas[9])+"\n")
+                                            
+                                            
+                                    if len(ListaVentas) ==  15:
+                                        if contadorIteracionWhile:
+                                            break
+                                        else:
+                                            if int(ListaVentas[3] )>= 500: 
+                                                archivoVideojuegoVentasMayor.write(str(ListaVentas[0])+","+str(ListaVentas[1])+","+str(ListaVentas[2])+","+str(ListaVentas[3])+","+str(ListaVentas[4])+"\n")
+                                            
+                                        
+                                            if int(ListaVentas[8] )>= 500:
+                                                archivoVideojuegoVentasMayor.write(str(ListaVentas[5])+","+str(ListaVentas[6])+","+str(ListaVentas[7])+","+str(ListaVentas[8])+","+str(ListaVentas[9])+"\n")
+                                            
+
+                                            if int(ListaVentas[13]) >= 500: 
+                                                archivoVideojuegoVentasMayor.write(str(ListaVentas[10])+","+str(ListaVentas[11])+","+str(ListaVentas[12])+","+str(ListaVentas[13])+","+str(ListaVentas[14])+"\n")
+                                                
+                                    if len(ListaVentas) == 20:
+                                            if contadorIteracionWhile:
+                                                break
+                                            else:
+                                                if int(ListaVentas[3] )>= 500: 
+                                                    archivoVideojuegoVentasMayor.write(str(ListaVentas[0])+","+str(ListaVentas[1])+","+str(ListaVentas[2])+","+str(ListaVentas[3])+","+str(ListaVentas[4])+"\n")
+                                                
+
+                                                if int(ListaVentas[8] )>= 500:
+                                                    archivoVideojuegoVentasMayor.write(str(ListaVentas[5])+","+str(ListaVentas[6])+","+str(ListaVentas[7])+","+str(ListaVentas[8])+","+str(ListaVentas[9])+"\n")
+                                                
+
+                                                if int(ListaVentas[13]) >= 500: 
+                                                    archivoVideojuegoVentasMayor.write(str(ListaVentas[10])+","+str(ListaVentas[11])+","+str(ListaVentas[12])+","+str(ListaVentas[13])+","+str(ListaVentas[14])+"\n")
+                                                
+                                                
+                                                if int(ListaVentas[18]) >= 500:
+                                                    archivoVideojuegoVentasMayor.write(str(ListaVentas[15])+","+str(ListaVentas[16])+","+str(ListaVentas[17])+","+str(ListaVentas[18])+","+str(ListaVentas[19])+"\n")
+                                                
+                                    
+                                    if len(ListaVentas) == 25:
+                                            if contadorIteracionWhile:
+                                                break
+                                            else:
+                                                if int(ListaVentas[3] )>= 500: 
+                                                    archivoVideojuegoVentasMayor.write(str(ListaVentas[0])+","+str(ListaVentas[1])+","+str(ListaVentas[2])+","+str(ListaVentas[3])+","+str(ListaVentas[4])+"\n")
+                                                
+
+                                                if int(ListaVentas[8] )>= 500:
+                                                    archivoVideojuegoVentasMayor.write(str(ListaVentas[5])+","+str(ListaVentas[6])+","+str(ListaVentas[7])+","+str(ListaVentas[8])+","+str(ListaVentas[9])+"\n")
+                                                
+
+                                                if int(ListaVentas[13]) >= 500: 
+                                                    archivoVideojuegoVentasMayor.write(str(ListaVentas[10])+","+str(ListaVentas[11])+","+str(ListaVentas[12])+","+str(ListaVentas[13])+","+str(ListaVentas[14])+"\n")
+                                                
+                                                
+                                                if int(ListaVentas[18]) >= 500:
+                                                    archivoVideojuegoVentasMayor.write(str(ListaVentas[15])+","+str(ListaVentas[16])+","+str(ListaVentas[17])+","+str(ListaVentas[18])+","+str(ListaVentas[19])+"\n")
+                                                
+                                                
+                                                if int(ListaVentas[23]) >= 500:
+                                                    archivoVideojuegoVentasMayor.write(str(ListaVentas[20])+","+str(ListaVentas[21])+","+str(ListaVentas[22])+","+str(ListaVentas[23])+","+str(ListaVentas[24])+"\n")    
+                                                
+                                    
+                                    apagar = 1  
+                                    contadorIteracionWhile += 1
+                                except IndexError:
+                                    elegirMenu()
+                                
+                          
+                    
                 else:
                     print(f"Lo siento, el '{eleccionAdicional}' no se encuentra en el menú. \n")
                     continue
@@ -2775,7 +2885,8 @@ def Menus(a):
                         while True:
                             try:
                                 if len(ListaVideoJuegos) == 0:
-                                    print("\nLo siento, no existe ninguna data para ventas, por favor crearla en el menú 1 CRUD, opción 1.\n")
+                                    print("\nLo siento, no existe ninguna data para videojuegos, por favor crearla en el menú 1 CRUD, opción 1.\n")
+                                    elegirMenu()
                                 else:
                                     print("¿Deseas cargar en un archivo csv la data de VideoJuegos para luego exportarla?\nPresiona '1' para Sí y presiona '0' para No.")
                                     elecionSIoNo = int(input("> "))
@@ -2786,15 +2897,15 @@ def Menus(a):
                         if elecionSIoNo:
                             archivoCargaExportacion = open("Carga_Exportacion_Videojuegos.csv", "a")
                             if len(ListaVentas) == 3:
-                                archivoCargaExportacion.write("Nombre,Tipo,Precio\n"+ListaVideoJuegos[0]+","+ListaVideoJuegos[1]+","+ListaVideoJuegos[2])
-                            if len(ListaVideoJuegos) == 6:
-                                archivoCargaExportacion.write("Nombre,Tipo,Precio\n"+ListaVideoJuegos[0]+","+ListaVideoJuegos[1]+","+ListaVideoJuegos[2]+"\n"+ListaVideoJuegos[3]+","+ListaVideoJuegos[4]+","+ListaVideoJuegos[5])
+                                archivoCargaExportacion.write("Nombre,Tipo,Precio\n"+str(ListaVideoJuegos[0])+","+str(ListaVideoJuegos[1])+","+str(ListaVideoJuegos[2]))
+                            elif len(ListaVideoJuegos) == 6:
+                                archivoCargaExportacion.write("Nombre,Tipo,Precio\n"+str(ListaVideoJuegos[0])+","+str(ListaVideoJuegos[1])+","+str(ListaVideoJuegos[2])+"\n"+str(ListaVideoJuegos[3])+","+str(ListaVideoJuegos[4])+","+str(ListaVideoJuegos[5]))
                             elif len(ListaVideoJuegos) == 9:
-                                archivoCargaExportacion.write("Nombre,Tipo,Precio\n"+ListaVideoJuegos[0]+","+ListaVideoJuegos[1]+","+ListaVideoJuegos[2]+"\n"+ListaVideoJuegos[3]+","+ListaVideoJuegos[4]+","+ListaVideoJuegos[5]+"\n"+ListaVideoJuegos[6]+","+ListaVideoJuegos[7]+","+ListaVideoJuegos[8])
+                                archivoCargaExportacion.write("Nombre,Tipo,Precio\n"+str(ListaVideoJuegos[0])+","+str(ListaVideoJuegos[1])+","+str(ListaVideoJuegos[2])+"\n"+str(ListaVideoJuegos[3])+","+str(ListaVideoJuegos[4])+","+str(ListaVideoJuegos[5])+"\n"+str(ListaVideoJuegos[6])+","+str(ListaVideoJuegos[7])+","+str(ListaVideoJuegos[8]))
                             elif len(ListaVideoJuegos) == 12:
-                                archivoCargaExportacion.write("Nombre,Tipo,Precio\n"+ListaVideoJuegos[0]+","+ListaVideoJuegos[1]+","+ListaVideoJuegos[2]+"\n"+ListaVideoJuegos[3]+","+ListaVideoJuegos[4]+","+ListaVideoJuegos[5]+"\n"+ListaVideoJuegos[6]+","+ListaVideoJuegos[7]+","+ListaVideoJuegos[8]+"\n"+ListaVideoJuegos[9]+","+ListaVideoJuegos[10]+","+ListaVideoJuegos[11])
+                                archivoCargaExportacion.write("Nombre,Tipo,Precio\n"+str(ListaVideoJuegos[0])+","+str(ListaVideoJuegos[1])+","+str(ListaVideoJuegos[2])+"\n"+str(ListaVideoJuegos[3])+","+str(ListaVideoJuegos[4])+","+str(ListaVideoJuegos[5])+"\n"+str(ListaVideoJuegos[6])+","+str(ListaVideoJuegos[7])+","+str(ListaVideoJuegos[8])+"\n"+str(ListaVideoJuegos[9])+","+str(ListaVideoJuegos[10])+","+str(ListaVideoJuegos[11]))
                             elif len(ListaVideoJuegos) == 15:
-                                archivoCargaExportacion.write("Nombre,Tipo,Precio\n"+ListaVideoJuegos[0]+","+ListaVideoJuegos[1]+","+ListaVideoJuegos[2]+"\n"+ListaVideoJuegos[3]+","+ListaVideoJuegos[4]+","+ListaVideoJuegos[5]+"\n"+ListaVideoJuegos[6]+","+ListaVideoJuegos[7]+","+ListaVideoJuegos[8]+"\n"+ListaVideoJuegos[9]+","+ListaVideoJuegos[10]+","+ListaVideoJuegos[11]+"\n"+ListaVideoJuegos[12]+","+ListaVideoJuegos[13]+","+ListaVideoJuegos[14])
+                                archivoCargaExportacion.write("Nombre,Tipo,Precio\n"+str(ListaVideoJuegos[0])+","+str(ListaVideoJuegos[1])+","+str(ListaVideoJuegos[2])+"\n"+str(ListaVideoJuegos[3])+","+str(ListaVideoJuegos[4])+","+str(ListaVideoJuegos[5])+"\n"+str(ListaVideoJuegos[6])+","+str(ListaVideoJuegos[7])+","+str(ListaVideoJuegos[8])+"\n"+str(ListaVideoJuegos[9])+","+str(ListaVideoJuegos[10])+","+str(ListaVideoJuegos[11])+"\n"+str(ListaVideoJuegos[12])+","+str(ListaVideoJuegos[13])+","+str(ListaVideoJuegos[14]))
                             
                         else:
                             archivoCargaExportacion.close()
@@ -2802,7 +2913,115 @@ def Menus(a):
                             break
 # ================================================================= CSV VENTAS MAYOR A RD$500.00 =================================================================== #
                     else:
-                        pass
+                        while True:
+                            try:
+                                if len(ListaVideoJuegos) == 0:
+                                    print("\nLo siento, no existe ninguna data para videojuegos, por favor crearla en el menú 1 CRUD, opción 1.\n")
+                                    elegirMenu()
+                                else:
+                                    print("¿Deseas cargar en un archivo csv la data de VideoJuegos con ventas mayores a RD$500.00 para luego exportarla?\nPresiona '1' para Sí y presiona '0' para No.")
+                                    elecionSIoNo = int(input("> "))
+                                break
+                            except ValueError:
+                                print("No aceptamos data basura. No ingresaste un dígito, vuelve a intentarlo.\n")
+                                continue
+                        if elecionSIoNo:
+                            archivoVideojuegoVentasMayor = open("Videojuegos_Ventas_Mayor.csv", "a")
+                            contadorIteracionWhile = 0
+                            archivoVideojuegoVentasMayor.write("Nombre,Tipo,Precio\n")
+                            while True:
+                                try:
+                                    if len(ListaVideoJuegos) == 3:
+                                        if contadorIteracionWhile:
+                                            break
+                                        else:
+                                            if int(ListaVideoJuegos[2] )>= 500: 
+                                                archivoVideojuegoVentasMayor.write(str(ListaVideoJuegos[0])+","+str(ListaVideoJuegos[1])+","+str(ListaVideoJuegos[2])+"\n")
+                                                
+                                            elegirMenu()  
+                                            
+                                    if len(ListaVideoJuegos) == 6:
+                                        if contadorIteracionWhile:
+                                            break
+                                        else:
+                                            if int(ListaVideoJuegos[2] )>= 500: 
+                                                archivoVideojuegoVentasMayor.write(str(ListaVideoJuegos[0])+","+str(ListaVideoJuegos[1])+","+str(ListaVideoJuegos[2])+"\n")
+                                            
+                                            
+                                            if int(ListaVideoJuegos[5] )>= 500:
+                                                archivoVideojuegoVentasMayor.write(str(ListaVideoJuegos[3])+","+str(ListaVideoJuegos[4])+","+str(ListaVideoJuegos[5])+"\n")
+                                                
+                                            elegirMenu()  
+                                            
+                                            
+                                    if len(ListaVideoJuegos) ==  9:
+                                        if contadorIteracionWhile:
+                                            break
+                                        else:
+                                            if int(ListaVideoJuegos[2] )>= 500: 
+                                                archivoVideojuegoVentasMayor.write(str(ListaVideoJuegos[0])+","+str(ListaVideoJuegos[1])+","+str(ListaVideoJuegos[2])+"\n")
+                                            
+                                            
+                                            if int(ListaVideoJuegos[5] )>= 500:
+                                                archivoVideojuegoVentasMayor.write(str(ListaVideoJuegos[3])+","+str(ListaVideoJuegos[4])+","+str(ListaVideoJuegos[5])+"\n")
+                                            
+
+                                            if int(ListaVideoJuegos[8]) >= 500: 
+                                                archivoVideojuegoVentasMayor.write(str(ListaVideoJuegos[6])+","+str(ListaVideoJuegos[7])+","+str(ListaVideoJuegos[8])+"\n")
+                                            
+                                            elegirMenu()  
+                                                
+                                    if len(ListaVideoJuegos) == 12:
+                                        if contadorIteracionWhile:
+                                            break
+                                        else:
+                                            if int(ListaVideoJuegos[2] )>= 500: 
+                                                archivoVideojuegoVentasMayor.write(str(ListaVideoJuegos[0])+","+str(ListaVideoJuegos[1])+","+str(ListaVideoJuegos[2])+"\n")
+                                            
+                                            
+                                            if int(ListaVideoJuegos[5] )>= 500:
+                                                archivoVideojuegoVentasMayor.write(str(ListaVideoJuegos[3])+","+str(ListaVideoJuegos[4])+","+str(ListaVideoJuegos[5])+"\n")
+                                            
+
+                                            if int(ListaVideoJuegos[8]) >= 500: 
+                                                archivoVideojuegoVentasMayor.write(str(ListaVideoJuegos[6])+","+str(ListaVideoJuegos[7])+","+str(ListaVideoJuegos[8])+"\n")
+                                                
+                                                
+                                            if int(ListaVideoJuegos[11]) >= 500:
+                                                archivoVideojuegoVentasMayor.write(str(ListaVideoJuegos[9])+","+str(ListaVideoJuegos[10])+","+str(ListaVideoJuegos[11])+"\n")
+                                                
+                                            elegirMenu()  
+                                    
+                                    if len(ListaVideoJuegos) == 15:
+                                        if contadorIteracionWhile:
+                                            break
+                                        else:
+                                            if int(ListaVideoJuegos[2] )>= 500: 
+                                                archivoVideojuegoVentasMayor.write(str(ListaVideoJuegos[0])+","+str(ListaVideoJuegos[1])+","+str(ListaVideoJuegos[2])+"\n")
+                                            
+                                            
+                                            if int(ListaVideoJuegos[5] )>= 500:
+                                                archivoVideojuegoVentasMayor.write(str(ListaVideoJuegos[3])+","+str(ListaVideoJuegos[4])+","+str(ListaVideoJuegos[5])+"\n")
+                                            
+
+                                            if int(ListaVideoJuegos[8]) >= 500: 
+                                                archivoVideojuegoVentasMayor.write(str(ListaVideoJuegos[6])+","+str(ListaVideoJuegos[7])+","+str(ListaVideoJuegos[8])+"\n")
+                                                
+                                                
+                                            if int(ListaVideoJuegos[11]) >= 500:
+                                                archivoVideojuegoVentasMayor.write(str(ListaVideoJuegos[9])+","+str(ListaVideoJuegos[10])+","+str(ListaVideoJuegos[11])+"\n")
+                                                
+                                                
+                                            if int(ListaVideoJuegos[14]) >= 500:
+                                                archivoVideojuegoVentasMayor.write(str(ListaVideoJuegos[12])+","+str(ListaVideoJuegos[13])+","+str(ListaVideoJuegos[14])+"\n")  
+                                            
+                                            elegirMenu()  
+                                                
+                                    
+                                    contadorIteracionWhile += 1
+                                except IndexError:
+                                    elegirMenu()
+                        break
                     break
                 else:
                     print(f"Lo siento, el '{eleccionAdicional}' no se encuentra en el menú. \n")
@@ -2813,7 +3032,7 @@ def Menus(a):
     def elegirMenu():
         while True:
             try:
-                eleccionMenu = int(input("\n¿Qué menú desea utilizar? '1' para 'Menú CRUD' y '2' para 'Menú adicional' y '3' para mostrar el menú\n> "))
+                eleccionMenu = int(input("\n¿Qué menú desea utilizar? '1' para 'Menú CRUD' y '2' para 'Menú adicional' y '3' para mostrar el menú y 4 para cerrar el programa general\n> "))
                 if eleccionMenu == 0:
                     print(f"Lo siento, el '{eleccionMenu}' no se encuentra dentro de las opciones (1 y 2). \n")
                 elif eleccionMenu == 1:
@@ -2825,6 +3044,8 @@ def Menus(a):
                 
                 elif eleccionMenu == 3:
                     Menus(1)
+                elif eleccionMenu == 4:
+                    exit()
                 else:
                     print(f"Lo siento, el '{eleccionMenu}' no se encuentra dentro de las opciones (1 y 2). \n")
                     continue
@@ -2850,7 +3071,7 @@ while True:
                 print("Haz seleccionado 'Ventas'...")
                 Menus(1)
             else:
-                print("Haz seleccionado 'Ventas'...")
+                print("Haz seleccionado 'Videojuegos'...")
                 Menus(1)
             break
         else:
@@ -2860,5 +3081,3 @@ while True:
     except ValueError:
         print("Lo siento, no aceptamos data basura.\n")
         continue
-
-#TODO HACER EL SEGUNDO MENU DE LOS 3 MODELOS.
