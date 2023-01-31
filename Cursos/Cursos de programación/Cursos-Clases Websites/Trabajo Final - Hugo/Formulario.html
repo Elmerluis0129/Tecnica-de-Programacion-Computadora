@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Formulario - Bancas Chepe</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <form action="recibir.php" method="POST">
+        <h2>Formulario - Bancas Chepe</h2>
+        Cédula: <input type="number" name="cedula"> </required> <br/>
+        Nombre: <input type="text" name="nombre"> </required> <br/>
+        Correo: <input type="email" name="correo"> </required> <br/>
+        Fecha de nacimiento: <input type="date" name="fechanacimiento"> </required> <br/>
+        Edad: <input type="number" name="edad"> </required> <br/>
+        Sexo: <input type="radio" name="sexo" value="M">Masculino
+        <input type="radio" name="sexo" value="F">Femenino </required> <br/>
+        Número celular: <input type="number" name="numero"> </required> <br/>
+        Número de emergencia: <input type="number" name="numeroemergencia"> </required> <br/>
+        Estado civil: <input type="text" name="estadocivil"> </required> <br/>
+        ¿Tienes hij@s? <input type="text" name="tienehijos"> </required> <br/>
+        Nivel Académico: <input type="text" name="nivelacademico"> </required> <br/>
+        Motivo por el cual desea trabajar: <input type="text" name="motivoparatrabajar"> </required> <br/>
+        ¿Ha trabajado anteriormente con nosotros? <input type="text" name="trabajdoantes"> </required> <br/>
+        ¿Tiene experiencia laboral en esta posición? <input type="text" name="experiencialaboral"> </required> <br/>
+        Motivo por el cual ya no trabaja: <input type="text" name="motivoyanotrabaja"> </required> <br/>
+
+        <input type="submit" name="enviar" value="Enviar formulario">
+    </form>
+</body>
+</html>

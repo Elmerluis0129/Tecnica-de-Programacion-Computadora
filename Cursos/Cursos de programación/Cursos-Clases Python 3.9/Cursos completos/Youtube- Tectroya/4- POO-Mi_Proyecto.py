@@ -1,4 +1,11 @@
 #Mi proyecto, basado en mis conocimientos básicos... (eN CONSTRUCION)
+# Elmer Luis Saint-Hilare Rojo
+# Sistema de vehículos
+
+"""
+Esto es un sistema que simula vehículos. Básicamente este sistema tiene 4 opciones de vehículos, los cuales según vayas selecionando tienen sus distintas funcionalidades y todo fue realizado con POO. Ya que fue con el propósito de poner en práctica mis conocimientos
+relacionados con la programación orientada a objetos con python.
+"""
 eleccion = int(input("""
 ¿En qué vehiculo vas a salir?
 
